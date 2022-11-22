@@ -1,0 +1,311 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>What is a Set?</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+         
+        <br><br><br><br><br><br><br>
+        <dfn><dt>What is a Set?</dt></dfn>
+        <dd>A set is an unordered collection with no duplicate elements</dd>
+        
+        <dd>Basic uses include membership testing and eliminating duplicate entries</dd>
+        <dd>Set objects also support mathematical operations like union, intersection, difference, and symmetric difference. </dd>
+        <dd>Curly braces or the set() function can be used to create sets</dd>
+            <dd>
+                <div class="note">
+                   <b> Note:</b> <br>
+                    <ul>
+                    <li>To create an empty set you have to use set(), not {} </li>
+                        <li>Set items are unchangeable, but you can remove items and add new items.</li>
+                        <li>A set is a collection which is unordered, unchangeable, and unindexed.   </li>
+                        <li>As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.</li>
+                    </ul>   
+                </div>
+                
+            </dd>
+            
+        </div>
+        
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        Example:1
+        <div class ="program">
+            <pre>
+        basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+        print(basket) # show that duplicates have been removed
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+        {'orange', 'banana', 'pear', 'apple'}
+        </pre>
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        
+        Example:2
+        <div class ="program">
+        
+        <pre>
+        basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+        'orange' in basket                 # fast membership testing
+        </pre>
+            
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            True
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+          Example:3
+        <div class ="program">
+            <pre>
+        basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+        'crabgrass' in basket                 # fast membership testing
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+        False
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+        <div class ="program">
+            <pre>
+        # Demonstrate set operations on unique letters from two words
+        a = set('abracadabra')
+        b = set('alacazam')                   #with single quote
+        c = set("abracadabra")                #with double quote                 
+        print(a)                              # unique letters in a
+        print(c)                              # unique letters in c
+        print(a - b)                          # letters in a but not in b
+        print(a | b)                          # letters in a or b or both
+        print(a & b)                          # letters in both a and b
+        print(a ^ b)                          # letters in a or b but not both
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+        {'a', 'r', 'b', 'c', 'd'}
+        {'b', 'r', 'c', 'd', 'a'}
+        {'r', 'd', 'b'}
+        {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+        {'a', 'c'}
+        {'r', 'd', 'b', 'm', 'z', 'l'}
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+        <div class ="program">
+            <pre>
+        #Similarly to list comprehensions, set comprehensions are also supported:
+        a = {x for x in 'abracadabra' if x not in 'abc'}
+        print(a)
+        
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+        {'r', 'd'}
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+        <b>Data Types:</b> Set items can be of any data type. <br><br>
+          Example:6     
+        <div class ="program">
+            <pre>
+        set1 = {"apple", "banana", "cherry"}
+        set2 = {1, 5, 7, 9, 3}
+        set3 = {True, False, False}
+
+        print(set1)
+        print(set2)
+        print(set3)
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+        {'cherry', 'apple', 'banana'}
+        {1, 3, 5, 7, 9}
+        {False, True}
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7     
+         <div class="note"> A set can contain different data elements in a single set also. </div>
+        <div class ="program">
+            <pre>
+        set1 = {"abc", 34, True, 40, "male"}
+        print(set1)
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+        {True, 34, 40, 'male', 'abc'}
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8     
+        <div class ="program">
+        <pre>
+           #We can create a set from a range.
+           set(range(10))     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 9 start --->
+          Example:9     
+        <div class ="program">
+        <pre>
+           #we can create a set from a list.
+           set([0, 1, 2, 3, 0, 1, 2, 3, 4, 5])     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            {0, 1, 2, 3, 4, 5}
+        </pre>
+        </div>
+        
+        <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

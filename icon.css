@@ -1,0 +1,56 @@
+body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+
+}
+
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+background-color: LemonChiffon;
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+float:right;
+background-color: LemonChiffon;
+margin:5px;
+}
+
+twidth
+{
+width:100%;
+magin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+
+tr:hover { background-color: #E0FFF;}

@@ -1,0 +1,509 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+        
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- Table start --->
+        
+        <div>
+            <table class="twidth method_table">
+            <tbody><tr>
+            <th>Method</th>
+            <th>Description</th>
+            </tr>
+            <tr><td><a href="ref_set_add.asp">add()</a></td><td>Adds an element to the 
+              set</td></tr>
+            <tr><td><a href="ref_set_clear.asp">clear()</a></td><td>Removes all the 
+              elements from the set</td></tr>
+            <tr><td><a href="ref_set_copy.asp">copy()</a></td><td>Returns a copy of the set</td></tr>
+              <tr>
+                <td><a href="ref_set_difference.asp">difference()</a></td><td>Returns a set 
+                containing the difference between two or more sets</td>
+              </tr>
+              <tr>
+                <td><a href="ref_set_difference_update.asp">difference_update()</a></td><td>Removes the 
+                items in this set that are also included in another, specified set</td>
+              </tr>
+            <tr><td><a href="ref_set_discard.asp">discard()</a></td><td>Remove the specified 
+              item</td></tr>
+              <tr>
+                <td><a href="ref_set_intersection.asp">intersection()</a></td><td>Returns a set, 
+                that is the intersection of two other sets</td>
+              </tr>
+            <tr><td><a href="ref_set_intersection_update.asp">intersection_update()</a></td><td>
+              Removes the items in this set that are not present in other, specified set(s)</td></tr>
+              <tr>
+                <td><a href="ref_set_isdisjoint.asp">isdisjoint()</a></td><td>Returns whether 
+                two sets have a intersection or not</td>
+              </tr>
+              <tr>
+                <td><a href="ref_set_issubset.asp">issubset()</a></td><td>Returns whether 
+                another set contains this set or not</td>
+              </tr>
+            <tr><td><a href="ref_set_issuperset.asp">issuperset()</a></td><td>Returns whether 
+              this set contains another set or not</td></tr>
+            <tr><td><a href="ref_set_pop.asp">pop()</a></td><td>Removes an element from the 
+              set</td></tr>
+            <tr><td><a href="ref_set_remove.asp">remove()</a></td><td>Removes the specified element</td></tr>
+              <tr>
+                <td><a href="ref_set_symmetric_difference.asp">symmetric_difference()</a></td><td>Returns 
+                a set with the symmetric differences of two sets</td>
+              </tr>
+            <tr><td><a href="ref_set_symmetric_difference_update.asp">symmetric_difference_update()</a></td><td>
+              inserts the symmetric differences from this set and another</td></tr>
+              <tr>
+                <td><a href="ref_set_union.asp">union()</a></td><td>Return a set containing 
+                the union of sets</td>
+              </tr>
+            <tr><td><a href="ref_set_update.asp">update()</a></td><td>Update the set with the 
+              union of this set and others</td></tr>
+            </tbody>
+        </table>
+        </div>
+        
+     <!-- Table end --->        
+    <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set Add() start --->
+        <H1><small>Set Add method:</small></H1>
+        <div class ="program">
+        <pre>
+        <b>Note:</b> Order of inserted element doesn't matter.
+        person = {"Anil", "Mohit", "Dinesh"}
+        person.add("Rakesh") #will add Rakesh in person set
+        print(person)
+        person.add("Geeta") #will add Geeta in person set
+        print(person)
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+        {'Rakesh', 'Mohit', 'Dinesh', 'Anil'}
+        {'Mohit', 'Anil', 'Dinesh', 'Geeta', 'Rakesh'}
+        </pre>
+        </div>
+        
+        <!-- Set Add() end --->        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set clear() method start --->
+        <H1><small>Set clear() method:</small></H1>
+        <div class ="program">
+        <pre>
+                 
+                person = {"Anil", "Mohit", "Dinesh"}
+                person.clear();
+                print(person)
+
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        set()
+        </pre>
+        </div>
+        
+        <!-- Set clear() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set remove() method start --->
+        <H1><small>Set remove() method:</small></H1>
+        <div class ="program">
+        <pre>
+                 
+                person = {"Anil", "Mohit", "Dinesh"}
+                person.remove("Mohit");
+                print(person)
+
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {'Dinesh', 'Anil'}
+        </pre>
+        </div>
+        
+        <!-- Set remove() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set discard() method start --->
+        <H1><small>Set discard() method:</small></H1>
+        <div class ="program">
+        <pre>
+                 
+                person = {"Anil", "Mohit", "Dinesh"}
+                person.discard("Mohit");
+                print(person)
+
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {'Dinesh', 'Anil'}
+        </pre>
+        </div>
+        
+        <!-- Set discard() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+          <!-- ------------------------------------------------------------------------- -->
+        <!-- Set pop() method start --->
+        <H1><small>Set pop() method:</small></H1>
+         pop() method of set collection is also used to remove an item of the set.  pop method remove any random element from set  because pop method removes the last item of the set but last item not possible to know in a set. 
+        <div class ="program">
+        <pre>
+                 
+            person = {"Anil", "Mohit", "Dinesh","Geeta","Ram","Sonu"}
+            person.pop();
+            print(person)
+
+        </pre>
+        </div>
+        Output:<br>
+        <b>Execute First Time:</b> 
+        <div class="output">
+        <pre>
+        {'Dinesh', 'Mohit', 'Ram', 'Anil', 'Sonu'} #Geeta Remove
+        </pre>
+        </div>
+        <b>Execute Second Time:</b>
+        <div class="output">
+            
+        <pre>
+        {'Sonu', 'Dinesh', 'Ram', 'Mohit', 'Geeta'} #Anil Remove
+        </pre>
+        </div>
+        <b>Execute Third Time:</b>
+        <div class="output">
+        <pre>
+        {'Geeta', 'Sonu', 'Dinesh', 'Anil', 'Mohit'} #Ram Remove
+        </pre>
+        </div>
+        
+        <!-- Set discard() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set union() method start --->
+        <H1><small>Set union() method:</small></H1>
+        In Python Set's union() Method is used to combine one or more sets together. All the duplicate items of every set is remove and collectivly create a new set with unique items.
+        <div class ="program">
+        <pre>
+                 
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                print(setNum1.union(setNum2))
+                
+                #we can also perform same task with | operator :
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                print(setNum1  | setNum2)
+
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} #Duplicates are removed
+        
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} #Duplicates are removed
+        </pre>
+        </div>
+        
+        <!-- Set union() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Another Set union() method start --->
+        <H1><small>Set union() method with more than one sets</small></H1>
+        <div class ="program">
+        <pre>
+                 
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                setNum3={11,33,55}
+                setNum4={22,44}
+                print(setNum1.union(setNum2,setNum3,setNum4))
+                
+                
+                #we can also perform same task with | operator :
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                setNum3={11,33,55}
+                setNum4={22,44}
+                print(setNum1  | setNum2 | setNum3 | setNum4)
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 33, 11, 44, 22, 55} #Duplicates are removed
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 33, 11, 44, 22, 55} #Duplicates are removed
+        </pre>
+        </div>
+        
+        <!-- AnotherSet union() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Another Set union() method with chain start --->
+        <H1><small>Set union() method with more than one sets using chain rule.</small></H1>
+       
+        <div class ="program">
+        <pre>
+                #Set union() method with more than one sets using chain rule.
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                setNum3={11,33,55}
+                setNum4={22,44}
+                print(setNum1.union(setNum2).union(setNum3).union(setNum4))
+                
+                
+                #we can perform same task with string more than one sets using chain rule.
+                A = {'red', 'blue', 'white'}
+                B = {'red', 'green', 'black'}
+                C = {'pink', 'red', 'white', 'orange'}
+
+                union = A.union(B).union(C)
+                print(union)
+                
+                #we can also perform same task with | operator :
+                A = {'red', 'blue', 'white'}
+                B = {'red', 'green', 'black'}
+                C = {'pink', 'red', 'white', 'orange'}
+                print(A|B|C)
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+    {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 33, 11, 44, 22, 55} #Duplicates are removed
+    {'white', 'black', 'green', 'pink', 'blue', 'red', 'orange'} #Duplicates are removed
+    {'green', 'red', 'pink', 'white', 'orange', 'black', 'blue'} #Duplicates are removed
+        </pre>
+        </div>
+        
+        <!-- Another Set union() method with chain end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set union() method vs | operator start --->
+        <H1><small>Set union() method vs | operator</small></H1>
+        1. Set Operation With | operator Both operands must be sets.   
+        <br>
+        2. Set Operation With union() method will take any iterable as an input, convert it to a set, and then conduct the union.
+        
+         <div class="note">
+         Note: union () method input could be list, set, tuple as well as dictionary too but dictionary keys will combine not value.
+        </div>
+        <div class ="program">
+        <pre>
+                #Set and List using union() method
+                num = {1, 2, 3} #num is set
+                name = ['Anil', 'Mohan', 'Geeta'] #name is List
+                print(num.union(name)) #union of List and Set
+                
+                #Set and List using | operator
+                num = {1, 2, 3} #num is set
+                name = ['Anil', 'Mohan', 'Geeta'] #name is List
+                print(num | name ) #union of List and Set
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {1, 2, 3, 'Anil', 'Mohan', 'Geeta'} #Set and List using union() method
+        <br><br>
+        
+        Traceback (most recent call last):           #Error: Set and List using | operator
+        File "C:/Users/user/Desktop/1.py", line 3, in <module>
+        print(num | name ) #union of List and Set
+        TypeError: unsupported operand type(s) for |: 'set' and 'list'
+        </pre>
+        </div>
+        
+        <!-- Set union() method vs | operator end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+            
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Set intersection Method start --->
+        <H1><small>Set intersection Method</small></H1>
+            Set intersection method is used to determined the common items that resides in two or more sets
+        <div class ="program">
+        <pre>
+                #Set intersection() Method
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                print(setNum1.intersection(setNum2)) #will return comman record
+                
+                #we can also perform same task with & operator :
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                print(setNum1  & setNum2)   #will return comman record
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+       {3, 6, 7}
+       {3, 6, 7}
+        </pre>
+        </div>
+        
+        <!-- Set union() method vs | operator end --->        
+        <!-- ------------------------------------------------------------------------- -->
+            
+            
+            
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Another Set intersection() method start --->
+        <H1><small>Set intersection() method with more than one sets</small></H1>
+        <div class ="program">
+        <pre>
+                #Set intersection() method with more than one sets
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                setNum3={11,33,55,3}
+                setNum4={22,3,44}
+                print(setNum1.intersection(setNum2,setNum3,setNum4))
+
+
+                #we can also perform same task with & operator :
+                setNum1={1,3,6,5,7,1,9}
+                setNum2={2,4,3,6,8,7,10}
+                setNum3={11,33,55,3}
+                setNum4={22,3,44}
+                print(setNum1  & setNum2 & setNum3 & setNum4)
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        {3}
+        {3}
+        </pre>
+        </div>
+        
+        <!-- AnotherSet union() method end --->        
+        <!-- ------------------------------------------------------------------------- -->
+            
+            
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Another Set intersection() method with chain start --->
+        <H1><small>Set intersection() method with more than one sets using chain rule.</small></H1>
+        <div class ="program">
+        <pre>
+        #Set intersection() method with more than one sets using chain rule.
+        setNum1={1,3,6,5,7,1,9}
+        setNum2={2,4,3,6,8,7,10}
+        setNum3={11,33,55}
+        setNum4={22,44}
+        print(setNum1.intersection(setNum2).intersection.(setNum3).intersection(setNum4))
+                
+                
+        #we can perform same task with string more than one sets using chain rule.
+        A = {'red', 'blue', 'white'}
+        B = {'red', 'green', 'black'}
+        C = {'pink', 'red', 'white', 'orange'}
+
+        intersection = A.intersection(B).intersection(C)
+        print(intersection)
+                
+        #we can also perform same task with | operator :
+        A = {'red', 'blue', 'white'}
+        B = {'red', 'green', 'black'}
+        C = {'pink', 'red', 'white', 'orange'}
+        print(A&B&C)
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+                {3}
+                {'red'}
+                {'red'}
+        </pre>
+        </div>
+        
+        <!-- AnotherSet intersection() method with chain end --->        
+        <!-- ------------------------------------------------------------------------- -->
+         
+            
+            
+                <!-- ------------------------------------------------------------------------- -->
+        <!-- Set intersection() method vs & operator start --->
+        <H1><small>Set intersection() method vs & operator</small></H1>
+        1. Set Operation With & operator Both operands must be sets.   
+        <br>
+        2. Set Operation With intersection() method will take any iterable as an input, convert it to a set, and then conduct the union.
+        <div class ="program">
+        <pre>
+                #Set and List using intersection() method
+                num = {1, 2, 3} #num is set
+                name = ['Anil', 'Mohan', 'Geeta'] #name is List
+                print(num.intersection(name)) #intersection of List and Set
+                
+                #Set and List using & operator
+                num = {1, 2, 3} #num is set
+                name = ['Anil', 'Mohan', 'Geeta'] #name is List
+                print(num & name ) #intersection of List and Set
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+        set()
+        Traceback (most recent call last):         #Error: Set and List using & operator
+        File "C:/Users/user/Desktop/1.py", line 9, in <module>
+        print(num & name ) #intersection of List and Set
+        TypeError: unsupported operand type(s) for &: 'set' and 'list'
+
+        </pre>
+        </div>
+        
+        <!-- Set union() method vs | operator end --->        
+        <!-- ------------------------------------------------------------------------- -->
+            
+            
+            
+            
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
