@@ -1,0 +1,823 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Array</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Array</h2></dt></dfn>
+        <dd>Array is a collection of similar type of elements which have contiguous memory
+            allocation.</dd><br>
+        <dd>1. Array is based on indices [ indexes ].<br>
+            2. Array Can hold only homogeneous element. [homogeneous = similar type.]<br>
+            3. Array have a fixed Size.<br>
+            4. Array always start from 0 index.<br>
+            5. Array always Ends with n-1 index;<br>
+            6. n is a size of an array.</dd>
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+            <b><h5>Type of an Array</h5></b>
+            1. One Dimensional array Or linear Array OR vector<br>
+            2. MultiDimensional array Or matrix OR Two Dimentional<br><br>
+            <b><h5>Declaration of one Dimensional array</h5></b>
+            DataType variableName[size];<br>
+            int marks[5];<br>
+            float marks[6];<br>
+            char name [30];<br><br>
+            <b><h5>Declaration of Two Dimensional array</h5></b>
+            DataType variableName[row][column];<br>
+            int marks[3][3];<br>
+            float marks[2][3];<br>
+            char name [3][2];<br> <br>
+            [0] = Starting Index<br>
+            [4] = end Index<br>
+            12  = value at index [1]<br>
+            5   = size of an array.
+        </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" style="border: none; outline: none;" readonly >
+  #include<stdio.h>
+
+  void main()
+  {
+    int i;
+    int marks[5]={11,12,13,14,15}; // Declaration as well as Assignment
+    // we can retrieve it using loop
+    for(i=0;i<5;i++)
+    {
+      printf("%d\n",marks[i]);
+    }
+  
+  }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              11
+              12
+              13
+              14
+              15
+              
+              --------------------------------
+              Process exited after 0.03378 seconds with return value 3
+              Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="29" readonly>
+    #include<stdio.h>
+    void main()
+    {
+      int i;
+      // Declaration
+      int marks[5];   
+      //Assignment
+      marks[0]=11;
+      marks[1]=12;
+      marks[2]=13;
+      marks[3]=14;
+      marks[4]=15;
+      
+      marks[5]=16; // To Test purpose only
+      // we can retrieve it using loop
+      for(i=0;i<5;++i)
+      //for(i=0;i<6;i++)
+    // if you try to access extra element
+    //than array size it will give garbage value.
+      {
+        printf("%d\n",marks[i]);
+      }
+    
+    }
+      
+      
+    
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+          11
+          12
+          13
+          14
+          15
+          
+          --------------------------------
+          Process exited after 0.03869 seconds with return value 3
+          Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="27" readonly>
+    #include<stdio.h>
+
+    void main()
+    {
+      int i,size;
+      int marks[50]; // Declaration
+      printf("Enter the size of an array :\n ");
+      scanf("%d",&size);
+      printf("Enter the %d elements :\n",size);
+      for(i=0;i<size;++i)
+      {
+        scanf("%d",&marks[i]);
+      }
+      
+      printf("\n\nThe Values Entered By You :\n");
+      // we can retrieve it using loop
+      for(i=0;i<size;++i)
+      {
+        printf("%d\n",marks[i]);
+      }
+    
+    }             
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+             Enter the size of an array :
+             2
+             Enter the 2 elements :
+             12
+             50
+             
+             
+             The Values Entered By You :
+             12
+             50
+             
+             --------------------------------
+             Process exited after 6.296 seconds with return value 2
+             Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+          <div class="note">
+            <dd>Two Dimensional Array</dd>
+          </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="22" readonly>
+    #include<stdio.h>
+    int main()
+    {
+      // printf("%d ", *(arr + (i*cols) + j)) 
+      // for pointer memory calculation[col=like 3]
+      //1234 +(0*4*3)+0*4 => First Element [Here 4 is Datatype]
+      int i,j,arr[3][3]={{1,2,13},{14,5,116},{7,8,15}};
+      // retrive two Dimentional array
+      for( i=0;i<3;i++)
+      {
+        for( j=0;j<3;j++)
+        {
+          printf("%d \t",arr[i][j]);
+         // printf("%x \t",arr[i][j]);
+          
+        }
+        printf("\n");
+      }
+    }         
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              1       2       13
+              14      5       116
+              7       8       15
+              
+              --------------------------------
+              Process exited after 0.04745 seconds with return value 10
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="24" readonly>
+    #include<stdio.h>
+    int main()
+    {
+    int i,j,size,vir[3][3];
+    printf("Enter the size of an  array: ");
+    scanf("%d",&size);
+    printf("Enter the %d elements :\n",size*size);
+    for( i=0;i<size;i++)//row
+    {
+    for( j=0;j<size;j++)//column
+    { 
+    scanf("%d",&vir[i][j]);
+    }
+    }
+    
+    printf("Output\n");
+    for( i=0;i<size;i++)//row
+    {
+    for( j=0;j<size;j++)//column
+    {printf(" %d \t",vir[i][j]);}
+    printf("\n");
+    }
+    }
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              Enter the size of an  array: 2
+              Enter the 4 elements :
+              10
+              30
+              65
+              67
+              Output
+               10      30
+               65      67
+              
+              --------------------------------
+              Process exited after 13.98 seconds with return value 2
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6     
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="26" readonly>
+    #include<stdio.h>
+    int main()
+    {
+    int i,j,size,vir[3][3];
+    printf("Enter the size of an  array: ");
+    scanf("%d",&size);
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+     scanf("%d",&vir[i][j]);
+    }
+    }
+    
+    printf("Transpose is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {printf(" %d \t",vir[j][i]);
+    }
+    printf("\n");
+    }
+    }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter the size of an  array: 3
+          65
+          45
+          23
+          23
+          45
+          67
+          54
+          23
+          32
+          Transpose is
+           65      23      54
+           45      45      23
+           23      67      32
+          
+          --------------------------------
+          Process exited after 18.48 seconds with return value 3
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="46" readonly>
+    #include<stdio.h>
+    int main()
+    {
+    int i,j,size,vir[3][3], vir1 [3][3];
+    printf("Enter the size of an  array: ");
+    scanf("%d",&size);
+    printf("enter the element for the first matrix \n");
+    for( i=0;i<size;i++)//row
+      {
+    
+       for( j=0;j<size;j++)//column
+        {
+          scanf("%d",&vir[i][j]);
+        }
+        }
+      printf("enter the element for the second matrix \n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+     scanf("%d",&vir1 [i][j]);
+    }
+    }
+    
+    printf("The matrix 1 is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {printf(" %d \t",vir[i][j]);
+    }
+    printf("\n");
+    }
+    printf("The matrix 2 is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+    printf(" %d \t",vir1[i][j]);
+    }
+    printf("\n");
+    }
+    }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter the size of an  array: 2
+          enter the element for the first matrix
+          1
+          2
+          3
+          4
+          enter the element for the second matrix
+          23
+          45
+          67
+          89
+          The matrix 1 is
+           1       2
+           3       4
+          The matrix 2 is
+           23      45
+           67      89
+          
+          --------------------------------
+          Process exited after 18.47 seconds with return value 2
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="64" readonly>
+    #include<stdio.h>
+    int main()
+    {
+    int i,j,size,vir[3][3], vir1 [3][3],vir2[3][3];
+    printf("Enter the size of an  array: ");
+    scanf("%d",&size);
+    printf("enter the element for the first matrix \n");
+    for( i=0;i<size;i++)//row
+      {
+    
+       for( j=0;j<size;j++)//column
+        {
+          scanf("%d",&vir[i][j]);
+        }
+        }
+      printf("enter the element for the second matrix \n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+     scanf("%d",&vir1 [i][j]);
+    }
+    }
+    
+    printf("The matrix 1 is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {printf(" %d \t",vir[i][j]);
+    }
+    printf("\n");
+    }
+    printf("The matrix 2 is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+    printf(" %d \t",vir1[i][j]);
+    }
+    printf("\n");
+    }
+    
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {
+    vir2[i][j]=vir[i][j]+vir1[i][j];
+    }
+    }
+    printf("The sum is\n");
+    for( i=0;i<size;i++)//row
+    {
+    
+    for( j=0;j<size;j++)//column
+    {printf(" %d \t",vir2[i][j]);
+    }
+    printf("\n");
+    }
+    }
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter the size of an  array: 2
+          enter the element for the first matrix
+          10
+          20
+          30
+          40
+          enter the element for the second matrix
+          100
+          200
+          300
+          400
+          The matrix 1 is
+           10      20
+           30      40
+          The matrix 2 is
+           100     200
+           300     400
+          The sum is
+           110     220
+           330     440
+          
+          --------------------------------
+          Process exited after 26.59 seconds with return value 2
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 9 start --->
+          Example:9   
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="69" readonly>
+    #include <stdio.h>
+
+    #define SIZE 3 // Size of the matrix
+    
+    int main()
+    {
+        int A[SIZE][SIZE]; // Matrix 1 
+        int B[SIZE][SIZE]; // Matrix 2
+        int C[SIZE][SIZE]; // Resultant matrix
+        
+        int row, col, i, sum;
+    
+    
+        /* Input elements in first matrix from user */
+        printf("Enter elements in matrix A of size %dx%d: \n", SIZE, SIZE);
+        for(row=0; row<SIZE; row++)
+        {
+            for(col=0; col<SIZE; col++)
+            {
+                scanf("%d", &A[row][col]);
+            }
+        }
+    
+        /* Input elements in second matrix from user */
+        printf("\nEnter elements in matrix B of size %dx%d: \n", SIZE, SIZE);
+        for(row=0; row<SIZE; row++)
+        {
+            for(col=0; col<SIZE; col++)
+            {
+                scanf("%d", &B[row][col]);
+            }
+        }
+    
+        /*
+         * Multiply both matrices A*B
+         */
+        for(row=0; row<SIZE; row++)
+        {
+            for(col=0; col<SIZE; col++)
+            {
+                sum = 0;
+                /*
+                 * Multiply row of first matrix to column of second matrix
+                 * and store sum of product of elements in sum.
+                 */
+                for(i=0; i<SIZE; i++)
+                {
+                    sum += A[row][i] * B[i][col];
+                }
+    
+                C[row][col] = sum;
+            }
+        }
+    
+        /* Print product of the matrices */
+        printf("\nProduct of matrix A * B = \n");
+        for(row=0; row<SIZE; row++)
+        {
+            for(col=0; col<SIZE; col++)
+            {
+                printf("%d ", C[row][col]);
+            }
+            printf("\n");
+        }
+    
+        return 0;
+    }
+    
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter elements in matrix A of size 3x3:
+          1
+          2
+          3
+          4
+          5
+          6
+          7
+          8
+          9
+          
+          Enter elements in matrix B of size 3x3:
+          10
+          20
+          30
+          40
+          50
+          60
+          70
+          80
+          90
+          
+          Product of matrix A * B =
+          300 360 420
+          660 810 960
+          1020 1260 1500
+          
+          --------------------------------
+          Process exited after 17.9 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

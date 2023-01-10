@@ -1,0 +1,599 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>C</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>C</h2></dt></dfn>
+        <dd>The C programming language is a procedural and general-purpose language that provides low-level access to system memory.
+             A program written in C must be run through a C compiler to convert it into an executable that a computer can run.</dd><br>
+    
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+         <b>Representation of Comments</b><br><br>
+            
+             1. Single line<br>
+             2. multi  line
+        
+        </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="31" style="border: none; outline: none;" readonly >
+         #include<stdio.h>
+        /*
+         header file
+         stdio - standered input output.
+         h   - extension for header file.
+         stdio.h -- file name
+         #include -- pre processor.
+        
+         #include<conio.h>
+         conio -- console input output
+         conio.h -- file name
+        
+        */
+        // main function-- from where program get started.
+        // void -- is a retrun type // void tell no need to return
+        // main -- name of the function every function should have unique name.
+        // ()   -- representation of the function. OR parameters
+        // {}   -- Body of the function or scop of the function.
+        void main(void)
+        {
+            printf("Hello student.");
+             // Function calling -- this function in stdio.h
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Hello student.
+                --------------------------------
+                Process exited after 0.03923 seconds with return value 14
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+        <div class="note">
+
+        <b><h5>Some Required symboles</h5></b>
+        1. %d 		integer<br>
+        2. %c 		character<br>
+        3. %f		float<br>
+        4. %s		String<br>
+        5. %u		unsigned<br>
+        6. %x		hexa decimal<br>
+        7. %0   	Octadecimal<br><br>
+        <b><h5>Some string symboles</h5></b>
+        1. \n  	    Next Line<br>
+        2. \t		Horizantal Tab<br>
+        3. \v 		vertical Tab<br>
+        4. \'		For single quote<br>
+        5. \" 		double quotes<br>
+        6. \\		for backslash<br>
+        7. \f		form fill<br>
+           etc<br><br>
+        <b><h5>Variables</h5></b>
+        is the name of the space which is alocated into the memory.<br>
+           OR<br>
+        is a container which hold a specific value.<br>
+           OR<br>
+        is that whose value may vary with in a program.<br>
+        <br>
+        <b><h5>Type of variable</h5></b>
+        1. global variable -- The variable which is declared  outside any function.<br>
+        2. local variable --  The variable which is declared in side a specific function.<br>
+        3. static variable -- The variable which is declared as static know as static variable.
+            it get's memory only once.<br>
+        4. constant variable -- whose value never change.<br>
+        <br>
+        <b><h5>Declaration of a variable</h5></b>
+        DataType variableName ;<br>
+        int x; // 4 bytes<br>
+        float y; // 4 bytes<br>
+        char z; //2 bytes<br>
+        long l;  // 8 bytes<br>
+        double d; // 8 bytes<br>
+            etc;<br><br>
+        <b><h5>Declaration of the multiple variable </h5></b>
+        DataType v1, v2,v3,..... vn;<br>
+        int x,y,z,.....n;<br><br>
+
+        <b><h5>Assignment of a Variable</h5></b>
+        variable = value;<br>
+        x=5;<br>
+        y=5.5;<br>
+        z='A'<br>
+        l=10000000000;<br>
+        d=222222222.3333333333;<br>
+        ==== Multiple assignment ====<br>
+        v1=v2=v3=vn;<br>
+        v1=v2=v3=5;<br><br>
+
+        <b><h5>Data Type</h5></b>
+        Every type of data have associated with a specific type that is know as Data Type.<br>
+        1. pre- defined :  short,int, float ,char ,long, double, etc.<br>
+        2. User -defined: arry, enum, stuct, union etc.
+        
+
+        </div>
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="14" readonly>
+        #include<stdio.h>
+        //#include<conio.h>
+        void main()
+        {
+            int x; // Variable Declaration // 4 bytes
+            int y,sum;//  Multiple variable Declaration
+            x=5;// Assignment
+            y=6;
+            sum = x+y;
+            printf(" The sum is : %d",sum);
+            //getch(); // get charactor
+        }
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            The sum is : 11
+            --------------------------------
+            Process exited after 0.04182 seconds with return value 16
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="16" readonly>
+    // use of float
+    #include<stdio.h>
+    //#include<conio.h>
+    void main()
+    {
+        float x=5.5;
+        float y=6.0;
+        int test;
+        float sum =x+y;
+        printf(" The sum is: %f ",sum);
+        //test=sum;// 0.0 if use %f // implicit casting
+        test=(int)sum; // Explicit casting. // 11
+        printf("\n After Conversion : %d",test);
+        //getch();
+    }     
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                The sum is: 11.500000
+                After Conversion : 11
+               --------------------------------
+               Process exited after 0.04312 seconds with return value 23
+               Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="14" readonly>
+    // Charater Conversion
+    #include<stdio.h>
+    
+    void main()
+    {   int x; // we can declare variable on top only in c language.
+        char c;// declaration
+        c='B';
+        printf("The Charactor is : %c",c);
+        // Casting
+        x =c;
+        printf("\nAfter conversion : %d",x);
+    
+    }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                The Charactor is : B
+                After conversion : 66
+                --------------------------------
+                Process exited after 0.03579 seconds with return value 22
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="13" readonly>
+        #include<stdio.h>
+        // How to get value from Keyboard At Runtime
+        void main()
+        {
+            int a,b,c;
+            printf("enter two integer nos.");
+            scanf("%d %d",&a,&b);// to read from keyboard
+            c=a+b;
+            printf("The sum is : %d",c);
+        
+        }
+        
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                enter two integer no.12
+                15
+                The sum is : 27
+                --------------------------------
+                Process exited after 7.532 seconds with return value 15
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6   
+          
+          <dd><b>Control structure -- is a technique in which a computer
+            takes decision itself for next step.</b><br><br>
+           
+                Way for control the program<br>
+            1. if  --- is a keyword which is execute<br>
+             when the condition is true.<br><br>
+           
+            2. if else -  is a technique in which if condition is<br>
+                true than if will execute otherwise else will execute.<br><br>
+           
+            3. else if  - is a technique in which if condition become<br>
+                false then else if will execute to check for
+                next condition.<br><br>
+           
+            4. nested if -- one if inside another if know as nested if.</dd>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="18" readonly>
+        #include<stdio.h>
+        // #include<conio.h>
+         void main()
+         {
+             int x;// declaration
+             printf("Enter the value of x :\n");
+             scanf("%d",&x); // &x - its represent address of a variable x.
+             if(x<0)
+             {
+                 printf("Negative Number.");
+             }
+        
+             if(x>=0)
+             {
+                 printf("Positive Number");
+             }
+         }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Enter the value of x :
+            12
+            Positive Number
+            --------------------------------
+            Process exited after 0.8577 seconds with return value 15
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="18" readonly>
+        #include<stdio.h>
+        // #include<conio.h>
+         void main()
+         {
+             int x;// declaration
+             printf("Enter the value of x :\n");
+             scanf("%d",&x); 
+             // &x - its represent address of a variable x.
+             if(x<0)
+             {
+                 printf("Nagetive Number.");
+             }
+             else
+             {
+                 printf("Positive Number");
+             }
+         }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Enter the value of x :
+            -10
+            Nagetive Number.
+            --------------------------------
+            Process exited after 1.772 seconds with return value 16
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+          <b><h5> write a program to calculate grade system</h5></b>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="33" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int a,b,c,big;// multiple variable declaration
+            printf("Enter the value of a, b and c :\n");
+            scanf("%d%d%d",&a,&b,&c);
+            //printf("%d",a>b);
+            if(a>b)
+            {
+                if(a>c)
+                {
+                    big=a;
+                }
+                else
+                {
+                    big=c;
+                }
+            }
+            else
+            {
+               if(b>c)
+               {
+                    big=b;
+               }
+               else
+               {
+                   big=c;
+               }
+            }
+            printf("The Large one is : %d",big);
+        }
+           
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Enter the value of a, b and c :
+            35
+            40
+            20
+            The Large one is : 40
+            --------------------------------
+            Process exited after 10.2 seconds with return value 21
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

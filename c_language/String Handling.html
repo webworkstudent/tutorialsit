@@ -1,0 +1,642 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Strcpy() Function</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Strcpy() Function</h2></dt></dfn>
+        <dd>The strcpy() function copies the string to the another character array.</dd><br>
+    
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        <h5>Example:1</h5>
+       
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="17" style="border: none; outline: none;" readonly >
+        #include <stdio.h>
+        #include <string.h>
+        
+        int main()
+        {
+            char str1[10]= "awesome";
+            char str2[10];
+            char str3[10];
+        
+            strcpy(str2, str1);
+            strcpy(str3, "well");
+            puts(str2);
+            puts(str3);
+        
+            return 0;
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                awesome
+                well
+                
+                --------------------------------
+                Process exited after 0.03882 seconds with return value 0
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        <h5>Example:2</h5>
+        <b><h5>C strcmp()</h5></b>
+        The strcmp() function compares two strings and returns 0 if both strings are identical.<br><br>
+        The strcmp() compares two strings character by character. If the first character of two
+        strings are equal, next character of two strings are compared. This continues until the
+        corresponding characters of two strings are different or a null character '\0' is reached.<br><br>
+        It is defined in string.h header file.<br><br>  
+        Return Value from strcmp()<br>
+        Return Value--------Remarks<br>
+        0-------------------if both strings are identical (equal)<br>
+        negative------------if the ASCII value of first unmatched character is less than second.<br>
+        positive integer----if the ASCII value of first unmatched character is greater than second.
+
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="20" readonly>
+        #include <stdio.h>
+        #include <string.h>
+
+        int main()
+        {
+            char str1[] = "abcd", str2[] = "abCd", str3[] = "abcd";
+            int result;
+
+            // comparing strings str1 and str2
+            result = strcmp(str1, str2);
+            printf("strcmp(str1, str2) = %d\n", result);
+
+            // comparing strings str1 and str3
+            result = strcmp(str1, str3);
+            printf("strcmp(str1, str3) = %d\n", result);
+
+            return 0;
+        }
+
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            strcmp(str1, str2) = 1
+            strcmp(str1, str3) = 0
+            
+            --------------------------------
+            Process exited after 0.04601 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          <h5>Example:3</h5>
+          <b><h5>The strcpy() function copies the string to the another character array.</h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="17" readonly>
+        #include <stdio.h>
+        #include <string.h>
+        
+        int main()
+        {
+            char str1[10]= "awesome";
+            char str2[10];
+            char str3[10];
+        
+            strcpy(str2, str1);
+            strcpy(str3, "well");
+            puts(str2);
+            puts(str3);
+        
+            return 0;
+        }  
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                awesome
+                well
+                
+                --------------------------------
+                Process exited after 0.04117 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          <h5>Example:4</h5>
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" readonly>
+        #include <stdio.h>
+        #include <string.h>
+        #include <errno.h>
+        
+        int main () {
+           FILE *fp;
+        
+           fp = fopen("file.txt","r");
+           if( fp == NULL ) {
+              printf("Error: %s\n", strerror(errno));
+           }
+        
+           return(0);
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Error: No such file or directory
+
+                --------------------------------
+                Process exited after 0.04267 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          <h5>Example:5</h5>
+          <b><h5>The strlen() function calculates the length of a given string.</h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="21" readonly>
+        #include <stdio.h>
+        #include <string.h>
+        int main()
+        {
+            char a[20]="Program";
+            char b[20]={'P','r','o','g','r','a','m','\0'};
+            char c[20];
+    
+            printf("Enter string: ");
+            gets(c);
+    
+            printf("Length of string a = %d \n",strlen(a));
+    
+            //calculates the length of string before null character.
+            printf("Length of string b = %d \n",strlen(b));
+            printf("Length of string c = %d \n",strlen(c));
+    
+            return 0;
+        }
+        
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Enter string: a
+                Length of string a = 7
+                Length of string b = 7
+                Length of string c = 1
+                
+                --------------------------------
+                Process exited after 3.069 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          <h5>Example:6</h5>
+          <h5><b>The function strcat() concatenates two strings.</b></h5> 
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="18" readonly>
+        #include <stdio.h>
+        #include <string.h>
+        int main()
+        {
+            char str1[] = "This is ", str2[] = "string concatenation.";
+            //concatenates str1 and str2 and resultant string is stored in str1.
+            strcat(str1,str2);
+            puts(str1);
+            puts(str2);
+            return 0;
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            This is string concatenation.
+            string concatenation.
+            
+            --------------------------------
+            Process exited after 0.3721 seconds with return value 3221225477
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          <h5>Example:7</h5>
+          <b><h5>This example demonstrates the difference between &strcmp.
+            and &strncmp</h5></b>    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="34" readonly>
+        #include <stdio.h>
+        #include <string.h>
+    
+        #define SIZE 10
+    
+        int index1 = 3;
+    
+        int main(void)
+        {
+          int  result;
+          char buffer1[SIZE] = "abcdefg";
+          char buffer2[SIZE] = "abcfg";
+          void print_result( int, char *, char * );
+    
+          result = strcmp( buffer1, buffer2 );
+          printf( "  strcmp: compares each character\n");
+          print_result( result, buffer1, buffer2 );
+    
+          result = strncmp( buffer1, buffer2, index1);
+          printf( "\nstrncmp: compares only the first %i characters\n", index1 );
+          print_result( result, buffer1, buffer2 );
+        }
+    
+        void print_result( int res, char * p_buffer1, char * p_buffer2 )
+        {
+          if ( res == 0 )
+            printf( "first %i characters of \"%s\" is identical to \"%s\"\n",
+                     index1,  p_buffer1, p_buffer2);
+          else if ( res < 0 )
+            printf( "\"%s\" is less than \"%s\"\n", p_buffer1, p_buffer2 );
+          else
+            printf( "\"%s\" is greater than \"%s\"\n", p_buffer1, p_buffer2 );
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            strcmp: compares each character
+            "abcdefg" is less than "abcfg"
+            
+            strncmp: compares only the first 3 characters
+            first 3 characters of "abcdefg" is identical to "abcfg"
+            
+            --------------------------------
+            Process exited after 0.05153 seconds with return value 56
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          <h5>Example:8</h5>   
+          <b><h5>Program to concat string using strcat() function.</h5></b>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="15" readonly>
+        #include<stdio.h>
+        #include<string.h>
+        int main()
+        {
+            char name[50];
+            strcpy(name,"String");
+            strcat(name," ");
+            strcat(name,"Computer");
+            strcat(name," ");
+            strcat(name,"Education");
+            printf("\n The String is = %s",name);
+            return 0;
+        }
+           
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            The String is = String Computer Education
+            --------------------------------
+            Process exited after 0.03716 seconds with return value 0
+            Press any key to continue . . .            
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 9 start --->
+        <h5>Example:9</h5>   
+        <b><h5>This example demonstrates the difference between &strcpy.
+            and &strncpy.</h5></b>
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="26" readonly>
+        #include <stdio.h>
+        #include <string.h>
+    
+        #define SIZE    40
+    
+        int main(void)
+        {
+          char source[ SIZE ] = "123456789";
+          char source1[ SIZE ] = "123456789";
+          char destination[ SIZE ] = "abcdefg";
+          char destination1[ SIZE ] = "abcdefg";
+          char * return_string;
+          int    index = 5;
+    
+          /* This is how strcpy works */
+          printf( "destination is originally = '%s'\n", destination );
+          return_string = strcpy( destination, source );
+          printf( "After strcpy, destination becomes '%s'\n\n", destination );
+    
+    
+          /* This is how strncpy works */
+          printf( "destination1 is originally = '%s'\n", destination1 );
+          return_string = strncpy( destination1, source1, index );
+          printf( "After strncpy, destination1 becomes '%s'\n", destination1 );
+        } 
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        destination is originally = 'abcdefg'
+        After strcpy, destination becomes '123456789'
+        
+        destination1 is originally = 'abcdefg'
+        After strncpy, destination1 becomes '12345fg'
+        
+        --------------------------------
+        Process exited after 0.05235 seconds with return value 46
+        Press any key to continue . . .           
+      </pre>
+      </div>
+      
+      <!-- Example 9 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+      
+     <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 10 start --->
+        <h5>Example:10</h5>   
+        <b><h5> Declaration of Global variable as static have no effect.</b></h5>
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="14" readonly>
+      
+        #include<stdio.h>
+        static
+         int z=0;
+
+        void counter()
+        {
+            printf("%d\n",z);
+            z++;
+        }
+
+
+        int main()
+        {
+            counter();
+            counter();
+            counter();
+        }
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        The first occurrence of any of the characters "ab" in "A Blue Danube" is "anube"
+
+        --------------------------------
+        Process exited after 0.04989 seconds with return value 81
+        Press any key to continue . . .          
+      </pre>
+      </div>
+      
+      <!-- Example 10 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

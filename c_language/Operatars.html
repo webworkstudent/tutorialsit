@@ -1,0 +1,609 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Operators </a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Operators </h2></dt></dfn>
+        <dd>C operators are symbols that are used to perform mathematical or logical manipulations.</dd><br>
+    
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+            <h4>Type of operator:</h4>
+            •	Arithmetic Operators<br>
+            •	Relational Operators<br>
+            •	Logical Operators<br>
+            •	Assignment Operators<br>
+            •	Increment and Decrement Operators<br>
+            •	Conditional Operator<br>
+            •	Bitwise Operators<br>
+            •	Special Operators<br>
+            •	comma operator
+            
+        
+        </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="10" style="border: none; outline: none;" readonly >
+         #include <stdio.h>
+        void main()
+        {
+         int i=3,j=7,k;
+          /* Variables Defining and Assign values */
+         k=i+j;
+         printf("Sum of two numbers is : %d\n", k);
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Sum of two numbers is : 10
+
+                --------------------------------
+                Process exited after 0.04763 seconds with return value 27
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2<br>
+        <b>C program to demonstrate working of binary arithmetic operators</b>
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="29" readonly>
+         #include<stdio.h>
+
+        int main()
+        {
+            int a = 10, b = 4, res;
+        
+            //printing a and b
+            printf("a is %d and b is %d\n", a, b);
+        
+            res = a+b; //addition
+            printf("a+b is %d\n", res);
+        
+            res = a-b; //subtraction
+            printf("a-b is %d\n", res);
+        
+            res = a*b; //multiplication
+            printf("a*b is %d\n", res);
+        
+            res = a/b; //division
+            printf("a/b is %d\n", res);
+        
+            res = a%b; //modulus
+            printf("a%b is %d\n", res);
+        
+            return 0;
+        }
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            a is 10 and b is 4
+            a+b is 14
+            a-b is 6
+            a*b is 40
+            a/b is 2
+            ab is 2
+            
+            --------------------------------
+            Process exited after 0.04341 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3<br>
+          <b>C program to demonstrate working of Unary arithmetic operators.</b>
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="35" readonly>
+        #include<stdio.h>
+
+        int main()
+        {
+            int a = 10, b = 4, res;
+        
+            // post-increment example:
+            // res is assigned 10 only, a is not updated yet
+            res = a++;
+            printf("a is %d and res is %d\n", a, res); 
+            //a becomes 11 now
+        
+        
+           // post-decrement example:
+           // res is assigned 11 only, a is not updated yet
+            res = a--;
+            printf("a is %d and res is %d\n", a, res);  
+            //a becomes 10 now
+            // pre-increment example:
+            // res is assigned 11 now since a is updated here itself
+            res = ++a;
+           // a and res have same values = 11
+            printf("a is %d and res is %d\n", a, res);
+            
+           // pre-decrement example:
+           // res is assigned 10 only since a is updated here itself
+             res = --a;
+           // a and res have same values = 10
+             printf("a is %d and res is %d\n",a,res);
+        
+            return 0;
+        }
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                a is 11 and res is 10
+                a is 10 and res is 11
+                a is 11 and res is 11
+                a is 10 and res is 10
+                
+                --------------------------------
+                Process exited after 0.04089 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4<br>
+          <b>C program to demonstrate working of relational operators.</b>
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="47" readonly>
+         #include <stdio.h>
+
+        int main()
+        {
+            int a=10, b=4;
+    
+            // relational operators
+            // greater than example
+            if (a > b)
+            printf("A is greater than B\n");
+            else
+            printf("A is less than or equal to B\n");
+    
+            // greater than equal to
+            if (a >= b)
+            printf("A is greater than or equal to B\n");
+            else
+            printf("A is lesser than B\n");
+    
+            // less than example
+            if (a < b)
+            printf("A is less than B\n");
+            else
+            printf("A is greater than or equal to B\n");
+    
+            // lesser than equal to
+            if (a <= b)
+            printf("A is lesser than or equal to B\n");
+            else
+            printf("A is greater than B\n");
+    
+            // equal to
+            if (a == b)
+            printf("A is equal to B\n");
+            else
+            printf("A and B are not equal\n");
+    
+            // not equal to
+            if (a != b)
+            printf("A is not equal to B\n");
+            else
+            printf("A is equal B\n");
+    
+            return 0;
+        
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                A is greater than B
+                A is greater than or equal to B
+                A is greater than or equal to B
+                A is greater than B
+                A and B are not equal
+                A is not equal to B
+                
+                --------------------------------
+                Process exited after 0.04566 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+          <br>
+          <b>C program to demonstrate working of logical operators.</b>
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="28" readonly>
+        #include <stdio.h>
+        int main()
+        {
+            int a=10, b=4, c = 10, d = 20;
+            // logical operators
+    
+            // logical AND example
+            if (a>b && c==d)
+            printf("A is greater than B AND C is equal to D\n");
+            else
+            printf("AND condition not satisfied\n");
+    
+            // logical OR example
+            if (a>b || c==d)
+            printf("A is greater than B OR C is equal to D\n");
+            else
+            printf("Neither A is greater than B nor C is equal "  " to D\n");
+    
+            // logical NOT example
+            if (!a)
+            printf("A is zero\n");
+            else
+            printf("A is not zero");
+    
+            return 0;
+        }
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                AND condition not satisfied
+                A is greater than B OR C is equal to D
+                A is not zero
+                --------------------------------
+                Process exited after 0.0457 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6 <br>
+          <b>Short-Circuiting in Logical Operators:<br>
+            In case of logical AND, the second operand is not evaluated
+            if first operand is false. For example, program 1 below doesnâ€™t
+            print â€œShort-Circuiting in Logical Operatorsâ€ as the first operand
+            of logical AND itself is false.</b>  
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="9" readonly>
+         #include <stdio.h>
+        #include <stdbool.h>
+        int main()
+        {
+            int a=10, b=4;
+            bool res = ((a == b) && printf("Short-Circuiting in Logical Operators"));
+            return 0;
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+
+            --------------------------------
+            Process exited after 0.03993 seconds with return value 0
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7 <br>
+          <b>But below program prints â€œLogical AND Operatorâ€ as first operand of logical</b><br>
+          <b>AND is true.</b>
+    
+        <div class ="program">
+        <pre>
+<textarea id="text"  rows="9" readonly>
+        #include <stdio.h>
+        #include <stdbool.h>
+        int main()
+        {
+            int a=10, b=4;
+            bool res = ((a != b) && printf("Logical AND Operator"));
+            return 0;
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Logical AND Operator
+            --------------------------------
+            Process exited after 0.03442 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8<br>
+          <b>In case of logical OR, the second operand is not evaluated<br>
+            if first operand is true. For example, program 1 below
+            doesnâ€™t print â€œLogical AND Operatorâ€ as the first operand of logical
+            OR itself is true.</b>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="9" readonly>
+         #include <stdio.h>
+        #include <stdbool.h>
+        int main()
+        {
+            int a=10, b=4;
+            bool res = ((a != b) || printf("Logical AND Operator"));
+            return 0;
+        
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+
+            --------------------------------
+            Process exited after 0.06589 seconds with return value 0
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- Example 9 start --->
+        Example:9<br>
+        <b>But below program prints Logical Operator as first operand of logical OR is false.</b>
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="10" readonly>
+         #include <stdio.h>
+        #include <stdbool.h>
+        int main()
+        {
+            int a=10, b=4;
+            bool res = ((a == b) || printf("Logical Operator"));
+            return 0;
+        }
+      
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        Logical Operator
+        --------------------------------
+        Process exited after 0.04 seconds with return value 0
+        Press any key to continue . . .
+          
+      </pre>
+      </div>
+      
+      <!-- Example 9 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
+      
+      
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

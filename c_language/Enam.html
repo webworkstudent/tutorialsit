@@ -1,0 +1,373 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Enumeration (or enum) </a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Enumeration (or enum) </h2></dt></dfn>
+        <dd>Enumeration (or enum) is a user defined data type in C. It is mainly used to assign names to integral constants,
+        the names make a program easy to read and maintain.</dd><br>
+    
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1<br>
+        <b>An example program to demonstrate working</b>
+        
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="12" style="border: none; outline: none;" readonly >
+#include<stdio.h>
+
+enum week{Mon, Tue, Wed, Thur, Fri, Sat, Sun};
+
+int main()
+{
+    enum week day;
+    day = Wed;
+    printf("%d",day);
+    return 0;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+                    <pre>
+                        2
+                        --------------------------------
+                        Process exited after 0.03745 seconds with return value 0
+                        Press any key to continue . . .       
+                    </pre>    
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+        <br>
+        <b>Another example program to demonstrate working OR of enum in C</b>
+        
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="15" readonly>
+         #include<stdio.h>
+
+        enum year{Jan, Feb, Mar, Apr, May, Jun, Jul,
+                Aug, Sep, Oct, Nov, Dec};
+        
+        int main()
+        {
+        int i;
+        for (i=Jan; i<=Dec; i++)
+            printf("%d ", i);
+        
+        return 0;
+        }
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            0 1 2 3 4 5 6 7 8 9 10 11
+            --------------------------------
+            Process exited after 0.04998 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3<br>
+          <b>Interesting facts about initialization of enum. </b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="10" readonly>
+         #include <stdio.h>
+        enum State {Working = 1, Failed = 0, Freezed = 0};
+        
+        int main()
+        {
+        printf("%d, %d, %d", Working, Failed, Freezed);
+        return 0;
+        }
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                1, 0, 0
+                --------------------------------
+                Process exited after 0.03936 seconds with return value 0
+                Press any key to continue . . .
+                
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4<br>
+          <b>If we do not explicitly assign values to enum names, the compiler by default assigns values starting from 0.
+            For example, in the following C program, sunday gets value 0, monday gets 1, and so on.</b>
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="14" readonly>
+        #include <stdio.h>
+        enum day {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+        
+        int main()
+        {
+            enum day d = thursday;
+            printf("The day number stored in d is %d", d);
+            return 0;
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                The day number stored in d is 4
+                --------------------------------
+                Process exited after 0.04111 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5<br>
+        <b>We can assign values to some name in any order. All unassigned names get value as value of previous name plus one.</b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="10" readonly>
+         #include <stdio.h>
+        enum day {sunday = 1, monday, tuesday = 5,
+                wednesday, thursday = 10, friday, saturday};
+        
+        int main()
+        {
+            printf("%d %d %d %d %d %d %d", sunday, monday, tuesday,
+                    wednesday, thursday, friday, saturday);
+            return 0;
+        }
+        
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                1 2 5 6 10 11 12
+                --------------------------------
+                Process exited after 0.04021 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6 <br> 
+          <b>The value assigned to enum names must be some integeral constant, i.e.,
+            the value must be in range from minimum possible integer value to maximum possible integer value.</b><br>
+        <b>All enum constants must be unique in their scope. For example, the following program fails in compilation.</b>
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="5" readonly>
+    enum state {working, failed};
+    enum result {failed, passed};
+    
+    int main() { return 0; }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Compile Failed
+
+            --------------------------------
+            Process exited after 0.8577 seconds with return value 15
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

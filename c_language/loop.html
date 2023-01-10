@@ -1,0 +1,687 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Loops</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a>&nbsp;&nbsp;&nbsp;&nbsp;Program for while loop :-</li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Factorial:-</li>
+            <li><a>Examples 10</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check weather a number is prime or not:-</li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Loops</h2></dt></dfn>
+        <dd>loops are repetitive structure. It will iterate the code which exist into the block
+            until the condition remains true.</dd><br>
+        <dd>Type of the loops<br>
+            1. condition Control -- Loop which is controlled by a condition
+                is known As Condition Control.<br>
+                Like : while, do while .<br>
+            2. Counter Control -- The Loop which is controlled by a counter
+                 is know as counter control loop.<br>
+                 Like : For loop</dd>
+        <dd>Condition Control<br>
+            1. while -- condition will be checked first. also called
+                         Entry Control loop.<br>
+                 --Syntax for while--<br>
+                 ============================<br>
+                 while(condition) // Entry control loop<br>
+                   {<br>
+                   // statements;<br>
+                   }</dd>
+        <dd>do while -- condition will be checked later on.
+            so it is called exit control loop.<br>
+            at least once this loop will execute even condition
+            is false.<br>
+
+         --Syntax for do while--<br>
+         ============================<br>
+             do<br>
+           {<br>
+           // statements;<br>
+           }while(condition); // Exit control loop</dd>
+    <dd>Counter Control Loop<br>
+        1. for -- it is based on counter.<br><br>
+
+             Syntex for for loop<br>
+           ============================<br>
+              for(initialization;condition;increment/)<br>
+              {<br>
+              // statements;<br>
+            }</dd>
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+    
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" style="border: none; outline: none;" readonly >
+        #include<stdio.h>
+        int main()
+        {
+            int i=1;
+            while(i<=10)
+            {
+                printf("%d\n",i);
+                i++; // i=i+1;
+            }
+        }
+        
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+                10
+                
+                --------------------------------
+                Process exited after 0.04731 seconds with return value 3
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+        
+        <div class ="program">
+            <b><h5>Program for while loop</h5></b>
+        
+          <pre>
+<textarea id="text" rows="19" readonly>
+        #include<stdio.h>
+        void main()
+        {
+        
+            int sum=0,i=1; // variable declaration
+        
+        
+        while(i<=10)
+        {
+            sum=sum+i;
+            //printf("The sum is : %d\n\n",sum);
+            printf("i= %5d \t sum= %d\n",i,sum);
+            i++; // increment by one.
+        }
+        
+            //printf("i= %2d \t sum= %d\n",i,sum);
+        }     
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            i=     1         sum= 1
+            i=     2         sum= 3
+            i=     3         sum= 6
+            i=     4         sum= 10
+            i=     5         sum= 15
+            i=     6         sum= 21
+            i=     7         sum= 28
+            i=     8         sum= 36
+            i=     9         sum= 45
+            i=    10         sum= 55
+            
+            --------------------------------
+            Process exited after 0.04832 seconds with return value 19
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3
+    
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" readonly>
+         #include<stdio.h>
+        void main()
+        {
+            int i=1; // Declaration as well as assignment
+            while(i<=10)
+            {
+                    //printf("%d\n",i*3);
+                printf("3 * %d=%d\n",i,i*3);
+                i++;
+            }
+        
+        }
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                3 * 1=3
+                3 * 2=6
+                3 * 3=9
+                3 * 4=12
+                3 * 5=15
+                3 * 6=18
+                3 * 7=21
+                3 * 8=24
+                3 * 9=27
+                3 * 10=30
+                
+                --------------------------------
+                Process exited after 0.04619 seconds with return value 10
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+        
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int i=1,num=0;
+            while(i<=10) 
+            //End of Entry Control loop will not print anything
+            {
+                printf("3 * %d=%d\n",i,num=num+3);
+                // not a part of the while loop another statement.
+                 i++;
+            }
+        
+        }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                3 * 1=3
+                3 * 2=6
+                3 * 3=9
+                3 * 4=12
+                3 * 5=15
+                3 * 6=18
+                3 * 7=21
+                3 * 8=24
+                3 * 9=27
+                3 * 10=30
+                
+                --------------------------------
+                Process exited after 0.03915 seconds with return value 10
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="16" readonly>
+         #include<stdio.h>
+        void main()
+        {
+        
+            //printf("%d",sizeof(byte));
+            printf("Space for char : %d\n",sizeof(char));
+            printf("Space for short : %d\n",sizeof(short));
+            printf("Space for signed short : %d\n",sizeof(signed short));
+            printf("Space for unsigned short : %d\n",sizeof(unsigned short));
+            printf("Space for int : %d\n",sizeof(int));
+            printf("Space for long : %d\n",sizeof(long));
+            printf("Space for float : %d\n",sizeof(float));
+            printf("Space for double : %d\n",sizeof(double));
+            printf("Space for long double : %d",sizeof(long double));
+        }
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Space for char : 1
+                Space for short : 2
+                Space for signed short : 2
+                Space for unsigned short : 2
+                Space for int : 4
+                Space for long : 4
+                Space for float : 4
+                Space for double : 8
+                Space for long double : 16
+                --------------------------------
+                Process exited after 0.04692 seconds with return value 26
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6    
+          <b>Do while loop -- it's an exit control loop. this loop will execute at least once<br>
+ 					even if the condition is false.</b> 
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="11" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int i=1; // declaration and assignment
+            do   // start -- do start your loop body to execute.
+            {
+                printf("%d\n",i);
+                i--;
+            }while(i>= 10); // exit control loop
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            1
+
+            --------------------------------
+            Process exited after 0.04178 seconds with return value 2
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7    
+          <div class="note">
+            <b>For LOOP -- it is counter control loop. in for loop we must have initial value
+                and initial value will increment by one or any number until it not exceed
+                the condition number.</b><br><br>
+                Syntax of the for Loop <br>
+                for(initialization; condition ; increment/decrement)<br>
+                {<br><br>
+            
+                // statements;<br>
+                }<br>
+                for :  -    is a keyword.<br>
+                () 	   -    is a signature or parameter block.<br>
+                {}     -    body or scope of the for loop.<br>
+
+          </div>
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="10" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int i;// just declaration
+            for(i=1; i<=10 ; i++)
+            {
+                printf("%d\t",i);
+            }
+        }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            1       2       3       4       5       6       7       8       9       10
+            --------------------------------
+            Process exited after 0.03964 seconds with return value 3
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="28" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int x=12345;
+            int temp,rem=0,rno=0; //temp: temporary variable
+            printf("The Original number is : %d\n",x);
+            temp =x;
+            do
+            {
+                rem = temp % 10;//5 //4 //3 //2 //1
+                temp =temp/10; //1234 //123 //12 //1 //0
+                rno = rno*10+rem; //5 //54 //543 //5432 //54321
+        
+            }while(temp>0);//1 //2 //3 //4 //5 
+            // now condition false
+            printf("Reverse Number is : %d\n ", rno);
+        
+            if(x==rno)
+            {
+                printf("%d is a palindrom.",x);
+            }
+            else
+            {
+                printf("%d Not a palindrom.",x);
+            }
+        }
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            The Original number is : 12345
+            Reverse Number is : 54321
+             12345 Not a palindrom.
+            --------------------------------
+            Process exited after 0.046 seconds with return value 22
+            Press any key to continue . . . 
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 9 start --->
+          Example:9   
+          <div class="note">
+            <b><h5>Factorial</h5></b>
+            4! =4*3!;<br>
+            4! =4*3*2!;<br>
+            4! =4*3*2*1!;<br>
+            4! =4*3*2*1*0!;<br>
+            4! =4*3*2*1*1;<br>
+            4! =24;<br><br>
+         
+            Note -- we can't calculate factorial of a negative number.
+          </div>
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="26" readonly>
+         #include<stdio.h>
+        void main()
+        {
+             int num,i, fact=1; //declaration
+             printf("Enter a number to get Factorial : \n");
+             scanf("%d",&num);
+             if(num<0)
+             {
+                 printf("Negative number is not allowed.");
+          }
+          else if(num==0 || num==1)
+             {
+                 printf("Factorial is : %d",1);
+             }
+             else
+             {
+                 for(i=1;i<=num;i++)
+                 {
+                     fact = fact * i; //1 //2 //6 //24
+                 }
+     
+             printf("The factorial value is : %d",fact);
+             }
+     
+        }
+     
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Enter a number to get Factorial :
+            2
+            The factorial value is : 2
+            --------------------------------
+            Process exited after 3.363 seconds with return value 26
+            Press any key to continue . .
+        </pre>
+        </div>
+        
+        <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 10 Start -->
+         
+        Example 10<br>
+        <b>Check weather a number is prime or not</b>
+
+        <div class="program">
+            <pre>
+<textarea id="text" rows="25" readonly>
+        #include<stdio.h>
+        void main()
+        {
+            int num,i;
+            printf("Enter a number :\n");
+            scanf("%d",&num);
+            if(num>1)
+            {
+                for(i=2;i<num;i++)
+                {
+                    if(num%i==0)
+                    {
+                        printf("%d is not a prime number.\n",num);
+                        break;
+                    }
+                }
+            }
+                if(i==num)
+                {
+                    printf(" %d is a prime.",num);
+                }
+        
+        
+        }
+            </textarea>
+            </pre>
+        </div>
+    Output:
+    <div class="output">
+        <pre>
+            Enter a number :
+            12
+            12 is not a prime number.
+            
+            --------------------------------
+            Process exited after 2.411 seconds with return value 12
+            Press any key to continue . . .
+        </pre>
+    </div>
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

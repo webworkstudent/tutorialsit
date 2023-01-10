@@ -1,0 +1,601 @@
+
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <style type="text/css">
+     body
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Storage Classes</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Storage Classes</h2></dt></dfn>
+        <dd>o fully define a variable one
+          needs to mention not only its â€˜typeâ€™ but also its â€˜storage classâ€™.</dd><br>
+          <p>We have not mentioned storage classes yet, though we have
+            written several programs in C. We were able to get away with this
+            because storage classes have defaults. If we donâ€™t specify the
+            storage class of a variable in its declaration, the compiler will
+            assume a storage class depending on the context in which the
+            variable is used. Thus, variables have certain default storage
+            classes.</p>
+          <p>There are basically two
+            kinds of locations in a computer where such a value may be keptâ€”
+            Memory and CPU registers. It is the variableâ€™s storage class that
+            determines in which of these two locations the value is stored.</p>
+
+          <p>Moreover, a variableâ€™s storage class tells us:<br>
+            (a) Where the variable would be stored.<br>
+            (b) What will be the initial value of the variable, if initial value is
+            not specifically assigned.(i.e. the default initial value).<br>
+            (c) What is the scope of the variable; i.e. in which functions the
+            value of the variable would be available.<br>
+            (d) What is the life of the variable; i.e. how long would the
+            variable exist.</p>
+    
+          <p>There are four storage classes in C:<br>
+            (a) Automatic storage class<br>
+            (b) Register storage class<br>
+            (c) Static storage class<br>
+            (d) External storage class</p>
+        
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1<br>
+        <b>Automatic Storage Class </b>
+        <b>The features of a variable defined to have an automatic storage class are as under:</b><br>
+        Storage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Memory.<br>
+        Default initial value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   - An unpredictable value, which is often called a garbage value.<br>
+        Scope &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;âˆ’ Local to the block in which the variable is defined.<br>
+        Life&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;âˆ’ Till the control remains within the block in which the variable is defined.
+      
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="7" style="border: none; outline: none;" readonly >
+   #include<stdio.h>
+    main( )
+    {
+    auto int i, j ;
+    printf ( "\n%d %d", i, j ) ;
+    }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+
+              0 1
+              --------------------------------
+              Process exited after 0.04942 seconds with return value 4
+              Press any key to continue . . .
+              </pre>
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2<br>
+        <b>Scope and life of an automatic variable is illustrated in the
+          following program.</b>
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="20" readonly>
+  main( )
+  {
+      auto int i = 1 ;
+      {
+          {
+              {
+                  printf ( "\n%d ", i ) ;
+              }
+              printf ( "%d ", i ) ;
+          }
+          printf ( "%d", i ) ;
+      }
+  }
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+
+          1 1 1
+          --------------------------------
+          Process exited after 0.04286 seconds with return value 1
+          Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          Example:3<br>
+          <b>C program to demonstrate working of Unary arithmetic operators.</b>
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="14" readonly>
+  main( )
+  {
+      auto int i = 1 ;
+      {
+          auto int i = 2 ;
+          {
+              auto int i = 3 ;
+              printf ( "\n%d ", i ) ;
+          }
+          printf ( "%d ", i ) ;
+      }
+      printf ( "%d", i ) ;
+  }
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+
+              3 2 1
+              --------------------------------
+              Process exited after 0.04604 seconds with return value 1
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4<br>
+          <b><h5>Register Storage Class </h5></b>
+          <b>The features of a variable defined to be of register storage class
+            are as under:</b><br>
+            Storage                 -CPU registers.<br>
+            Default initial value   -Garbage value.<br>
+            Scope                   -Local to the block in which the variable is defined.<br>
+            Life                    -Till the control remains within the block in which the variable is defined.
+          <br><br>
+          <p>A value stored in a CPU register can always be accessed faster
+            than the one that is stored in memory. Therefore, if a variable is
+            used at many places in a program it is better to declare its storage
+            class as register. A good example of frequently used variables is
+            loop counters. We can name their storage class as register.</p>
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="9" readonly>
+   #include<stdio.h>
+
+    void    main( )
+    {
+    register int i ;
+    for ( i = 1 ; i <= 10 ; i++ )
+    printf ( "\n%d", i ) ;
+    }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              1
+              2
+              3
+              4
+              5
+              6
+              7
+              8
+              9
+              10
+              --------------------------------
+              Process exited after 0.04765 seconds with return value 3
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+          <br>
+          <b><h5>Static Storage Class</h5></b>
+          The features of a variable defined to have a static storage class are
+            as under:<br><br>
+            
+            Storage                - Memory.<br>
+            Default initial value  - Zero.<br><br>
+            
+            Scope                  -Local to the block in which the variable is defined.<br>
+            Life                   âˆ’ Value of the variable persists between different function calls.
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="18" readonly>
+    #include<stdio.h>
+    void  main( )
+        {
+            increment( ) ;
+            increment( ) ;
+            increment( ) ;
+        }
+    
+      void  increment( )
+    
+        {
+            //auto int i = 1 ;
+            static int i = 1 ;
+            printf ( "%d\n", i ) ;
+            i = i + 1 ;
+        }
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              1
+              2
+              3
+              
+              --------------------------------
+              Process exited after 0.04867 seconds with return value 4
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          Example:6 <br>
+          <b><h5>Consider one more program.</h5></b><br> 
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="16" readonly>
+    #include<stdio.h>
+    void main( )
+     {
+         int *j ;
+         int * fun( ) ;
+         j = fun( ) ;
+         printf ( "\n %d", *j ) ; 
+     // my compiler is not supporting run at your system
+     }
+ 
+     int *fun( )
+     {
+         int k = 35 ;
+         return ( &k ) ;
+     }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          35
+          --------------------------------
+          Process exited after 0.04793 seconds with return value 4
+          Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7 <br>
+          <b><h5>External Storage Class </h5></b><br>
+          <dd> The features of a variable whose storage class has been defined as
+            external are as follows:<br>
+            Storage                 - Memory.<br>
+            Default initial value   -  Zero.<br>
+            Scope                   -  Global.<br>
+            Life                    -   As long as the programâ€™s execution doesnâ€™t come to an end.</dd>
+    
+        <div class ="program">
+        <pre>
+<textarea id="text"  rows="24" readonly>
+    #include <stdio.h>
+    int i ;
+
+   void increment( )
+    {
+        i = i + 1 ;
+        printf ( "\non incrementing i = %d", i ) ;
+    }
+
+   void decrement( )
+    {
+        i = i - 1 ;
+        printf ( "\non decrementing i = %d", i ) ;
+    }
+
+    int main( )
+    {
+        printf ( "\ni = %d", i ) ;
+        increment( ) ;
+        increment( ) ;
+        decrement( ) ;
+        decrement( ) ;
+    }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          i = 0
+          on incrementing i = 1
+          on incrementing i = 2
+          on decrementing i = 1
+          on decrementing i = 0
+          --------------------------------
+          Process exited after 0.04679 seconds with return value 22
+          Press any key to continue . . .
+          </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8<br>
+          <b>Here, x and y both are global variables. Since both of them have
+            been defined outside all the functions both enjoy external storage
+            class. Note the difference between the following:<br></b>
+            extern int y ;<br>
+            int y = 31 ;<br>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="10" readonly>
+    #include<stdio.h>
+    int x = 21 ;
+    main( )
+    {
+    extern int y ;
+    printf ( "\n%d %d", x, y ) ;
+    }
+    int y = 31 ;         
+        
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Compile Failed
+            --------------------------------
+            Process exited after 0.06589 seconds with return value 0
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- Example 9 start --->
+        Example:9<br>
+       
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="15" readonly>
+    #include<stdio.h>
+    int x = 10 ;
+    void display( );
+    void main( )
+    {
+    int x = 20 ;
+    printf ( "\n%d", x ) ;
+    display( ) ;
+    }
+    
+    void display( )
+    {
+    printf ( "\n%d", x ) ;
+    }
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        20
+        10
+        --------------------------------
+        Process exited after 0.05123 seconds with return value 3
+        Press any key to continue . . .
+          
+      </pre>
+      </div>
+      
+      <!-- Example 9 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
+      
+      
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
