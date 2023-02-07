@@ -1,0 +1,858 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Constructor and Destructor ?</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Constructor and Destructor ?</h2></dt></dfn>
+        <dd>Constructors are special type of member function used
+            to initialize the Object data members with a specific
+            values at the time of its creation.</dd>
+        
+        <dd>Constructor can also be used to allocate the memory.</dd>
+        <dd>Constructor can be overloaded too. </dd>
+    
+            <dd>
+                <div class="note">
+                   <b> Type Of Constructor</b> <br>
+                    <ol>
+                        <li>Default Constructor.</li>
+                        <li>Parameterized Constructor.  </li>
+                        <li>Copy Constructor</li>
+                    </0l> 
+                    <hr>
+        Example :<br>
+
+        class student<br>
+        {<br>
+        private :<br>
+         int roll;<br>
+         int marks;<br>
+
+         public :<br>
+          student()<br> 
+          {<br>
+          roll =0;<br>
+          marks =0;<br>
+          }<br>
+        };<br><br>
+
+        int main()<br>
+        {<br>
+           student s;<br>
+        } <hr> 
+        <h3>Characteristics of a constructor</h3><br>
+        <ol>
+                <li type="1">A constructor name must be the same as that of its class name.</li>
+                <li>It is declared with no return type ( note even void ).</li>
+                <li>It is declared in public section of the class.</li>
+                <li>It is automatically invoked when an object is created.</li>
+                <li>It can have default arguments.</li>
+                <li>It cannot be declared const but a constructor can be invoked
+                    for const objects.</li>
+                <li>It cannot refer to its own address.</li>
+                <li>It may not be static.</li>
+                <li>It may not be virtual.</li>
+                <li>It can not be inherited.</li>
+            </li>
+        </ol>
+                </div>
+                
+            </dd>
+            
+        </div>
+        
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+            <b>Write a program for unparameterized constructor?</b>
+        </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="40" style="border: none; outline: none;" readonly >
+          #include<iostream>
+          #include<string.h>
+          using namespace std;
+                
+          class Student
+          {
+          //scope is private, roll and marks are member variables
+          private : 
+          int roll;
+          char name[30];
+          int marks;
+             
+          public :
+          Student()  // Unparameterized construcotor
+          {
+          roll=1;
+          strcpy(name,"MR");
+          marks =100;
+                       
+          }
+                       
+          void display()
+          {	
+          cout<<"Roll Number is :"<<roll<<endl;
+          cout<<"Name is :"<<name<<endl;
+          cout<<"Marks is :"<<marks<<endl;
+           }
+          };
+             
+          int main()
+          {
+          Student s; // Object Creation with unparameterized constructor
+          s.display();
+          }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Roll Number is :1
+                Name is :MR
+                Marks is :100
+                
+                --------------------------------
+                Process exited after 0.08815 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+       
+
+        <div class="note">
+            <b>Write a program for Parameterized constructor?</b><br><br>
+            <b>Parameterized Constructor</b><br>
+            The Constructors with arguments are know as parameterized constructor.<br>
+            It is used to provide the specific values to the objects<br>
+            Example :<br>
+        class sample<br>
+        {<br>
+          int a,b;<br>
+          public :<br>
+            sample (int x, int y)<br>
+            {<br>
+              a=x;<br>
+              b=y<br>;
+            }<br>
+        };<br>
+        <b>Two ways of passing initial values in arguments to the constructor.</b><br>
+        <b>1. Explicit call to constructor:</b><br>
+        class_name object_name = function_name(arguments);<br>
+        sample obj1 = sample(2,9);<br>
+
+       <b> 2. Implicit call to constructor:</b><br>
+       class_name object_name(arguments);<br>
+        sample obj1(2,3);
+        </div>
+        
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" cols="25" readonly>
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+                   
+class Student
+{
+                       
+private : 
+int roll;
+char name[30];
+int marks;
+                
+public :
+// Parameterized construcotor
+Student(int r,char n[], int m) 
+{
+roll=r;
+strcpy(name,n);
+marks =m;
+}
+                         
+void display()
+{
+cout<<"Roll Number is :"<<roll<<endl;
+cout<<"Name is :"<<name<<endl;
+cout<<"Marks is :"<<marks<<endl;
+}
+};
+                
+int main()
+{
+// Object Creation with parameterized constructoer
+Student s(101,"Ram",98);
+s.display();
+}
+
+</textarea>    
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            Roll Number is :101
+            Name is :Ram
+            Marks is :98
+            
+            --------------------------------
+            Process exited after 0.1162 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+          
+          <div class="note">
+            <b>Write a program for Default constructor?</b><br>
+            Without constructor we can not create any Object so The compiler automatically provide a default constructor
+      with the some dummy values. [default values]<br>
+          </div>
+          Example:3
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="60" readonly>
+              #include<iostream>
+              #include<string.h>
+              using namespace std;
+                
+              class Student
+              {
+                   
+              private : 
+              int roll;
+              char name[30];
+              int marks;
+                      
+              public:
+              void display()
+              {
+              cout<<"Roll Number is :"<<roll<<endl;
+              cout<<"Name is :"<<name<<endl;
+              cout<<"Marks is :"<<marks<<endl;
+              }
+              };
+             
+               main()
+              {
+              Student s; // Object Creation with parameterized constructoer
+              s.display();
+                        
+              Student *s1= new Student();// Dynamic type object creation
+              ->display();
+              }
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              Roll Number is :1
+              Name is :
+              Marks is :0
+              Roll Number is :0
+              Name is :
+              Marks is :0
+              
+              --------------------------------
+              Process exited after 0.1099 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+          <div class="note">
+            <dd>Write a program to Assign values member variables at declaration?</dd><br>
+            <dd>Execute with warning : non-static data member initializers only available with -std=c++11 or -std=gnu++11</dd>
+          </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+          #include<iostream>
+            #include<string.h>
+            using namespace std;
+            
+            class Student
+             {
+               
+            private : 
+            int roll=101;
+            char name[30]={'A','n','i','l','\0'}; //accepted
+            //char name[30]="String"; //accepted
+            int marks=90;
+                  
+            public:
+            void display()
+            {
+            cout<<"Roll Number is :"<<roll<<endl;
+            cout<<"Name is :"<<name<<endl;
+            cout<<"Marks is :"<<marks<<endl;
+            }
+            };
+         
+            int main()
+            {
+            Student s; // Object Creation with unparameterized constructoer
+            s.display();
+                    
+            Student *s1= new Student();// Dynamic type object creation
+            s1->display();
+            }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              Roll Number is :101
+              Name is :Anil
+              Marks is :90
+              Roll Number is :101
+              Name is :Anil
+              Marks is :90
+              
+              --------------------------------
+              Process exited after 0.1941 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+          <div class="note">
+            <dd>We can declare member function as static with const keyword only at declaration time.</dd>
+          </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+              #include<iostream>
+              #include<string.h>
+              using namespace std;
+                
+              class Student
+              {
+                   
+              private : 
+              //static int roll=101; //Error because without const
+              static const int roll=101; //acceptable
+              char name[30]="String";
+              int marks=90;
+                      
+              public:
+              void display()
+              {
+              cout<<"Roll Number is :"<<roll<<endl;
+              cout<<"Name is :"<<name<<endl;
+              cout<<"Marks is :"<<marks<<endl;
+              }
+              };
+             
+             int main()
+            {
+            Student s; // Object Creation with unparameterized constructoer
+             s.display();
+                        
+            Student *s1= new Student();// Dynamic type object creation
+            ->display();
+            }
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              Roll Number is :101
+              Name is :String
+              Marks is :90
+              Roll Number is :101
+              Name is :String
+              Marks is :90
+              
+              --------------------------------
+              Process exited after 0.2017 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+        <div class="note">
+          <b>Copy Constructor</b>
+          <dd>The initialization of an object when done by another object is called Copy Constructor.
+            sample obj1;</dd>
+            <dd>sample obj2 (obj1);</dd>
+            <dd>we can also write the second statement as</dd>
+            sample obj2 = obj1;<br>
+            The copy constructor is defined in the class as a parameterized constructor receiving
+     an object as argument passed-by-reference as given below:
+        <dd><b>class sample</b><br>
+      {<br>
+        ..........<br>
+        ..........<br>
+        public:<br>
+        sample (sample& obj);//copy constructor<br>
+        ...<br>
+ 
+      };
+      </dd>
+        </div>
+          Example:6     
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68"readonly>
+            #include<iostream>
+            using namespace std;
+            class Code{
+            int a,b;
+            public :
+            Code() // unparameterizde Constructor
+            {
+              a = 10;
+              b = 20;
+            }
+            Code(Code& i);// Copy Constructor declared
+            void display(void)
+            {
+            cout<<"a = "<<a<<" b ="<<b<<"\n";
+            }
+            };
+       
+            Code :: Code(Code& i) // copy Constructor defined
+            {
+              a = i.a;
+              b = i.b;
+            }
+       
+            int  main()
+            {
+              Code c1,c2(c1); // Copy constructor calling
+              cout<<endl<<"First object"<<endl;
+              c1.display();
+              cout<<endl<<"Second object "<<endl;
+              c2.display();
+              cout<<endl<<"Third Object :"<<endl;
+              Code c3 =c2; // Another way to call the copy constructor
+              c3.display();
+            }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          First object
+          a = 10 b =20
+          
+          Second object
+          a = 10 b =20
+          
+          Third Object :
+          a = 10 b =20
+          
+          --------------------------------
+          Process exited after 0.1845 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7     
+         <div class="note"> 
+          <b>Multiple Constructor OR Constructor Overloading</b>
+          <dd>When we have more than one constructor with in the same class
+            is called Constructor Overloading.</dd>
+         </div>
+         
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+          #include<iostream>
+            using namespace std;
+            class Code
+            {
+              int a,b,c;
+              public :
+                Code() // unparametrized constructor
+                 {
+                 a=0;
+                 b=0;
+                 c=0;
+                }
+             Code(int i, int j); // parameterized constructor
+             Code(int i, int j, int k)
+             {
+                a =i;
+                b =j;
+                c =k;
+             }
+                void display(void);
+            };
+       
+            Code :: Code(int i, int j) //constructor definition
+             {
+                a =i;
+                b =j;
+             }
+       
+             void Code :: display()
+             {
+              cout<<"a= "<<a<<" b="<<b<<" c="<<c<<'\n';
+             }
+       
+             int main()
+             {
+               Code a=Code();// Unparametrized Constructor Calling
+               a.display();
+               Code c(5,10); // Two Parameterized Calling
+               c.display();
+               Code d=Code(3,9,4); // Three Parameterized Calling
+               d.display();
+       
+             }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          a= 0 b=0 c=0
+          a= 5 b=10 c=21
+          a= 3 b=9 c=4
+          
+          --------------------------------
+          Process exited after 0.1692 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+          <div class="note">
+            <b>Dynamic Construction</b>
+            <dd>Allocation of memory to objects at the time of their construction is known as
+              Dynamic construction of objects.</dd>
+            <dd>The constructors, with the use of new operators, can be used to allocate memory
+              while creating objects.</dd> 
+          </div>  
+        <div class ="program">
+        <pre>
+<textarea id="text"cols="68" readonly>
+              #include<iostream>
+              #include<string.h>
+              using namespace std;
+              class DC   //DC -> Dynamic Constructor
+              {
+                char *str;
+                int length;
+                public :
+                 DC (char *s)
+                 {
+                   length =strlen(s);
+                   str = new char[length+1]; //get memory
+                   strcpy(str,s);// copy argument to it
+                 }
+        
+                 void display()
+                 {
+                    cout<<"String = "<<str<<endl;
+                 }
+              };
+        
+              int main()
+              {
+                DC name1 = "Dynamic Constructors";// Excepted
+                DC name2 ("Dynamic Constructors");// Excepted
+                name1.display();
+                name2.display();
+              }
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          String = Dynamic Constructors
+          String = Dynamic Constructors
+          
+          --------------------------------
+          Process exited after 0.1861 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 9 start --->
+          Example:9   
+          <div class="note">
+            <b>Destructo</b>
+            <dd>A destructor as the name implies is used to destroy the object that has been created by a constructor.</dd>
+            <dd>So Destructors are  member functions that are used to destroy the objects created by constructors.</dd>
+            <dd>Destructors again have the same name as does the class and a tilde sign (~) proceed their name.</dd><br>
+            <dd>The Destructor for the class sample can be defined as :<br>
+              ~ sample(){};</dd><br>
+            <dd><b> Characteristics of a Destructor:</b></dd>
+            <ol type="1">
+              <li>A destructor has the same name as that of class prefixed by tilde character '~'.</li>
+              <li>No arguments can be provided to a destructor.</li>
+              <li>It has not return type, not even void type.</li>
+              <li>Destructors can't be Inherited</li>
+              <li>Destructors can't be overloaded</li>
+              <li>Destructor functions are invoked automatically when the object is destroyed.</li>
+              <li>If there is no destructor in a class, a default destructor is generated by the compiler.</li>
+            </ol>
+
+          </div>  
+        <div class ="program">
+        <pre>
+<textarea id="text" cols="68" readonly>
+            #include<iostream>
+              using namespace std;
+              class Destructor
+              {
+                int a,b;
+                public:
+                Destructor(int i, int j);
+                void display(void);
+                Destructor();
+                ~Destructor();
+          
+          //   ~Destructor()
+          //    {
+          //      cout<<"\n Destructor Called";
+          //    }
+          
+              };
+               Destructor :: Destructor()
+               {
+                 cout<<"Constructor."<<endl;
+               }
+               
+              Destructor :: Destructor(int i, int j)
+              {
+                a=i;
+                b=j;
+              }
+          
+              void Destructor :: display()
+              {
+                cout<<a<<"\t"<<b<<endl;
+              }
+          
+             Destructor :: ~Destructor()
+              {
+                cout<<"\nDestructor Called"<<endl;
+              }
+          
+              int main()
+              {
+                Destructor();
+                Destructor c(5,10);
+                c.display();
+              }
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Constructor.
+
+          Destructor Called
+          5       10
+          
+          Destructor Called
+          
+          --------------------------------
+          Process exited after 0.1698 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 10 start --->
+
+        Example 10
+        
+        <div class="program">
+          <pre>
+<textarea id="text" cols="68" readonly>
+              #include<iostream>
+                using namespace std;
+                class A
+                {
+                public:
+                A()
+                 {
+                  cout << "Constructor called"<<endl;
+                 }
+                
+                ~A()
+                 {
+                  cout << "Destructor called"<<endl;
+                 }
+                
+                };
+                
+                int main()
+                {
+                 A obj1;   // Constructor Called
+                 int x=1;
+                 if(x)
+                  {
+                   A obj2;  // Constructor Called
+                  }   // Destructor Called for obj2
+                }
+            </textarea>
+          </pre>
+        </div>
+
+        Output
+        <div class="output">
+          <pre>
+            Constructor called
+            Constructor called
+            Destructor called
+            Destructor called
+
+            --------------------------------
+            Process exited after 0.1736 seconds with return value 0
+            Press any key to continue . . .
+          </pre>
+        </div>
+
+      <!-- Example 10 end --->
+        
+        
+      <!-- ------------------------------------------------------------------------- -->  
+        
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

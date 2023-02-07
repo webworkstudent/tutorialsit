@@ -1,0 +1,1421 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Inheritance ?</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+  
+        </fieldset>
+        </div> <!-- Content end-->
+        
+        <dfn><dt><h2>Inheritance?</h2></dt></dfn>
+        <dd>Inheritance is a mechanism of inheriting the
+            property from parent class object to child class
+            object.</dd>
+    
+            <dd>
+                <div class="note">
+                  <b><h3>what is property?</h3></b>
+                    <ul>
+                
+                        <li>Variables and functions are know as properties.</li>
+                        <li>==> Parent Class ==> super class ==> Base class</li>
+                        <li>==> Child class  ==> Sub class   ==> Derived class</li>
+                    </ul> 
+                    <hr>
+                    <h3>Define Derived Class</h3>
+                    class derived_class_name : visibility_mode base_class_name<br>
+                    {<br>
+                    // Members of the derived class<br>
+                     }<br><br>
+
+                    Like:<br><br>
+
+                    class d : public b<br>
+                     {<br>
+                     // Members of the derived class.<br>
+                     };
+
+                </div>
+                
+            </dd>
+            
+        </div>
+        
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+            <b>Example of Inheritance</b>
+        </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" readonly >
+          
+                #include<iostream>
+                using namespace std;
+               
+                // Base Class
+                class student
+                {
+                  int roll;
+                  char name[25];
+                  public :
+                  void getData()
+                  {
+                    cout<<"Enter roll number :"<<endl;
+                    cin>>roll;
+                    cout<<"Enter the name :"<<endl;
+                    cin>>name;
+                  }
+               
+                   void display()
+                   {
+                     cout<<"Roll No :"<<roll<<endl;
+                     cout<<"Name : "<<name<<endl;
+                   }
+                };
+               
+                // Derived Class
+               
+                class test :public  student
+                {
+                  int sub1,sub2;
+                  public :
+                  void readdata(); // declaration
+                  void putdata(); // declaration
+               
+                };
+               
+                  void test::readdata() // definition
+                  {
+                     getData();
+                     cout<<"Enter the marks of Subject 1: "<<endl;
+                     cin>> sub1;
+                     cout<<"Enter the marks of Subject 2: "<<endl;
+                     cin>>sub2;
+                  }
+               
+                  void test ::putdata() // definition
+                  {
+                     display();
+                     cout<<"Marks in Subject 1: "<<sub1<<endl;
+                     cout<<"Marks in Subject 2: "<<sub2<<endl;
+                  }
+               
+                  int main()
+                  {
+                    test obj; // object of derived class
+                    obj.readdata();
+                    obj.putdata();
+               
+                   }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+            Enter roll number :
+            101
+            Enter the name :
+            Geeta
+            Enter the marks of Subject 1:
+            98
+            Enter the marks of Subject 2:
+            95
+            Roll No :101
+            Name : Geeta
+            Marks in Subject 1: 98
+            Marks in Subject 2: 95
+            
+            --------------------------------
+            Process exited after 13.39 seconds with return value 0
+            Press any key to continue . . .       
+                
+        </pre>
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+        <div class="note">
+            <b><h3>Example of Inheritance with visibility mode</h3></b>
+            public -- means all the members of parent class will be in same mode .<br>
+                [public, protected]. [Private will not access any how]<br><br>
+
+         .. public means we can use it any where with in program as well as outside<br>
+            the program.<br><br>
+
+            protected -- means all the members will be protected.<br><br>
+
+         .. protected means we can use it only and only in child class.<br><br>
+
+            private -- means all the member of parent class will become private.<br>
+          .. private means you can't use it even in child class.
+
+        </div>
+        
+        <div class ="program">
+        
+        <pre>
+<textarea id="text" cols="68" readonly>
+                
+                    #include<iostream>
+                    using namespace std;
+                    class student
+                    {
+                       //public:
+                   
+                      protected:
+                      int roll; // private any how not possible to access in any other class even in child class
+                      char name[25];
+                      public :
+                      void getData()
+                      {
+                        cout<<"Enter roll number :"<<endl;
+                        cin>>roll;
+                        cout<<"Enter the name :"<<endl;
+                        cin>>name;
+                      }
+                   
+                       void display()
+                       {
+                         cout<<"Roll No :"<<roll<<endl;
+                         cout<<"Name : "<<name<<endl;
+                       }
+                    };
+                   
+                    // Derived Class
+                      //class test :public student  // will inherit the DataMembers as it is in parent class.
+                     //class test :protected student// will inherit as protected
+                     class test :private  student // will be private in child
+                     {
+                      int sub1,sub2;
+                      public :
+                      void readdata();
+                      void putdata();
+                   
+                     };
+                   
+                      void test::readdata()
+                      {
+                         getData();
+                         cout<<"Enter the marks of Subject 1: "<<endl;
+                         cin>> sub1;
+                         cout<<"Enter the marks of Subject 2: "<<endl;
+                         cin>>sub2;
+                      }
+                   
+                      void test ::putdata()
+                      {
+                         display();
+                         cout<<"Roll No is : "<<roll<<endl; // private not possible to access directly.
+                         cout<<"Marks in Subject 1: "<<sub1<<endl;
+                         cout<<"Marks in Subject 2: "<<sub2<<endl;
+                      }
+                   
+                      class childOfTest : public test
+                      {
+                         public:
+                         void getDataInMode()
+                         {
+                           cout<<"Enter name for ChildOfTest class :"<<endl;
+                           cin>>name;
+                         }
+                         void showDataInMode()
+                         {
+                           cout<<"Name is :"<<name;
+                         }
+                      };
+                      int main()
+                      {
+                   //     test obj; // object of derived class
+                   //     obj.readdata();
+                   //     obj.putdata();
+                   
+                        //......................//
+                   
+                        childOfTest ob;
+                        ob.getDataInMode();
+                        ob.showDataInMode();
+                   
+                       }
+            </textarea> 
+        </pre>
+            
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            Roll Number is :101
+            Name is :Ram
+            Marks is :98
+            
+            --------------------------------
+            Process exited after 0.1162 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+          
+          
+          
+        
+          <div class="note">
+            <b><h3>Type of Inheritance.</h3></b><br>
+            There are five type of inheritance :-
+            <ul type="1">
+                <li>Single Inheritance : when class B inherit the property
+                    of class A is know as Single Inheritance.</li>
+                <li>Multilevel Inheritance : When class C inherit the property
+                    of class B and class B inherit the property of class A
+                    these levels are know as multilevel Inheritance.</li>
+                <li>Multiple Inheritance : when we have more than one parent
+                    of a class is know as multiple Inheritance.</li>
+                <li>Hierarchical Inheritance: when a class have more than one
+                    child is called Hierarchical inheritance.</li>
+                <li>Hybrid Inheritance : The Combination of more than one inheritance
+                    know as Hybrid inheritance.</li>
+
+            </ul>
+          </div>
+          Example: 3
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="60" readonly>
+              
+                
+                #include<iostream>
+                    using namespace std;
+                   
+                    // Base Class
+                    class student
+                    {
+                      int roll;
+                      char name[25];
+                      public :
+                      void getData()
+                      {
+                        cout<<"Enter roll number :"<<endl;
+                        cin>>roll;
+                        cout<<"Enter the name :"<<endl;
+                        cin>>name;
+                      }
+                   
+                       void display()
+                       {
+                         cout<<"Roll No :"<<roll<<endl;
+                         cout<<"Name : "<<name<<endl;
+                       }
+                    };
+                   
+                    // Drived Class
+                   
+                    class test :public  student // Single Inheritance
+                    {
+                      int subjects[6];
+                      public :
+                      void readdata(); // declaration
+                      void putdata(); // declaration
+                   
+                    };
+                   
+                      void test::readdata() // definition
+                      {
+                         getData();
+                   
+                         cout<<"Enter the marks of Hindi "<<endl;
+                         cin>>subjects[0];
+                         cout<<"Enter the marks of English "<<endl;
+                         cin>>subjects[1];
+                         cout<<"Enter the marks of Math "<<endl;
+                         cin>>subjects[2];
+                         cout<<"Enter the marks of Science "<<endl;
+                         cin>>subjects[3];
+                         cout<<"Enter the marks of SS "<<endl;
+                         cin>>subjects[4];
+                         cout<<"Enter the marks of Games "<<endl;
+                         cin>>subjects[5];
+                   
+                      }
+                   
+                      void test ::putdata() // definition
+                      {
+                         cout<<endl<<"Record of a Student is :"<<endl;
+                         display();
+                         cout<<"The marks In Hindi :";
+                         cout<<subjects[0]<<endl;
+                         cout<<"The marks In English ";
+                         cout<<subjects[1]<<endl;
+                         cout<<"The marks In Math ";
+                         cout<<subjects[2]<<endl;
+                         cout<<"The marks Science Science ";
+                         cout<<subjects[3]<<endl;
+                         cout<<"The marks In SS ";
+                         cout<<subjects[4]<<endl;
+                         cout<<"The marks In Games ";
+                         cout<<subjects[5]<<endl;
+                      }
+                   
+                      int main()
+                      {
+                        test obj; // object of drived class
+                        obj.readdata();
+                        obj.putdata();
+                   
+                       }
+                   
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Enter roll number :
+                101
+                Enter the name :
+                Sachin
+                Enter the marks of Hindi
+                95
+                Enter the marks of English
+                88
+                Enter the marks of Math
+                97
+                Enter the marks of Science
+                70
+                Enter the marks of SS
+                54
+                Enter the marks of Games
+                100
+                
+                Record of a Student is :
+                Roll No :101
+                Name : Sachin
+                The marks In Hindi :95
+                The marks In English 88
+                The marks In Math 97
+                The marks Science Science 70
+                The marks In SS 54
+                The marks In Games 100
+                
+                --------------------------------
+                Process exited after 31.24 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+          <div class="note">
+            <dd><h3>Multilevel Inheritance</h3></dd>
+          </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+          
+            #include<iostream>
+            using namespace std;
+           
+            // Base Class
+            class student
+            {
+              protected:
+              int roll;
+              char name[25];
+              public :
+              void getData()
+              {
+                cout<<"Enter roll number :"<<endl;
+                cin>>roll;
+                cout<<"Enter the name :"<<endl;
+                cin>>name;
+              }
+           
+               void display()
+               {
+                 cout<<"Roll No :"<<roll<<endl;
+                 cout<<"Name : "<<name<<endl;
+               }
+            };
+           
+            // Drived Class
+           
+            class test :protected  student // Single Inheritance
+            {
+              protected:
+              int subjects[6];
+              public :
+              void readdata(); // declaration
+              void putdata(); // declaration
+           
+            };
+           
+              void test::readdata() // definition
+              {
+                 getData();
+           
+                 cout<<"Enter the marks of Hindi "<<endl;
+                 cin>>subjects[0];
+                 cout<<"Enter the marks of English "<<endl;
+                 cin>>subjects[1];
+                 cout<<"Enter the marks of Math "<<endl;
+                 cin>>subjects[2];
+                 cout<<"Enter the marks of Science "<<endl;
+                 cin>>subjects[3];
+                 cout<<"Enter the marks of SS "<<endl;
+                 cin>>subjects[4];
+                 cout<<"Enter the marks of Games "<<endl;
+                 cin>>subjects[5];
+           
+              }
+           
+              void test ::putdata() // definition
+              {
+                 cout<<endl<<"Record of a Student is :"<<endl;
+                 display();
+                 cout<<"The marks In Hindi :";
+                 cout<<subjects[0]<<endl;
+                 cout<<"The marks In English ";
+                 cout<<subjects[1]<<endl;
+                 cout<<"The marks In Math ";
+                 cout<<subjects[2]<<endl;
+                 cout<<"The marks Science Science ";
+                 cout<<subjects[3]<<endl;
+                 cout<<"The marks In SS ";
+                 cout<<subjects[4]<<endl;
+                 cout<<"The marks In Games ";
+                 cout<<subjects[5]<<endl;
+              }
+           
+              class Result : private test // Multi Level Inheritance
+              {
+                 int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                 public:
+                 void InsertRecord()
+                 {
+                   readdata();
+                 }
+                 void result()
+                 {
+                    for(int i=0;i<6;i++)
+                    {
+                      obtaind_marks +=subjects[i];
+                    }
+                   cout<<"Roll No is:"<<roll<<endl;
+                   cout<<"Name is :" <<name<<endl;
+                   cout<<"Result is : "<<obtaind_marks<<endl;
+                 }
+              };
+           
+              int main()
+              {
+                Result obj;
+                obj.InsertRecord();
+                obj.result();
+               }
+           
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+          Enter roll number :
+          101
+          Enter the name :
+          Sachin
+          Enter the marks of Hindi
+          98
+          Enter the marks of English
+          58
+          Enter the marks of Math
+          69
+          Enter the marks of Science
+          70
+          Enter the marks of SS
+          100
+          Enter the marks of Games
+          100
+          Roll No is:101
+          Name is :Sachin
+          Result is : 495
+          
+          --------------------------------
+          Process exited after 38.66 seconds with return value 0
+          Press any key to continue . . .   
+          
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+          <div class="note">
+            <dd><h3>Multiple Inheritance</h3></dd>
+          </div>
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+              #include<iostream>
+              using namespace std;
+             
+              // Base Class
+              class student
+              {
+                protected:
+                int roll;
+                char name[25];
+                public :
+                void getData()
+                {
+                  cout<<"Enter roll number :"<<endl;
+                  cin>>roll;
+                  cout<<"Enter the name :"<<endl;
+                  cin>>name;
+                }
+             
+                 void display()
+                 {
+                   cout<<"Roll No :"<<roll<<endl;
+                   cout<<"Name : "<<name<<endl;
+                 }
+              };
+             
+              // Drived Class
+             
+              class test :protected  student // Single Inheritance
+              {
+                protected:
+                int subjects[6];
+                public :
+                void readdata(); // declaration
+                void putdata(); // declaration
+             
+              };
+             
+                void test::readdata() // definition
+                {
+                   getData();
+             
+                   cout<<"Enter the marks of Hindi "<<endl;
+                   cin>>subjects[0];
+                   cout<<"Enter the marks of English "<<endl;
+                   cin>>subjects[1];
+                   cout<<"Enter the marks of Math "<<endl;
+                   cin>>subjects[2];
+                   cout<<"Enter the marks of Science "<<endl;
+                   cin>>subjects[3];
+                   cout<<"Enter the marks of SS "<<endl;
+                   cin>>subjects[4];
+                   cout<<"Enter the marks of Games "<<endl;
+                   cin>>subjects[5];
+             
+                }
+             
+                void test ::putdata() // definition
+                {
+                   cout<<endl<<"Record of a Student is :"<<endl;
+                   display();
+                   cout<<"The marks In Hindi :";
+                   cout<<subjects[0]<<endl;
+                   cout<<"The marks In English ";
+                   cout<<subjects[1]<<endl;
+                   cout<<"The marks In Math ";
+                   cout<<subjects[2]<<endl;
+                   cout<<"The marks Science Science ";
+                   cout<<subjects[3]<<endl;
+                   cout<<"The marks In SS ";
+                   cout<<subjects[4]<<endl;
+                   cout<<"The marks In Games ";
+                   cout<<subjects[5]<<endl;
+                }
+             
+                class Game
+                {
+                   char game[45];
+                   public:
+                   void getGame()
+                   {
+                    cout<<"Which Game Do you Like :"<<endl;
+                    cin>>game;
+                   }
+             
+                   void showGame()
+                   {
+                      cout<<"Game is : "<<game<<endl;
+                   }
+             
+                };
+             
+                class Result : private test, private Game // Multiple Inheritance
+                {
+                   int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                   public:
+                   void InsertRecord()
+                   {
+                     readdata();
+                     getGame();
+                   }
+                   void result()
+                   {
+                      for(int i=0;i<6;i++)
+                      {
+                        obtaind_marks +=subjects[i];
+                      }
+                      cout<<endl<<"Output is :"<<endl;
+                     cout<<"Roll No is:"<<roll<<endl;
+                     cout<<"Name is :" <<name<<endl;
+                     cout<<"Result is : "<<obtaind_marks<<endl;
+                      showGame();
+                   }
+                };
+             
+                int main()
+                {
+                  Result obj;
+                  obj.InsertRecord();
+                  obj.result();
+                 }
+                
+            
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+        <pre>
+          Enter roll number :
+          101
+          Enter the name :
+          Sachin
+          Enter the marks of Hindi
+          98
+          Enter the marks of English
+          89
+          Enter the marks of Math
+          78
+          Enter the marks of Science
+          76
+          Enter the marks of SS
+          100
+          Enter the marks of Games
+          99
+          Which Game Do you Like :
+          yes
+          
+          Output is :
+          Roll No is:101
+          Name is :Sachin
+          Result is : 540
+          Game is : yes
+          
+          --------------------------------
+          Process exited after 31.19 seconds with return value 0
+          Press any key to continue . . .    
+              
+
+              
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+        
+          Example:6 
+          <div class="note">
+          <dd><h3>Hierarichal Inheritance</h3></dd>
+          </div>    
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68"readonly>
+            #include<iostream>
+            #include<string.h>
+            using namespace std;
+           
+            // Base Class
+            class student
+            {
+              protected:
+              int roll;
+              char name[25];
+              public :
+              void getData()
+              {
+                cout<<"Enter roll number :"<<endl;
+                cin>>roll;
+                cout<<"Enter the name :"<<endl;
+                cin>>name;
+              }
+           
+               void display()
+               {
+                 cout<<"Roll No :"<<roll<<endl;
+                 cout<<"Name : "<<name<<endl;
+               }
+            };
+           
+            // Drived Class
+           
+            class Science :protected  student // Single Inheritance
+            {
+              protected:
+              int subjects[6];
+              public :
+              void readdata(); // declaration
+              void putdata(); // declaration
+           
+            };
+           
+              void Science::readdata() // definition
+              {
+                 getData();
+           
+                 cout<<"Enter the marks of Hindi "<<endl;
+                 cin>>subjects[0];
+                 cout<<"Enter the marks of English "<<endl;
+                 cin>>subjects[1];
+                 cout<<"Enter the marks of Physics "<<endl;
+                 cin>>subjects[2];
+                 cout<<"Enter the marks of Chemistery "<<endl;
+                 cin>>subjects[3];
+                 cout<<"Enter the marks of Maths "<<endl;
+                 cin>>subjects[4];
+                 cout<<"Enter the marks of Games "<<endl;
+                 cin>>subjects[5];
+           
+              }
+           
+              void Science ::putdata() // definition
+              {
+                 cout<<endl<<"Record of a Student is :"<<endl;
+                 display();
+                 cout<<"The marks In Hindi :";
+                 cout<<subjects[0]<<endl;
+                 cout<<"The marks In English ";
+                 cout<<subjects[1]<<endl;
+                 cout<<"The marks In Physics ";
+                 cout<<subjects[2]<<endl;
+                 cout<<"The marks Chemistery ";
+                 cout<<subjects[3]<<endl;
+                 cout<<"The marks In Maths ";
+                 cout<<subjects[4]<<endl;
+                 cout<<"The marks In Games ";
+                 cout<<subjects[5]<<endl;
+              }
+           
+               class Commerce :protected  student // Single Inheritance
+            {
+              protected:
+              int subjects[6];
+              public :
+              void readdata(); // declaration
+              void putdata(); // declaration
+           
+            };
+           
+             void Commerce::readdata() // definition
+              {
+                 getData();
+           
+                 cout<<"Enter the marks of Hindi "<<endl;
+                 cin>>subjects[0];
+                 cout<<"Enter the marks of English "<<endl;
+                 cin>>subjects[1];
+                 cout<<"Enter the marks of Economics "<<endl;
+                 cin>>subjects[2];
+                 cout<<"Enter the marks of Business Studies "<<endl;
+                 cin>>subjects[3];
+                 cout<<"Enter the marks of Accounts "<<endl;
+                 cin>>subjects[4];
+                 cout<<"Enter the marks of Games "<<endl;
+                 cin>>subjects[5];
+           
+              }
+           
+              void Commerce ::putdata() // definition
+              {
+                 cout<<endl<<"Record of a Student is :"<<endl;
+                 display();
+                 cout<<"The marks In Hindi :";
+                 cout<<subjects[0]<<endl;
+                 cout<<"The marks In English ";
+                 cout<<subjects[1]<<endl;
+                 cout<<"The marks In Economics ";
+                 cout<<subjects[2]<<endl;
+                 cout<<"The marks Business Studies ";
+                 cout<<subjects[3]<<endl;
+                 cout<<"The marks In Accounts ";
+                 cout<<subjects[4]<<endl;
+                 cout<<"The marks In Games ";
+                 cout<<subjects[5]<<endl;
+              }
+           
+           
+              class ScienceResult : private Science
+              {
+                 int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                 public:
+                 void InsertRecord()
+                 {
+                   readdata();
+                 }
+                 void result()
+                 {
+                    for(int i=0;i<6;i++)
+                    {
+                      obtaind_marks +=subjects[i];
+                    }
+                    cout<<endl<<"Output is :"<<endl;
+                   cout<<"Roll No is:"<<roll<<endl;
+                   cout<<"Name is :" <<name<<endl;
+                   putdata();
+                   cout<<"Result is : "<<obtaind_marks<<endl;
+           
+                 }
+              };
+           
+                   class CommerceResult : private Commerce
+              {
+                 int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                 public:
+                 void InsertRecord()
+                 {
+                   readdata();
+                 }
+                 void result()
+                 {
+                    for(int i=0;i<6;i++)
+                    {
+                      obtaind_marks +=subjects[i];
+                    }
+                    cout<<endl<<"Output is :"<<endl;
+                   cout<<"Roll No is:"<<roll<<endl;
+                   cout<<"Name is :" <<name<<endl;
+                   putdata();
+                   cout<<"Result is : "<<obtaind_marks<<endl;
+           
+                 }
+              };
+              int main()
+              {
+           
+           
+              int option;
+               cout<<"Enter 1 for Science :"<<endl;
+               cout<<"Enter 2 for Commerce :"<<endl;
+               cin>>option;
+           
+           
+            if(option==1)
+               {
+                ScienceResult obj;
+                obj.InsertRecord();
+                obj.result();
+               }
+               else if(option==2)
+               {
+                CommerceResult obj;
+                obj.InsertRecord();
+                obj.result();
+               }
+               else
+               {
+                 cout<<"Enter the Correct input.";
+               }
+           
+               }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter 1 for Science :
+          Enter 2 for Commerce :
+          1
+          Enter roll number :
+          101
+          Enter the name :
+          Geeta
+          Enter the marks of Hindi
+          98
+          Enter the marks of English
+          78
+          Enter the marks of Physics
+          89
+          Enter the marks of Chemistery
+          77
+          Enter the marks of Maths
+          66
+          Enter the marks of Games
+          100
+          
+          Output is :
+          Roll No is:101
+          Name is :Geeta
+          
+          Record of a Student is :
+          Roll No :101
+          Name : Geeta
+          The marks In Hindi :98
+          The marks In English 78
+          The marks In Physics 89
+          The marks Chemistery 77
+          The marks In Maths 66
+          The marks In Games 100
+          Result is : 508
+          
+          --------------------------------
+          Process exited after 34.43 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7     
+         <div class="note"> 
+          <dd><h3>Hybrid Inheritance</h3></dd>
+         </div>
+         
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+            #include<iostream>
+            #include<string.h>
+            using namespace std;
+           
+            // Base Class
+            class student
+            {
+              protected:
+              int roll;
+              char name[25];
+              public :
+              void getData()
+              {
+                cout<<"Enter roll number :"<<endl;
+                cin>>roll;
+                cout<<"Enter the name :"<<endl;
+                cin>>name;
+              }
+           
+               void display()
+               {
+                 cout<<"Roll No :"<<roll<<endl;
+                 cout<<"Name : "<<name<<endl;
+               }
+            };
+           
+            // Drived Class
+           
+            class Science :protected  student // Single Inheritance
+            {
+              protected:
+              int subjects[6];
+              public :
+              void readdata(); // declaration
+              void putdata(); // declaration
+           
+            };
+           
+              void Science::readdata() // definition
+              {
+                 getData();
+           
+                 cout<<"Enter the marks of Hindi "<<endl;
+                 cin>>subjects[0];
+                 cout<<"Enter the marks of English "<<endl;
+                 cin>>subjects[1];
+                 cout<<"Enter the marks of Physics "<<endl;
+                 cin>>subjects[2];
+                 cout<<"Enter the marks of Chemistery "<<endl;
+                 cin>>subjects[3];
+                 cout<<"Enter the marks of Maths "<<endl;
+                 cin>>subjects[4];
+                 cout<<"Enter the marks of Games "<<endl;
+                 cin>>subjects[5];
+           
+              }
+           
+              void Science ::putdata() // definition
+              {
+                 cout<<endl<<"Record of a Student is :"<<endl;
+                 display();
+                 cout<<"The marks In Hindi :";
+                 cout<<subjects[0]<<endl;
+                 cout<<"The marks In English ";
+                 cout<<subjects[1]<<endl;
+                 cout<<"The marks In Physics ";
+                 cout<<subjects[2]<<endl;
+                 cout<<"The marks Chemistery ";
+                 cout<<subjects[3]<<endl;
+                 cout<<"The marks In Maths ";
+                 cout<<subjects[4]<<endl;
+                 cout<<"The marks In Games ";
+                 cout<<subjects[5]<<endl;
+              }
+           
+               class Commerce :protected  student // Single Inheritance
+            {
+              protected:
+              int subjects[6];
+              public :
+              void readdata(); // declaration
+              void putdata(); // declaration
+           
+            };
+           
+             void Commerce::readdata() // definition
+              {
+                 getData();
+           
+                 cout<<"Enter the marks of Hindi "<<endl;
+                 cin>>subjects[0];
+                 cout<<"Enter the marks of English "<<endl;
+                 cin>>subjects[1];
+                 cout<<"Enter the marks of Economics "<<endl;
+                 cin>>subjects[2];
+                 cout<<"Enter the marks of Business Studies "<<endl;
+                 cin>>subjects[3];
+                 cout<<"Enter the marks of Accounts "<<endl;
+                 cin>>subjects[4];
+                 cout<<"Enter the marks of Games "<<endl;
+                 cin>>subjects[5];
+           
+              }
+           
+              void Commerce ::putdata() // definition
+              {
+                 cout<<endl<<"Record of a Student is :"<<endl;
+                 display();
+                 cout<<"The marks In Hindi :";
+                 cout<<subjects[0]<<endl;
+                 cout<<"The marks In English ";
+                 cout<<subjects[1]<<endl;
+                 cout<<"The marks In Economics ";
+                 cout<<subjects[2]<<endl;
+                 cout<<"The marks Business Studies ";
+                 cout<<subjects[3]<<endl;
+                 cout<<"The marks In Accounts ";
+                 cout<<subjects[4]<<endl;
+                 cout<<"The marks In Games ";
+                 cout<<subjects[5]<<endl;
+              }
+              class Game
+              {
+                 char game[45];
+                 public:
+                 void getGame()
+                 {
+                  cout<<"Which Game Do you Like :"<<endl;
+                  cin>>game;
+                 }
+           
+                 void showGame()
+                 {
+                    cout<<"Game is : "<<game<<endl;
+                 }
+           
+              };
+           
+              class ScienceResult : private Science, private Game// Hybrid Inheritance
+              {
+                 int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                 public:
+                 void InsertRecord()
+                 {
+                   readdata();
+                   getGame();
+                 }
+                 void result()
+                 {
+                    for(int i=0;i<6;i++)
+                    {
+                      obtaind_marks +=subjects[i];
+                    }
+                    cout<<endl<<"Output is :"<<endl;
+                   cout<<"Roll No is:"<<roll<<endl;
+                   cout<<"Name is :" <<name<<endl;
+                   putdata();
+                   cout<<"Result is : "<<obtaind_marks<<endl;
+                   showGame();
+                 }
+              };
+           
+                   class CommerceResult : private Commerce, private Game // Hybrid Inheritance
+              {
+                 int obtaind_marks=0; // must assign with a value 0. otherwise will give garbage.
+                 public:
+                 void InsertRecord()
+                 {
+                   readdata();
+                   getGame();
+                 }
+                 void result()
+                 {
+                    for(int i=0;i<6;i++)
+                    {
+                      obtaind_marks +=subjects[i];
+                    }
+                    cout<<endl<<"Output is :"<<endl;
+                   cout<<"Roll No is:"<<roll<<endl;
+                   cout<<"Name is :" <<name<<endl;
+                   putdata();
+                   cout<<"Result is : "<<obtaind_marks<<endl;
+                    showGame();
+                 }
+              };
+              int main()
+              {
+           
+              // char str[55];
+              int option;
+               cout<<"Enter 1 for Science :"<<endl;
+               cout<<"Enter 2 for Commerce :"<<endl;
+               cin>>option;
+           
+            if(option==1)
+               {
+                ScienceResult obj;
+                obj.InsertRecord();
+                obj.result();
+               }
+               else if(option==2)
+               {
+                CommerceResult obj;
+                obj.InsertRecord();
+                obj.result();
+               }
+               else
+               {
+                 cout<<"Enter the Correct input.";
+               }
+           
+               }
+           
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter 1 for Science :
+          Enter 2 for Commerce :
+          2
+          Enter roll number :
+          101
+          Enter the name :
+          Geeta
+          Enter the marks of Hindi
+          98
+          Enter the marks of English
+          78
+          Enter the marks of Economics
+          89
+          Enter the marks of Business Studies
+          67
+          Enter the marks of Accounts
+          88
+          Enter the marks of Games
+          100
+          Which Game Do you Like :
+          yes
+          
+          Output is :
+          Roll No is:101
+          Name is :Geeta
+          
+          Record of a Student is :
+          Roll No :101
+          Name : Geeta
+          The marks In Hindi :98
+          The marks In English 78
+          The marks In Economics 89
+          The marks Business Studies 67
+          The marks In Accounts 88
+          The marks In Games 100
+          Result is : 520
+          Game is : yes
+          
+          --------------------------------
+          Process exited after 33.16 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+          <div class="note">
+            <dd><h3>C++ Aggregation (HAS-A Relationship)</h3></dd>
+
+            <dd>In C++, aggregation is a process in which one class defines another class
+                as any entity reference. It is another way to reuse the class. It is a form
+                of association that represents HAS-A relationship.</dd>
+            <dd><h3>C++ Aggregation Example</h3></dd>
+            <dd>Let's see an example of aggregation where Employee class has the reference of
+              Address class as data member. In such way, it can reuse the members of Address class.</dd> 
+          </div>  
+        <div class ="program">
+        <pre>
+           <textarea id="text"cols="68" readonly>
+              #include <iostream>
+              using namespace std;
+              class Address {
+                  public:
+                 string addressLine, city, state;
+                   Address(string addressLine, string city, string state)
+                  {
+                      this->addressLine = addressLine;
+                      this->city = city;
+                      this->state = state;
+                  }
+              };
+              class Employee
+                  {
+                      private:
+                      Address* address;  //Employee HAS-A Address
+                      public:
+                      int id;
+                      string name;
+                      Employee(int id, string name, Address* address)
+                     {
+                         this->id = id;
+                         this->name = name;
+                         this->address = address;
+                     }
+                   void display()
+                     {
+                         cout<<id <<" "<<name<< " "<<endl<<
+                           address->addressLine<<endl<< address->city<< " "<<address->state<<endl;
+                     }
+                 };
+              int main(void) {
+                  Address a1= Address("M30, Sec-14","Gurgaon","HR");
+                  Employee e1 = Employee(101,"Ram",&a1);
+                          e1.display();
+                 return 0;
+              }
+           </textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          101 Ram
+          M30, Sec-14
+          Gurgaon HR
+          
+          --------------------------------
+          Process exited after 0.1508 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->  
+        
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

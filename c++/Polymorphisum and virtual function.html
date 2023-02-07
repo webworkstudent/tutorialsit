@@ -1,0 +1,836 @@
+
+<html>
+  <head>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+      <link href="icon.css" rel="stylesheet" type="text/css"/>
+   
+  </head>
+  <body>
+  <div class="container"><!-- Container start -->
+  
+    <div class="row"> <!-- Row start -->
+        
+      <div class="col">
+        1 of 3
+      </div>
+        
+      <div class="col-8"> <!-- Middle page start-->
+        
+          <div>
+              
+          <div class="pagecontent"><!-- Content start-->
+          <fieldset>
+          <legend> Polymorphisum and<br>virtual function  </legend>
+              <li><a>Examples 1</a></li>
+              <li><a>Examples 2</a></li>
+              <li><a>Examples 3</a></li>
+              <li><a>Examples 4</a></li>
+              <li><a>Examples 5</a></li>
+              <li><a>Examples 6</a></li>
+              <li><a>Examples 7</a></li>
+              <li><a>Examples 8</a></li>
+              <li><a>Examples 9</a></li>
+              <li><a>Examples 10</a></li>
+          </fieldset>
+          </div> <!-- Content end-->
+          
+          <dd>
+          <dfn><dt><h2>Means one thing many forms.</h2></dt></dfn><br><br></dd>
+          <dd> 1. static Binding OR Compile time polymorphism OR Early Binding :<br>
+            ---  means that the code associated with the function call is linked at compile time.<br><br>
+     
+            Like : Function Overloading, Operator Overloading:<br><br>
+            2. Dynamic Binding OR Runtime polymorphism OR Late Binding :<br>
+            ---  means that the code associated with the function call is linked at runtime.<br><br>
+  
+            Like : Virtual Function OR Overriding<br>
+            <br>
+             </dd>
+             <dfn><dt><h2>Function OverLoading</h2></dt></dfn>
+             <dd>
+              When a class have more than one function with same name but different argument<br>
+              is called Function Overloading.<br>
+              <br>
+             </dd>
+             <dfn><dt><h2>Ways for Function Overloading</h2></dt></dfn>
+             <dd>
+                1. By Changing Number of arguments<br>
+                2. By Changing Type of arguments
+               <br><br>
+              </dd>
+              <dfn><dt><h2>Function Overriding </h2></dt></dfn>
+              <dd>
+              When a child class as well as parent class both have same method with<br>
+           same arguments is called Function Overriding.<br>
+             </dd>
+                </div>
+          
+  
+          <!-- ------------------------------------------------------------------------- -->
+          <!-- Example 1 start --->
+          
+          Example:1
+          <div class="note">
+            <b>Function OverLoading using Different number of arguments</b>
+          </div>
+          
+  <div class ="program">
+              <pre>
+<textarea id="text" style="border: none; outline: none;" readonly >
+#include<iostream>
+using namespace std;
+     
+class Pv2
+      {
+public :
+     
+void add(int x, int y)
+{
+cout<<x+y<<endl;
+}
+void add(int x, int y, int z)
+{
+cout<<x+y+z;
+}
+};
+     
+int main()
+{
+Pv2 ob;
+ob.add(2,3);
+ob.add(2,3,4);
+}
+</textarea>
+          </pre>
+          </div>
+          Output:
+          <div class="output">
+          <pre>
+            5
+            9
+            --------------------------------
+            Process exited after 0.06434 seconds with return value 0
+            Press any key to continue . . . 
+          </pre>
+          </div>
+          
+          <!-- Example 1 end --->        
+          <!-- ------------------------------------------------------------------------- -->
+          
+          
+          <!-- Example 2 start --->
+          Example:2
+         
+  
+          <div class="note">
+              <b>Function OverLoading Using Different Type of arguments</b>
+          </div>
+          
+          <div class ="program">
+          
+            <pre>
+<textarea id="text" cols="25" readonly>
+    #include<iostream>
+    using namespace std;
+   
+    class Pv2
+    {
+   
+      public :
+   
+      void add(int x, int y)
+      {
+        cout<<x+y<<endl;
+      }
+      void add(int x, float y)
+      {
+        cout<<x+y;
+      }
+    };
+   
+    int main()
+    {
+      Pv2 ob;
+      ob.add(2,3);
+      ob.add(2,3.4f); // must write f for float
+    }  
+  </textarea>    
+  </pre>     
+          </div>
+          
+          Output:
+          <div class="output">
+              
+          <pre>
+            5
+            5.4
+            --------------------------------
+            Process exited after 0.06337 seconds with return value 0
+            Press any key to continue . . .
+          </pre>
+              
+          </div>
+          <!-- Example 2 end --->
+          
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          
+         
+          
+          <!-- Example 3 start --->
+            
+            <div class="note">
+              <b>Function Overriding</b><br>
+             
+            </div>
+            Example:3
+          <div class ="program">
+              <pre>
+<textarea id="text" cols="60" readonly>
+    #include<iostream>
+    using namespace std;
+    
+    class Pv4P
+    {
+      protected:
+      int x;
+      public :
+       void display()
+       {
+        cout<<"Parent Class \n";
+       }
+    };
+    class Pv4 : public Pv4P
+    {
+      public :
+        void getX()
+        {
+        cout<<"Enter the value of x."<<endl;
+        cin>>x;
+        }
+       void display()
+       {
+         cout<<"Child Class"<<"and the value of x="<<x<<endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv4 obj;
+      obj.getX();
+      obj.display();
+    }               
+              </textarea>
+          </pre>
+          </div>
+          Output:
+          <div class="output">
+          <pre>
+            Enter the value of x.
+            25
+            Child Classand the value of x=25
+            
+            --------------------------------
+            Process exited after 4.322 seconds with return value 0
+            Press any key to continue . . .  
+          </pre>
+          </div>
+          
+          <!-- Example 3 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+         
+          
+        <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 4 start --->
+            Example:4
+            <div class="note">
+            <b>Function Overriding In Multi Level Inheritance</b>
+            </div>
+          <div class ="program">
+              <pre>
+<textarea id="text" cols="68" readonly>
+    #include<iostream>
+    using namespace std;
+    class Pv5PP
+    {
+      public :
+      void display()
+      {
+        cout<<"Parent Pv5PP Class"<<endl;
+      }
+    };
+    class Pv5P : public Pv5PP
+    {
+      public :
+       void display()
+       {
+        cout<<"Parent Pv5P Class \n";
+       }
+    };
+    class Pv5 : public Pv5P
+    {
+      public :
+       void display()
+       {
+         cout<<"Child Class"<<endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv5 obj;
+      obj.display();
+      Pv5P obj1;
+      obj1.display();
+      Pv5PP obj2;
+      obj2.display();
+    }            
+          </textarea>
+          </pre>
+          </div>
+          Output:
+          <div class="output">
+              <pre>
+                Child Class
+                Parent Pv5P Class
+                Parent Pv5PP Class
+                
+                --------------------------------
+                Process exited after 0.06276 seconds with return value 0
+                Press any key to continue . . .
+          </pre>
+          </div>
+          
+          <!-- Example 4 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+           <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 5 start --->
+            Example:5
+            <div class="note">
+              <dd><b>Function Overriding In Multiple Inheritance</b></dd>
+            </div>
+          <div class ="program">
+              <pre>
+<textarea id="text" cols="68" readonly>
+    #include<iostream>
+    using namespace std;
+    class Pv6A
+    {
+      public :
+      void display()
+      {
+        cout<<"Parent Pv5PP Class"<<endl;
+      }
+    };
+    class Pv6B
+    {
+      public :
+       void display()
+       {
+        cout<<"Parent Pv5P Class \n";
+       }
+    };
+    class Pv6 : public Pv6B, public Pv6A
+    {
+      public :
+       void display() // will override the parent classes
+       {
+         cout<<"Child Class"<<endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv6 obj;
+      obj.display();
+    
+    }                
+            </textarea>
+          </pre>
+          </div>
+          Output:
+          <div class="output">
+              <pre>
+                Child Class
+
+                --------------------------------
+                Process exited after 0.05978 seconds with return value 0
+                Press any key to continue . . .
+          </pre>
+          </div>
+          
+          <!-- Example 5 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+        
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 6 start --->
+          <div class="note">
+            <b>Function Overriding In Multiple Inheritance</b>
+            
+          </div>
+            Example:6     
+          <div class ="program">
+              <pre>
+<textarea id="text" cols="68"readonly>
+  #include<iostream>
+  using namespace std;
+   class Pv6A
+  {
+    public :
+    void display()
+    {
+      cout<<"Parent Pv6A Class Display"<<endl;
+    }
+  };
+  class Pv6B
+  {
+    public :
+     void display()
+     {
+      cout<<"Parent Pv6B Class Display \n";
+     }
+  };
+  class Pv6 : public Pv6B, public Pv6A
+  {
+    public :
+     void display()
+     {
+        display(); // Ambiguity -- which display() function will call
+      //Pv6A::display();
+      //Pv6B::display();
+     }
+  };
+  
+  int main()
+  {
+    Pv6 obj;
+    obj.display();
+  
+  }             
+          </textarea>
+                  
+          </pre>
+          </div>
+          
+          Output:
+          <div class="output">
+        <pre>
+          --------------------------------
+          Process exited after 0.4036 seconds with return value 3221225725
+          Press any key to continue . . .
+            
+          </pre>
+          </div>
+          
+          <!-- Example 6 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          
+            <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 7 start --->
+         
+            Example:7     
+           <div class="note"> 
+            <b>Function Overriding Base Class Function Calling</b>
+            
+           </div>
+           
+          <div class ="program">
+              <pre>
+<textarea id="text" cols="68" readonly>
+    #include<iostream>
+    using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout<<"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout<<"Child Class"<<endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8 obj;
+      obj.display(); // invoke display() in derived Class
+      obj.Pv8P::display();// invoke display() in Base Class
+    }
+          </textarea>
+                  
+          </pre>
+          </div>
+          
+          Output:
+          <div class="output">
+          <pre>
+            Child Class
+            Parent Class
+            
+            --------------------------------
+            Process exited after 0.0791 seconds with return value 0
+            Press any key to continue . . .
+          </pre>
+          </div>
+          
+          <!-- Example 7 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          
+            <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 8 start --->
+            Example:8   
+            <div class="note">
+              <b><h3>Pointers to Derived Classes</h3></b>
+              <dd>Calling Child class members using base class pointers.</dd>
+            </div>  
+          <div class ="program">
+          <pre>
+<textarea id="text"cols="68" readonly>
+    #include<iostream>
+    using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout<<"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout<<"Child Class"<<endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }                
+             </textarea>     
+          </pre>
+          </div>
+          
+          Output:
+          <div class="output">
+          <pre>
+            Parent Class
+            Parent Class
+            Child Class
+            
+            --------------------------------
+            Process exited after 0.06797 seconds with return value 0
+            Press any key to continue . . .
+          </pre>
+          </div>
+          
+          <!-- Example 8 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 9 start --->
+            Example:9   
+            <div class="note">
+              <b><h3>Virtual function</h3></b>
+              <dd>A virtual function is a member function of a class, whose functionality can be
+                overridden in its derived classes.It is one that is declared as virtual in the
+                base class using the virtual key word. The function body of base class can be
+                completely replaced with a new set of implementation in the derived class.
+                Virtual , as the name implies,is something that exists in effects but not in
+                reality . The object oriented programming language C++ implements the concept
+                of virtual function as a simple member function , like all member functions of
+                the class. Virtual function is a mechanism to implement the concept of polymorphism
+                i.e. the ability to give different meanings to one function.</dd>
+              
+              <b><h3>Declaration of Virtual Function</h3></b>
+              <dd>class name   // base class of C++ virtual function<br>
+                {<br>
+                   public:<br>
+                   virtual void memberfuctionname ( )// This denotes the C++  virtual function<br>
+                   {<br>
+           
+                   }<br>
+                };</dd>
+            <b><h3>Properties of virtual function</h3></b>
+            <dd>Dynamic binding: virtual functions are resolved during run time or dynamic binding.
+              The main difference between a nonâ€“virtual C++ member function and a virtual member
+              function is in the way they are both resolved. A non- virtual C++ member function
+              is resolved during compile time and hence it is a static binding. Virtual functions
+              are resolved during run time hence it is a dynamic binding.<br><br>
+         
+              1. Virtual functions are member functions of a class.<br>
+              2. Virtual functions are declared with the keyword virtual.<br>
+              3. Virtual function takes a different functionality in the derived class.</dd>
+            <b><h3>Need for virtual function</h3></b>
+            <dd>Virtual function is needed to implement different functionalities in different derived
+              classes of a base class.<br><br>
+         
+         
+              The virtual functions can be inherited. when a virtual function is inherited, its
+              virtual nature is also inherited. This means that when a derived class that has
+              inherited a virtual function is itself used as a base class for another derived
+              class ,the virtual function can still be overridden.<br>
+              One can inherited a virtual function any number of times.</dd>
+              
+  
+            </div>  
+          <div class ="program">
+          <pre>
+<textarea id="text" cols="68" readonly>
+    #include <iostream>
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout <<"member function of base  class vehicle accessed"<<endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout <<"Two Wheeler accessed"<<endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout <<"Four Wheeler accessed"<<endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }              
+             </textarea>     
+          </pre>
+          </div>
+          
+          Output:
+          <div class="output">
+          <pre>
+            member function of base  class vehicle accessed
+            Four Wheeler accessed
+            Two Wheeler accessed
+            member function of base  class vehicle accessed
+            Four Wheeler accessed
+            
+            --------------------------------
+            Process exited after 0.06046 seconds with return value 0
+            Press any key to continue . . .
+          </pre>
+          </div>
+          
+          <!-- Example 9 end --->
+          
+          
+          <!-- ------------------------------------------------------------------------- -->
+  
+          <!-- ------------------------------------------------------------------------- -->
+          
+          <!-- Example 10 start --->
+  
+          Example 10
+          <div class="note">
+            <b><h3>Pure virtual Function And Abstraction And Interface</h3></b>
+            <dd>Abstract Class :</dd><br>
+            <dd>A class which contain pure virtual function is called abstract class.
+              Abstract classes cannot be used to instantiate objects and serves only
+              as an interface. Attempting to instantiate an object of an abstract
+              class causes a compilation error.</dd>
+          </div>
+          
+          <div class="program">
+            <pre>
+<textarea id="text" cols="68" readonly>
+    #include <iostream>
+
+    using namespace std;
+    
+    // Base class
+    class Shape {
+       public:
+          // pure virtual function providing interface framework.
+          virtual int getArea() = 0;
+          void setWidth(int w) {
+             width = w;
+          }
+    
+          void setHeight(int h) {
+             height = h;
+          }
+    
+       protected:
+          int width;
+          int height;
+    };
+    
+    // Derived classes
+    class Rectangle: public Shape {
+       public:
+          int getArea() {
+             return (width * height);
+          }
+    };
+    
+    class Triangle: public Shape {
+       public:
+           Triangle()
+           {
+    
+           }
+          Triangle(int w, int h)
+          {
+            width=w;
+            height=h;
+          }
+    
+          int getArea() {
+             return (width * height)/2;
+          }
+    };
+    
+    int main(void) {
+    //   Shape obj; // We can not create an object of abstract Class.
+       Rectangle Rect;
+      // Triangle  Tri; will call default constructor
+        Triangle  Tri(2,3);
+    //
+    //   Rect.setWidth(5);
+    //   Rect.setHeight(7);
+    
+       // Print the area of the object.
+       cout << "Total Rectangle area: " << Rect.getArea() << endl;
+    
+    //   Tri.setWidth(5);
+    //   Tri.setHeight(7);
+    
+       // Print the area of the object.
+       cout << "Total Triangle area: " << Tri.getArea() << endl;
+    
+       cout<<"\nObject Creation at Dynamic time :"<<endl<<endl;
+       Shape *Drect, *Dtri;
+       Drect= new Rectangle;
+       Drect ->setWidth(8);
+       Drect ->setHeight(5);
+       cout << "Total Rectangle area: " <<Drect ->getArea()<<endl;
+       Dtri= new Triangle(4,5);
+    // delete Dtri; 
+    // Delete will deallocate the memory for Triangle Object.
+    //   Dtri ->setWidth(2);
+    //   Dtri ->setHeight(3);
+        cout << "Total Triangle area: "<<Dtri ->getArea()<<endl; 
+    // after delete line will not execute
+       return 0;
+    }                
+              </textarea>
+            </pre>
+          </div>
+  
+          Output
+          <div class="output">
+            <pre>
+              Total Rectangle area: 0
+              Total Triangle area: 3
+              
+              Object Creation at Dynamic time :
+              
+              Total Rectangle area: 40
+              Total Triangle area: 10
+              
+              --------------------------------
+              Process exited after 0.06405 seconds with return value 0
+              Press any key to continue . . .
+            </pre>
+          </div>
+  
+        <!-- Example 10 end --->
+          
+          
+        <!-- ------------------------------------------------------------------------- -->  
+          
+      </div> <!-- Middle page end-->
+      
+      <div class="col">
+        3 of 3
+      </div>
+        
+    </div> <!-- Container end-->
+  </div>  
+  </body>
+  </html>

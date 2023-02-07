@@ -1,0 +1,649 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+          <fieldset>
+          <legend> Polymorphisum and<br>virtual function  </legend>
+              <li><a>Examples 1</a></li>
+              <li><a>Examples 2</a></li>
+              <li><a>Examples 3</a></li>
+              <li><a>Examples 4</a></li>
+              <li><a>Examples 5</a></li>
+              <li><a>Examples 6</a></li>
+              <li><a>Examples 7</a></li>
+              <li><a>Examples 8</a></li>
+              <li><a>Examples 9</a></li>
+              <li><a>Examples 10</a></li>
+          </fieldset>
+          </div>
+         
+        
+        <dfn><dt><h3> Explanation of Namesapace:-</h3></dt></dfn>
+        <dd>
+          Consider a situation, when we have two persons with the same name, Zara, in the same class.</dd>
+        
+        <dd>Whenever we need to differentiate them definitely we would have to use some additional<br>
+          information along with their name, like either the area, if they live in different area or<br>
+          their motherâ€™s or fatherâ€™s name, etc.<br></dd>
+        <dd>  Same situation can arise in your C++ applications. For example, you might be writing some<br>
+          code that has a function called xyz() and there is another library available which is also<br>
+          having same function xyz(). Now the compiler has no way of knowing which version of xyz()<br>
+          function you are referring to within your code.<br></dd>
+        <dd>A namespace is designed to overcome this difficulty and is used as additional information<br>
+          to differentiate similar functions, classes, variables etc. with the same name available in<br>
+          different libraries. Using namespace, you can define the context in which names are defined.<br>
+          In essence, a namespace defines a scope<br></dd>
+
+          <br><br>
+              <dfn><dt><h3>Pints on Namespace </h3></dt></dfn>
+              <br>
+              <ol>
+                <li>Namespace is a feature added in C++ and not present in C.</li>
+                 <li>A namespace is a declarative region that provides a scope to the identifiers<br>
+                      (names of the types, function, variables etc) inside it.</li>
+                 <li> Multiple namespace blocks with the same name are allowed.</li>
+                 <li>  All declarations within those blocks are declared in the named scope.</li>
+               
+                 <li> Namespace declarations appear only at global scope.</li>
+                 <li> Namespace declarations can be nested within another namespace.</li>
+                 <li> Namespace declarations donâ€™t have access specifiers. (Public or private)</li>
+                 <li> No need to give semicolon after the closing brace of definition of namespace.</li>
+                 <li> We can split the definition of namespace over several units.</li>
+              </ol>
+              <br><br>
+              <div class ="program">
+                <pre>
+<textarea id="text" cols="67" rows="27" readonly>
+   #include <iostream>
+    using namespace std;
+
+   // first name space
+   namespace first_space {
+      void func() {
+         cout << "Inside first_space" << endl;
+      }
+   }
+
+   // second name space
+   namespace second_space {
+      void func() {
+         cout << "Inside second_space" << endl;
+      }
+   }
+
+   int main () {
+      // Calls function from first name space.
+      first_space::func();
+
+      // Calls function from second name space.
+      second_space::func();
+
+      return 0;
+   }
+                </textarea>
+            </pre>
+            </div>
+            Output:
+            <div class="output">
+                <pre>
+                  Inside first_space
+                  Inside second_space
+                  
+                  --------------------------------
+                  Process exited after 0.1208 seconds with return value 0
+                  Press any key to continue . . .
+            </pre>
+            </div>
+            <dd>
+                <div class="note">
+                   <b> Note:</b> <br>
+                   <b> The using directive</b>
+                   <br> 
+                   </div>
+                   </dd>   
+                    
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        Example:1
+        <div class ="program">
+          <pre>
+<textarea id="text" cols="67" rows="26" readonly>
+    #include <iostream>
+    using namespace std;
+    
+    // first name space
+    namespace first_space {
+       void func() {
+          cout << "Inside first_space" << endl;
+       }
+    }
+    
+    // second name space
+    namespace second_space {
+       void func() {
+          cout << "Inside second_space" << endl;
+       }
+    }
+    
+    using namespace first_space;
+    //using namespace second_space;
+    int main () {
+       // This calls function from first name space.
+       func();
+    
+       return 0;
+    }
+              </textarea>
+              </pre>
+             </div>
+              Output:
+               <div class="output">
+          <pre>
+            Inside first_space
+
+            --------------------------------
+            Process exited after 0.09367 seconds with return value 0
+             Press any key to continue . . .
+                
+                </pre>
+              </div>
+  
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        
+        Example:2
+        <div class ="program">
+          <pre>
+<textarea id="text" cols="68" rows="10" readonly>
+    #include <iostream>
+    using std::cout; // will access only cout object by using 'using' directive
+    int main () {
+    cout << "std::endl is used with std!" << std::endl; // directly accessing endl without using 'using' directive
+
+    return 0;
+    }             
+          
+          </textarea>
+      </pre>
+      </div>
+      Output:
+      <div class="output">
+          <pre>
+            std::endl is used with std!
+
+            --------------------------------
+            Process exited after 0.09488 seconds with return value 0
+            Press any key to continue . . .
+      </pre>
+      </div>
+        
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <div class="note">
+            <dfn><dt><h3> Defining a Namespace </h3></dt></dfn>
+              <br>
+             <h6> Namespaces can be nested where you can define one namespace inside another name space as follows âˆ’</h6>
+             <br> 
+              namespace namespace_name1<br>
+              {<br>
+                // code declarations<br>
+                    namespace namespace_name2<br>
+                    {<br>
+                       // code declarations<br>
+                    }
+              }<br>
+                  <br><br>
+                    You can access members of nested namespace by using resolution operators as follows âˆ’
+                    <br><br>
+                    // to access members of namespace_name2<br>
+                    using namespace namespace_name1::namespace_name2;<br>
+                    <br>
+                    // to access members of namespace:name1<br>
+                    using namespace namespace_name1;<br>
+                <br>
+             </div>
+             </dd>   
+             </div>      
+        <!-- Example 3 start --->
+          Example:3
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="67" rows="27" readonly>
+    #include <iostream>
+    using namespace std;
+
+    // first name space
+    namespace first_space {
+    void func() {
+    cout << "Inside first_space" << endl;
+    }
+
+  // second name space
+  namespace second_space {
+  void func() {
+   cout << "Inside second_space" << endl;
+  }
+  }
+  }
+
+  using namespace first_space::second_space;
+  int main () {
+  // This calls function from second name space.
+  func();
+
+ return 0;
+  }         
+
+            
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              Inside second_space
+
+              --------------------------------
+              Process exited after 0.0899 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+    
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        <div class="note">
+          <b><h6> A C++ program to demonstrate use of class<br>
+            // in a namespace</h6></b>
+        </div>
+        <!-- Example 4 start --->
+
+         Example:4
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="67" rows="29" readonly>
+    #include <iostream>
+    using namespace std;
+
+      // first name space
+       namespace first_space {
+      void func() {
+      cout << "Inside first_space" << endl;
+      }
+
+      // second name space
+        namespace second_space {
+        void func() {
+        cout << "Inside second_space" << endl;
+        }
+        }
+        }              
+        using namespace first_space::second_space;
+        int main () {
+        // This calls function from second name space.
+        func();
+
+        return 0;
+        }     
+  
+                        
+                      </textarea>
+                      </pre>
+                      </div>
+                       Output:
+                        <div class="output">
+                        <pre>
+              ns::geek::display()
+
+              --------------------------------
+              Process exited after 0.0957 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+      
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+         <div class="note">
+          <b><h6> Class can also be declared inside namespace and defined outside namespace using following syntax<br></h6></b>
+        </div>
+        
+            
+        <!-- Example 5 start --->
+          Example:5
+        <div class ="program">
+            <pre>
+        
+<textarea id="text" cols="67" rows="30" readonly>
+  // A C++ program to demonstrate use of class
+  // in a namespace
+
+  #include <iostream>
+  using namespace std;
+  
+  namespace ns
+  {
+    // Only declaring class here
+    class geek;
+  }
+  
+  // Defining class outside
+  class ns::geek
+  {
+  public:
+    void display()
+    {
+      cout << "ns::geek::display()\n";
+    }
+  };
+  
+  int main()
+  {
+    //Creating Object of student Class
+    ns::geek obj;
+    obj.display();
+    return 0;
+  }                 
+                </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              ns::geek::display()
+
+              --------------------------------
+              Process exited after 0.09396 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+      
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+        <b> We can define methods also outside the namespace. Following is an example code.</b><br>
+          Example:6
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="67" rows="40" readonly>
+  //A C++ code to demonstrate that we can define
+  // methods outside namespace.
+
+  
+  #include <iostream>
+  using namespace std;
+  
+  // Creating a namespace
+  namespace ns
+  {
+    void display();
+    class geek
+    {
+    public:
+    void display();
+    };
+  }
+  
+  // Defining methods of namespace
+  void ns::geek::display()
+  {
+    cout << "ns::geek::display()\n";
+  }
+  void ns::display()
+  {
+    cout << "ns::display()\n";
+  }
+  
+  // Driver code
+  int main()
+  {
+    ns::geek obj;
+    ns::display();
+    obj.display();
+    return 0;
+  }             
+                  
+             </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          ns::display()
+          ns::geek::display()
+          
+          --------------------------------
+          Process exited after 0.09159 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+           
+         <div class="note"><h4>Extending namespaces (Using same name twice)</h4> <br>
+          It is also possible to create two namespace blocks having the same name.<br>
+          The second namespace block is nothing but actually the continuation of<br>
+          the first namespace. In simpler words, we can say that both the namespaces<br>
+          are not different but actually the same, which are being defined in parts.<br>  </div>
+          Example:7 
+        <div class ="program">
+            <pre>
+<textarea id="text" cols="67" rows="25" readonly>
+  // C++ program to demonstrate namespace exntension
+          
+          
+  #include <iostream>
+  using namespace std;
+
+  // first name space
+  namespace first
+  {
+  int val1 = 500;
+  }
+
+  // rest part of the first namespace
+  namespace first
+  {
+  int val2 = 501;
+  }
+
+  int main()
+  {
+  cout << first::val1 <<"\n";
+  cout << first::val2 <<"\n";
+  return 0;
+  }         
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          500
+          501
+          
+          --------------------------------
+          Process exited after 0.09291 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+        <div class="note"><h4>Unnamed Namespaces</h4> <br>
+          They are directly usable in the same program and are used for declaring unique identifiers.<br>
+          In unnamed namespaces, name of the namespace in not mentioned in the declaration of namespace.<br>
+          The name of the namespace is uniquely generated by the compiler.<br>
+          The unnamed namespaces you have created will only be accessible within the file you created it in.<br>
+          Unnamed namespaces are the replacement for the static declaration of variables.<br>  </div>
+          Example:8     
+        <div class ="program">
+        <pre>
+<textarea id="text" cols="67" rows="20" readonly>
+  // C++ program to demonstrate working of unnamed
+  // namespaces
+  
+
+  #include <iostream>
+  using namespace std;
+
+  // unnamed namespace declaration
+  namespace
+  {
+  int rel = 300;
+  }
+
+  int main()
+  {
+  cout << rel << "\n"; // prints 300
+  return 0;
+  }          
+          
+         </textarea>    
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          300
+
+            --------------------------------
+            Process exited after 0.09557 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 9 start --->
+          Example:9
+          <b>Namespace Aliasing</b>     
+        <div class ="program">
+        <pre>
+<textarea id="text" cols="67" rows="29" readonly>
+  In C++, you can use an alias name for your namespace name, for ease of use.
+  Existing namespaces can be aliased with new names, with the following syntax:
+
+  namespace new_name = current_name;
+
+  #include <iostream>
+
+  namespace name1
+  {
+  namespace name2
+  {
+  namespace name3
+  {
+  int var = 42;
+  }
+  }
+  }
+
+   // Aliasing
+    namespace alias = name1::name2::name3;
+
+    int main()  
+    {
+    std::cout << alias::var << '\n';
+    }            
+  
+                </textarea>     
+              </pre>
+              </div>
+        
+              Output:
+              <div class="output">
+              <pre>
+                42
+
+                --------------------------------
+                Process exited after 0.08209 seconds with return value 0
+                Press any key to continue . . .
+              </pre>
+              </div>
+              <!-- Example 9 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
