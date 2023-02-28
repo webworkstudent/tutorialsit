@@ -1,0 +1,502 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+   <style type="text/css">
+
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>IO</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        <dd><h3>Sprintf( ) and sscanf( ) Functions </h3></dd>
+        <p>The sprintf( ) function works similar to the printf( ) function
+    except for one small difference. Instead of sending the output to
+    the screen as printf( ) does, this function writes the output to an
+    array of characters. The following program illustrates this.</p>
+        <h5>Example:1</h5>
+        <b><h5> 1. Program to Simple Function.</h5></b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="17" style="border: none; outline: none;" readonly >
+    #include<stdio.h>
+    void main()
+    {
+        int i = 10 ;
+        char ch = 'A' ;
+        float a = 3.14 ;
+        char str[20] ;
+        printf ( "\n%d %c %f", i, ch, a ) ;
+        sprintf ( str, "%d %c %f", i, ch, a ) ;
+        printf ( "\n%s", str ) ;
+    }
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+            10 A 3.140000
+            10 A 3.140000
+            --------------------------------
+            Process exited after 0.05335 seconds with return value 14
+            Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        <h5>Example:2</h5>
+        <b><h5>Formated String</h5></b>
+
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="11" readonly>
+#include<stdio.h>
+void main( )
+{
+int weight = 63 ;
+printf ( "\nweight is %d kg", weight ) ;
+printf ( "\nweight is %2d kg", weight ) ;
+printf ( "\nweight is %4d kg", weight ) ;
+printf ( "\nweight is %6d kg", weight ) ;
+printf ( "\nweight is %-6d kg", weight ) ;
+}
+</textarea>    
+        </pre>     
+        </div>
+    
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+        weight is 63 kg
+        weight is 63 kg
+        weight is   63 kg
+        weight is     63 kg
+        weight is 63     kg
+        --------------------------------
+        Process exited after 0.04775 seconds with return value 20
+        Press any key to continue . . .
+        </pre>
+            
+        </div>
+            <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          <h5>Example:3</h5>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="18" readonly>
+#include<stdio.h>
+void main( )
+{
+    printf ( "\n%f %f %f", 5.0, 13.5, 133.9 ) ;
+    printf ( "\n%f %f %f", 305.0, 1200.9, 3005.3 ) ;
+
+    /*
+
+    Even though the numbers have been printed, the numbers have not
+    been lined up properly and hence are hard to read. A better way
+    would be something like this...
+
+    */
+
+    printf ( "\n%10.1f %10.1f %10.1f", 5.0, 13.5, 133.9 ) ;
+    printf ( "\n%10.1f %10.1f %10.1f", 305.0, 1200.9, 3005.3 );
+}
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                5.000000 13.500000 133.900000
+                305.000000 1200.900000 3005.300000
+                       5.0       13.5      133.9
+                     305.0     1200.9     3005.3
+                --------------------------------
+                Process exited after 0.04943 seconds with return value 33
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          <h5>Example:4</h5>
+          <b><h5> 4.Formatting strings with printf( )</h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="18" readonly>
+#include<stdio.h>
+void main( )
+{
+char firstname1[ ] = "Sandy" ;
+char surname1[ ] = "Malya" ;
+char firstname2[ ] = "AjayKumar" ;
+char surname2[ ] = "Gurubaxani" ;
+
+/* without formated */
+printf ( "\n%s%s", firstname1, surname1 ) ;
+printf ( "\n%s%s", firstname2, surname2 ) ;
+
+/* With Formated */
+printf ( "\n%20s%20s", firstname1, surname1 ) ;
+printf ( "\n%20s%20s", firstname2, surname2 ) ;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+            SandyMalya
+            AjayKumarGurubaxani
+                           Sandy               Malya
+                       AjayKumar          Gurubaxani
+            --------------------------------
+            Process exited after 0.05533 seconds with return value 41
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          <h5>Example:5</h5>
+          <b><h5>5.The following program shows a few of these conversions, some
+sensible, some weird.
+        </h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="14" readonly>
+#include<stdio.h>
+main( )
+{
+char ch = 'z' ;
+int i = 125 ;
+float a = 12.55 ;
+char s[ ] = "hello there !" ;
+printf ( "\n%c %d %f", ch, ch, ch ) ;
+printf ( "\n%s %d %f", s, s, s ) ;
+printf ( "\n%c %d %f",i ,i, i ) ;
+printf ( "\n%f %d\n", a, a ) ;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                z 122 0.000000
+                hello there ! 6487552 0.000000
+                } 125 0.000000
+                12.550000 -1610612736
+
+                --------------------------------
+                Process exited after 0.05862 seconds with return value 23
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          <h5>Example:6</h5>
+          <h5><b> 6.Unformatted Console I/O Functions </b></h5> 
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="19" readonly>
+#include<stdio.h>
+void
+    main( )
+    {
+    char ch ;
+    printf ( "\nPress any key to continue" ) ;
+    getch( ) ; 
+    /* will not echo the character */
+    printf ( "\nType any character" ) ;
+    ch = getche( ) ; 
+    /* will echo the character typed */
+    printf ( "\nType any character" ) ;
+    getchar( ) ; 
+    /* will echo character, must be followed by enter key */
+    printf ( "\nContinue Y/N" ) ;
+    fgetchar( ) ; 
+    /* will echo character, must be followed by enter key */ // ERROR Check it.
+    }
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Press any key to continue
+            Type any characterS
+            Type any characterSachin
+
+            Continue Y/N
+            --------------------------------
+            Process exited after 9.1 seconds with return value 97
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          <h5>Example:7</h5>
+          <b><h5>7. ERROR let's check first</h5></b>    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="12" readonly>
+#include<stdio.h>
+void main( )
+{
+char ch = 'A' ;
+putch ( ch ) ;
+putchar ( ch ) ;
+fputchar ( ch ) ;
+putch ( 'Z' ) ;
+putchar ( 'Z' ) ;
+fputchar ( 'Z' ) ;
+}
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            AAAZZZ
+            --------------------------------
+            Process exited after 0.05162 seconds with return value 90
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+        
+
+          <h5>Example:8</h5>   
+   
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="17" readonly>
+#include<stdio.h>
+void main( )
+{
+char name[50] ;
+char footballer[40] ;
+printf ( "\nEnter name " ) ;
+scanf ( "%s", name ) ;
+printf ( "%s", name ) ;
+
+puts ( "Enter name" ) ;
+//gets ( footballer ) ; 
+/* sends base address of array */ 
+// gets not working check it
+puts ( "Happy footballing!" ) ;
+puts ( footballer ) ;
+}
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+        Enter name Sachin
+        SachinEnter name
+        Happy footballing!
+
+
+        --------------------------------
+        Process exited after 3.361 seconds with return value 0
+        Press any key to continue . . .          
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>

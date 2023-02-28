@@ -1,0 +1,589 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<link href="icon.css" rel="stylesheet" type="text/css"/>
+     
+</head>
+<body>
+    <style type="text/css">
+
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>String</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+    
+        
+        
+        </div>
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        <h5>Example:1</h5>
+        <b><h5> 1.Program to Input and Display String.</h5></b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" style="border: none; outline: none;" readonly >
+#include<stdio.h>
+int main()
+{
+char str[25];
+printf("Enter Name :");
+scanf("%s",str); 
+// will scan for string but only one word after space word is not allowed.
+printf("\n Name = %s",str); 
+// printf is used for formated string
+printf("\n Name = ");
+puts(str); 
+// will print only string we can't print format string using puts().
+return 0;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                 Enter Name :sachin
+                 Name = sachin
+                 Name = sachin
+
+                --------------------------------
+                Process exited after 3.069 seconds with return value 0
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        <h5>Example:2</h5>
+        <b><h5>2. Program to Input Multiple Words in String (Embedded Blanks) using gets() function.</h5></b>
+
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="14" readonly>
+#include<stdio.h>
+int main()
+{
+    char str[50];
+    printf("\n Enter a String :");
+    gets(str);
+     // will read single line as input. [means will stop on enter]
+    printf("\n String is = %s",str);
+     // formated string
+    return 0;
+}
+</textarea>    
+        </pre>     
+        </div>
+    
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+
+         Enter a String :sachin
+
+         String is = sachin
+        --------------------------------
+        Process exited after 1.998 seconds with return value 0
+        Press any key to continue . .
+        </pre>
+            
+        </div>
+            <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          <h5>Example:3</h5>
+          <b><h5> 3.Program to Initialize a String.</h5></b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="19" readonly>
+#include<stdio.h>
+int main()
+{
+    char s1[]="String"; // assign String as value using litteral.
+    char s2[]={'S','t','r','i','n','g','\0'};
+    char s3[7];
+    s3[0]='S';
+    s3[1]='t';
+    s3[2]='r';
+    s3[3]='i';
+    s3[4]='n';
+    s3[5]='g';
+    s3[6]='\0';
+    printf("\n s1 = %s",s1);
+    printf("\n s2 = %s",s2);
+    printf("\n s3 = %s",s3);
+    return 0;
+}
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+             s1 = String
+             s2 = String
+             s3 = String
+            --------------------------------
+            Process exited after 0.04193 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          <h5>Example:4</h5>
+          <b><h5> 4.Program to display a string character-wise.</h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="12" readonly>
+#include<stdio.h>
+int main()
+{
+    char name[]="String";
+    int i=0;
+    while(name[i]!='\0')
+    {
+        printf("\n %c",name[i]);
+        i++;
+    }
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+             S
+             t
+             r
+             i
+             n
+             g
+            --------------------------------
+            Process exited after 0.05798 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          <h5>Example:5</h5>
+          <b><h5>5.Program to find the length of string using strlen() function.
+        </h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="11" readonly>
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[]="My Computer Class";
+    int len;
+    len =strlen(str);
+    printf("\n String = %s \n Length =%d",str,len);
+    return 0;
+}
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                 String = My Computer Class
+                 Length =17
+                --------------------------------
+                Process exited after 0.04749 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          <h5>Example:6</h5>
+          <h5><b> 6.Program to copy a string using strcpy() function.</b></h5> 
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="13" readonly>
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char source[] ="My Computer Class";
+    char target[20];
+    strcpy(target,source);
+    printf("\n Source String = %s",source);
+    printf("\n Target String = %s",target);
+    return 0;
+}
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+         Source String = My Computer Class
+         Target String = My Computer Class
+        --------------------------------
+        Process exited after 0.05573 seconds with return value 0
+        Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          <h5>Example:7</h5>
+          <b><h5>7. Program to concat string strcat() function.</h5></b>    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="13" readonly>
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char name[50]="String ";
+    strcat(name,"Computer ");
+    strcat(name,"Education");
+    printf("\n %s",name);
+    return 0;
+}
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+         String Computer Education
+        --------------------------------
+        Process exited after 0.05493 seconds with return value 0
+        Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+
+
+          <h5>Example:8</h5>   
+          <b><h5>8.Program to use strcmp() function to Compare String.</h5></b>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="22" readonly>
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[25]="String";
+    char str2[25]="string";
+    int d=0;
+    d= strcmp(str1,str2);
+    printf("\n Difference=%d",d);
+    if(d==0)
+    {
+        printf("\n Strings are same.");
+    }
+    else
+    {
+     printf("\n Strings are different.");
+    }
+    return 0;
+}
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+             Difference=-1
+             Strings are different.
+            --------------------------------
+            Process exited after 0.05592 seconds with return value 0
+            Press any key to continue . . .           
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 9 start --->
+        
+        <h5>Example:9</h5>   
+        <b><h5>9.Program to use strcmp() function to compare String.</h5></b>
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="23" readonly>
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    char mpass[7]="Ram",npass[7];
+    int d=0;
+    printf("Enter your Password : \n");
+    scanf("%s",npass);
+  //  d=strcmpi(mpass,npass);  // WILL NOT WORK IN LINUX
+   d= strcasecmp(mpass,npass); // ALTERNATE IN LINUX
+    if(d==0)
+    {
+        printf("\n Welcome Password Match.");
+    }
+    else
+    {
+        printf("\n Sorry Password didn't Match.");
+    }
+    return 0;
+}
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        Enter your Password :
+        ram
+
+         Welcome Password Match.
+        --------------------------------
+        Process exited after 1.296 seconds with return value 0
+        Press any key to continue . . .
+                  
+      </pre>
+      </div>
+      
+      <!-- Example 9 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+      
+     <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 10 start --->
+        <h5>Example:10</h5>   
+        <b><h5>Program to swap Two Strings.</h5></b>
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="18" readonly>
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    char str1[25],str2[25],t[25];
+    printf("\n Enter Two String : ");
+    scanf("%s %s",str1,str2);
+    printf("\n Strings Before Swapping are :\n");
+    printf("1. %s \n2. %s",str1,str2);
+    strcpy(t,str1);
+    strcpy(str1,str2);
+    strcpy(str2,t);
+    printf("\n String After Swapping are :\n");
+    printf("1. %s \n2. %s",str1,str2);
+    return 0;
+}
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+         Enter Two String : sachin
+        kumar
+
+         Strings Before Swapping are :
+        1. sachin
+        2. kumar
+         String After Swapping are :
+        1. kumar
+        2. sachin
+        --------------------------------
+        Process exited after 7.197 seconds with return value 0
+        Press any key to continue . . .        
+      </pre>
+      </div>
+      
+      <!-- Example 10 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
