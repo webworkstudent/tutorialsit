@@ -1,0 +1,716 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+   <style type="text/css">
+
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+ 
+</head>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Pointers</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+    
+        
+        
+        </div>
+        <div class="pagecontent">
+            
+          <b><h2>Pointers </h2></b>
+          <h5>- Pionter is a special type of variable which is used to hold the address
+           of any other variable.</h5><br><br>
+           <h2><b>Declaration of Pointer variable</b></h2><br>
+           <h5> Datatype * variableName ;<br>
+                 DataType -- is a type of data. like int , float , char, double etc.<br>
+                * / astrik / -- represent the variable pointer means location of particular<br>
+                        &nbsp;&nbsp; variable OR Address OR pointer.
+                        variableName --any name for variable.like firstName, lastName , roll ,e_id etc<br>
+                            int x =5; // Normal variable declaration<br>
+                            int * y;// pointer variable declaration<br></h5>
+                            <h2>Assignment of pointer variable</h2>
+                            <h5> y=&x;</h5>
+                            <h2> <b>How the memory get allocated to the pointer variable</b> </h2>
+                            <h5>      x &nbsp;&nbsp; name of the variable<br>
+                                | 5 |   value of the variable<br>
+                                -----<br>
+                                1234   Address of the variable<br>
+                                <hr>
+                                      y  name of the variable<br>
+        -------
+        |1234 |   value of the variable<br>
+        -------
+         1238  &nbsp;&nbsp; Address of the variable
+                        </h5>
+                        <h2><b>Like nested value do we have any nested address Assignment</b></h2>
+                            <h5>x=y=z=5;  &nbsp;&nbsp;    // PRINTF("%D",X);  //5<br>
+                    int *PTR1,*PTR2,*PTR3;<br>
+                    PTR1=PTR2=PTR3=&X;  //PRINTF("%D",PTR1);  //5 // 1234<br>
+                    Nested Pointer to access same value from all:<br>
+                    int *PTR1,**PTR2,***PTR3; // pointer variable declaration<br>
+                      X      &nbsp;   &nbsp;            PTR1      &nbsp;   &nbsp;      PTR2              &nbsp;   &nbsp;    PTR3<br>
+        -------               ----------      --------------    --------------<br>
+        |  5  |          &nbsp;&nbsp;    |&X (1234)|    &nbsp;   &nbsp;  |&PTR1 (4321)|      &nbsp;   &nbsp;|&PTR2 (5432)|<br>
+        -------              -----------     --------------     --------------<br>
+         1234                    4321           5432                9876<br>
+                    </h5>
+        </div>
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        <h5>Example:1</h5>
+        <b><h5> 1.First pointer program</h5></b>
+
+        <div class ="program">
+            <pre>
+
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x=5;
+    int *PTR1;// pointer declaration
+    PTR1=&x; // pointer variable assignment
+    int **PTR2;
+    PTR2=&PTR1;
+    int ***PTR3=&PTR2;
+    printf("The value of x is : %d   ::  Address is : %d\n",x,&x);
+    printf("The value of x is : %d   ::  value of x is : %d\n",x,*(&x));
+    printf("The Address of x is : %d   ::  Address of is PTR1 : %d\n",PTR1,&PTR1);
+    printf("The value of x is : %d   ::  Address is : %d\n",PTR2,&PTR2);
+    printf("The value of x is : %d   ::  Address is : %d\n",PTR3,&PTR3);
+    printf("The value of x is : %d   ::  Address is : %d\n",PTR3,*PTR3);
+    printf("The value of x is : %d   ::  Address is : %d\n",PTR3,****(&PTR3));
+
+
+}
+        
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+            The value of x is : 5   ::  Address is : 6487580
+            The value of x is : 5   ::  value of x is : 5
+            The Address of x is : 6487580   ::  Address of is PTR1 : 6487568
+            The value of x is : 6487568   ::  Address is : 6487560
+            The value of x is : 6487560   ::  Address is : 6487552
+            The value of x is : 6487560   ::  Address is : 6487568
+            The value of x is : 6487560   ::  Address is : 5
+
+            --------------------------------
+            Process exited after 0.07429 seconds with return value 49
+            Press any key to continue . . .
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        <h5>Example:2</h5>
+        <b><h5>2.Operation on the pointers</h5></b>
+
+        <div class ="program">
+        
+          <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int y=6;
+        int *PTR1=&x;
+        int *PTR2=&y;
+        printf("The value of x =%d\n",*PTR1);
+        printf("The value of y =%d\n\n\n",*PTR2);
+
+        PTR1=PTR2;
+
+        printf("The value of x =%d\n",*PTR1);
+        printf("The value of y =%d\n",*PTR2);
+
+    }
+   
+        </pre>     
+        </div>
+    
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+            The value of x =5
+            The value of y =6
+
+
+            The value of x =6
+            The value of y =6
+
+            --------------------------------
+            Process exited after 0.04261 seconds with return value 18
+            Press any key to continue . . .
+        </pre>
+            
+        </div>
+            <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+        
+          <h5>Example:3</h5>
+          <b><h5> 3.Operation on the pointers</h5></b>
+
+        <div class ="program">
+            <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int y=6;
+        int *PTR1=&x;
+        int *PTR2=&y;
+        printf("The value of x =%d\n",*PTR1);
+        printf("The value of y =%d\n\n\n",*PTR2);
+
+    //  PTR1=PTR2;
+
+        printf("The value of *PTR1 =%d\n",*PTR1);
+        printf("The value of *PTR2 =%d\n",*PTR2);
+
+        if(PTR1==PTR2)
+        {
+            printf("Pointers holding same value");
+        }
+        else
+        {
+            printf("Pointers holding Different value");
+        }
+    }
+            
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+             The value of x =5
+             The value of y =6
+
+
+             The value of *PTR1 =5
+             The value of *PTR2 =6
+             Pointers holding Different value
+             --------------------------------
+             Process exited after 0.04734 seconds with return value 32
+             Press any key to continue . . .
+                    </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          <h5>Example:4</h5>
+          <b><h5> 4. Addition with pointer a constant value </h5></b>
+        <div class ="program">
+            <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int *PTR1=&x;
+        printf("The Address of x =%x\n",PTR1); // x stands for hexadecimal
+        printf("The value of PTR1 =%x\n",*PTR1);
+        PTR1=PTR1+1;
+        //*PTR1=*PTR1+3;
+        printf("The Address of x =%x\n",PTR1);
+        printf("The value of x =%x\n",*PTR1);
+
+    }
+  
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+             The Address of x =62fe14
+             The value of PTR1 =5
+             The Address of x =62fe18
+             The value of x =62fe18
+
+             --------------------------------
+             Process exited after 0.04787 seconds with return value 23
+             Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          <h5>Example:5</h5>
+          <b><h5>5.Addition with pointer a constant value
+        </h5></b>
+        <div class ="program">
+            <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int *PTR1=&x;
+        printf("The Address of x =%x\n",PTR1); // x stands for hexadecimal
+        printf("The value of PTR1 =%x\n",*PTR1);
+        PTR1=PTR1+1;
+        //*PTR1=*PTR1+3;
+        printf("The Address of x =%x\n",PTR1);
+        printf("The value of x =%x\n",*PTR1);
+
+    }
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                The Address of x =62fe14
+                The value of PTR1 =5
+                The Address of x =62fe18
+                The value of x =62fe18
+
+                --------------------------------
+                Process exited after 0.04886 seconds with return value 23
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+          <h5>Example:6</h5>
+          <h5><b> 6.Addition with pointer a constant value.</b></h5> 
+          
+          
+        <div class ="program">
+            <pre>
+
+   
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int *PTR1=&x;
+        printf("The value of PTR1 =%d\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+        PTR1=PTR1++; // post Increment
+        *PTR1=*PTR1+1;
+        printf("The value of PTR1 =%d\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+}
+       
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            The value of PTR1 =6487572
+            The value of PTR1 =5
+            The value of PTR1 =6487572
+            The value of PTR1 =6
+
+            --------------------------------
+            Process exited after 0.06062 seconds with return value 21
+            Press any key to continue . . .
+            
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          <h5>Example:7</h5>
+          <b><h5>Addition with pointer a constant value.</h5></b>    
+    
+        <div class ="program">
+            <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int *PTR1=&x;
+        printf("The value of PTR1 =%u\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+        PTR1=++PTR1; // pre Increment
+        *PTR1=6;
+        printf("The value of PTR1 =%u\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+}
+    
+    
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            The value of PTR1 =6487572
+            The value of PTR1 =5
+            The value of PTR1 =6
+
+            --------------------------------
+            Process exited after 0.5377 seconds with return value 3221225477
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+
+
+          <h5>Example:8</h5>   
+
+  
+        <div class ="program">
+        <pre>
+
+    #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int x=5;
+        int *PTR1=&x;
+        printf("The value of PTR1 =%d\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+        //PTR1=PTR1/5;// WE CAN'T DIVIDE TWO POINTERS.
+
+        printf("The value of PTR1 =%d\n",PTR1);
+        printf("The value of PTR1 =%d\n",*PTR1);
+    }
+    
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            The value of PTR1 =6487572
+            The value of PTR1 =5
+            The value of PTR1 =6487572
+            The value of PTR1 =5
+
+            --------------------------------
+            Process exited after 0.05053 seconds with return value 0
+            Press any key to continue . . .           
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 9 start --->
+       
+        
+        <h5>Example:9</h5>
+        <dd><b>9.POINTERS WITH ARRAY</b></dd>   
+
+      <div class ="program">
+      <pre>
+
+     #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int arr[15],size,i;
+        int *PTR;
+        printf("Enter the size of an array :\n");
+        scanf("%d",&size);
+        printf("Enter the %d elements in an array",size);
+        PTR=arr;// THE FIRST ELEMENT'S ADDRESS GET STORED INTO PTR;
+        for(i=0;i<size;i++)
+        {
+            scanf("%d",&arr[i]);
+        }
+
+            for(i=0;i<size;i++)
+        {
+        printf("The value in arr %d  :: The address in array %u\n",arr[i],&arr[i]);
+        printf("The value in arr %d  :: The address in array %u\n\n",*PTR,PTR);
+        PTR++;
+        }
+    }
+    
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+                Enter the size of an array :
+                5
+                Enter the 5 elements in an array
+                1
+                2
+                3
+                4
+                4
+                The value in arr 1  :: The address in array 6487504
+                The value in arr 1  :: The address in array 6487504
+
+                The value in arr 2  :: The address in array 6487508
+                The value in arr 2  :: The address in array 6487508
+
+                The value in arr 3  :: The address in array 6487512
+                The value in arr 3  :: The address in array 6487512
+
+                The value in arr 4  :: The address in array 6487516
+                The value in arr 4  :: The address in array 6487516
+
+                The value in arr 4  :: The address in array 6487520
+                The value in arr 4  :: The address in array 6487520
+
+
+                --------------------------------
+                Process exited after 4.452 seconds with return value 5
+                Press any key to continue . . .
+                  
+      </pre>
+      </div>
+      
+      <!-- Example 9 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+      
+     <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 10 start --->
+        <h5>Example:10</h5>   
+        <b><h5>POINTERS WITH ARRAY</h5></b>
+
+      <div class ="program">
+      <pre>
+
+ #include&lt;stdio.h&gt;
+
+    int main()
+    {
+        int arr[15],size,i;
+        int *PTR;
+        printf("Enter the size of an array :\n");
+        scanf("%d",&size);
+        printf("Enter the %d elements in an array",size);
+        PTR=&arr[0];// CAN D0 LIKE THIS
+    //  PTR=&arr[14];// THAN FIRST ELEMENTS ADDRESS GET STORED INTO PTR;
+        for(i=0;i<size;i++)
+        {
+            scanf("%d",&arr[i]);
+        }
+
+            for(i=0;i<size;i++)
+        {
+
+  //  printf("The value in arra %d  :: The address in array %u\n",*PTR,PTR);
+    printf("The value in arra %d  :: The address in array %u\n",arr[i],&arr[i]);
+    printf("The value in arra %d  :: The address in array %u\n",i[arr],&i[arr]);
+    printf("The value in arra %d  :: The address in array %u\n",*(PTR+i),(PTR+i));
+    printf("The value in arra %d  :: The address in array %u\n\n",*(i+PTR),(i+PTR));
+    PTR++;// WILL CHANGE THE MEMORY LOCATION
+        }
+    }
+    
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+            Enter the size of an array :
+            2
+            Enter the 2 elements in an array
+            3
+            4
+            The value in arra 3  :: The address in array 6487504
+            The value in arra 3  :: The address in array 6487504
+            The value in arra 3  :: The address in array 6487504
+            The value in arra 3  :: The address in array 6487504
+
+            The value in arra 4  :: The address in array 6487508
+            The value in arra 4  :: The address in array 6487508
+            The value in arra 1  :: The address in array 6487512
+            The value in arra 1  :: The address in array 6487512
+
+
+            --------------------------------
+            Process exited after 5.269 seconds with return value 0
+            Press any key to continue . . .          
+      </pre>
+      </div>
+      
+      <!-- Example 10 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
+      
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
