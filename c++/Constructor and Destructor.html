@@ -134,9 +134,9 @@
                        
           void display()
           {	
-          cout<<"Roll Number is :"<<roll<<endl;
-          cout<<"Name is :"<<name<<endl;
-          cout<<"Marks is :"<<marks<<endl;
+          cout&lt;&lt;"Roll Number is :"&lt;&lt;roll&lt;&lt;endl;
+          cout&lt;&lt;"Name is :"&lt;&lt;name&lt;&lt;endl;
+          cout&lt;&lt;"Marks is :"&lt;&lt;marks&lt;&lt;endl;
            }
           };
              
@@ -223,9 +223,9 @@ marks =m;
                          
 void display()
 {
-cout<<"Roll Number is :"<<roll<<endl;
-cout<<"Name is :"<<name<<endl;
-cout<<"Marks is :"<<marks<<endl;
+cout&lt;&lt;"Roll Number is :"&lt;&lt;roll&lt;&lt;endl;
+cout&lt;&lt;"Name is :"&lt;&lt;name&lt;&lt;endl;
+cout&lt;&lt;"Marks is :"&lt;&lt;marks&lt;&lt;endl;
 }
 };
                 
@@ -289,9 +289,9 @@ s.display();
               public:
               void display()
               {
-              cout<<"Roll Number is :"<<roll<<endl;
-              cout<<"Name is :"<<name<<endl;
-              cout<<"Marks is :"<<marks<<endl;
+              cout&lt;&lt;"Roll Number is :"&lt;&lt;roll&lt;&lt;endl;
+              cout&lt;&lt;"Name is :"&lt;&lt;name&lt;&lt;endl;
+              cout&lt;&lt;"Marks is :"&lt;&lt;marks&lt;&lt;endl;
               }
               };
              
@@ -303,7 +303,7 @@ s.display();
               Student *s1= new Student();// Dynamic type object creation
               ->display();
               }
-            </textarea>
+            
         </pre>
         </div>
         Output:
@@ -355,9 +355,9 @@ s.display();
             public:
             void display()
             {
-            cout<<"Roll Number is :"<<roll<<endl;
-            cout<<"Name is :"<<name<<endl;
-            cout<<"Marks is :"<<marks<<endl;
+            cout&lt;&lt;"Roll Number is :"&lt;&lt;roll&lt;&lt;endl;
+            cout&lt;&lt;"Name is :"&lt;&lt;name&lt;&lt;endl;
+            cout&lt;&lt;"Marks is :"&lt;&lt;marks&lt;&lt;endl;
             }
             };
          
@@ -419,9 +419,9 @@ s.display();
               public:
               void display()
               {
-              cout<<"Roll Number is :"<<roll<<endl;
-              cout<<"Name is :"<<name<<endl;
-              cout<<"Marks is :"<<marks<<endl;
+              cout&lt;&lt;"Roll Number is :"&lt;&lt;roll<<endl;
+              cout&lt;&lt;"Name is :"&lt;&lt;name&lt;&lt;endl;
+              cout&lt;&lt;"Marks is :"&lt;&lt;marks&lt;&lt;endl;
               }
               };
              
@@ -511,11 +511,11 @@ s.display();
             int  main()
             {
               Code c1,c2(c1); // Copy constructor calling
-              cout<<endl<<"First object"<<endl;
+              cout&lt;&lt;endl&lt;&lt;"First object"&lt;&lt;endl;
               c1.display();
-              cout<<endl<<"Second object "<<endl;
+              cout&lt;&lt;endl&lt;&lt;"Second object "&lt;&lt;endl;
               c2.display();
-              cout<<endl<<"Third Object :"<<endl;
+              cout&lt;&lt;endl&lt;&lt;"Third Object :"&lt;&lt;endl;
               Code c3 =c2; // Another way to call the copy constructor
               c3.display();
             }
@@ -592,7 +592,7 @@ s.display();
        
              void Code :: display()
              {
-              cout<<"a= "<<a<<" b="<<b<<" c="<<c<<'\n';
+              cout&lt;&lt;"a= "&lt;&lt;a&lt;&lt;" b="&lt;&lt;b&lt;&lt;" c="&lt;&lt;c&lt;&lt;'\n';
              }
        
              int main()
@@ -659,7 +659,7 @@ s.display();
         
                  void display()
                  {
-                    cout<<"String = "<<str<<endl;
+                    cout&lt;&lt;"String = "&lt;&lt;str&lt;&lt;endl;
                  }
               };
         
@@ -730,13 +730,13 @@ s.display();
           
           //   ~Destructor()
           //    {
-          //      cout<<"\n Destructor Called";
+          //      cout&lt;&lt;"\n Destructor Called";
           //    }
           
               };
                Destructor :: Destructor()
                {
-                 cout<<"Constructor."<<endl;
+                 cout&lt;&lt;"Constructor."&lt;&lt;endl;
                }
                
               Destructor :: Destructor(int i, int j)
@@ -747,12 +747,12 @@ s.display();
           
               void Destructor :: display()
               {
-                cout<<a<<"\t"<<b<<endl;
+                cout&lt;&lt;a&lt;&lt;"\t"&lt;&lt;b&lt;&lt;endl;
               }
           
              Destructor :: ~Destructor()
               {
-                cout<<"\nDestructor Called"<<endl;
+                cout&lt;&lt;"\nDestructor Called"&lt;&lt;endl;
               }
           
               int main()
@@ -802,12 +802,12 @@ s.display();
                 public:
                 A()
                  {
-                  cout << "Constructor called"<<endl;
+                  cout &lt;&lt; "Constructor called"&lt;&lt;endl;
                  }
                 
                 ~A()
                  {
-                  cout << "Destructor called"<<endl;
+                  cout &lt;&lt; "Destructor called"&lt;&lt;endl;
                  }
                 
                 };
