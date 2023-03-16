@@ -122,9 +122,9 @@
                   {
                      getData();
                      cout&lt;&lt;"Enter the marks of Subject 1: "&lt;&lt;endl;
-                     cin>> sub1;
+                     cin&gt;&gt; sub1;
                      cout&lt;&lt;"Enter the marks of Subject 2: "&lt;&lt;endl;
-                     cin&lt;&lt;sub2;
+                     cin&gt;&gt;sub2;
                   }
                
                   void test ::putdata() // definition
@@ -344,9 +344,9 @@
                       void getData()
                       {
                         cout&lt;&lt;"Enter roll number :"&lt;&lt;endl;
-                        cin&lt;&lt;roll;
+                        cin&gt;&gt;roll;
                         cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
-                        cin&lt;&lt;name;
+                        cin&gt;&gt;name;
                       }
                    
                        void display()
@@ -372,17 +372,17 @@
                          getData();
                    
                          cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[0];
+                         cin&gt;&gt;subjects[0];
                          cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[1];
+                         cin&gt;&gt;subjects[1];
                          cout&lt;&lt;"Enter the marks of Math "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[2];
+                         cin&gt;&gt;subjects[2];
                          cout&lt;&lt;"Enter the marks of Science "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[3];
+                         cin&gt;&gt;subjects[3];
                          cout&lt;&lt;"Enter the marks of SS "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[4];
+                         cin&gt;&gt;subjects[4];
                          cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
-                         cin&lt;&lt;subjects[5];
+                         cin&gt;&gt;subjects[5];
                    
                       }
                    
@@ -481,9 +481,9 @@
               void getData()
               {
                 cout&lt;&lt;"Enter roll number :"&lt;&lt;endl;
-                cin&lt;&lt;roll;
+                cin&gt;&gt;roll;
                 cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
-                cin&lt;&lt;name;
+                cin&gt;&gt;name;
               }
            
                void display()
@@ -510,17 +510,17 @@
                  getData();
            
                  cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
-                 cin&lt;&lt;subjects[0];
+                 cin&gt;&gt;subjects[0];
                  cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
-                 cin&lt;&lt;subjects[1];
+                 cin&gt;&gt;subjects[1];
                  cout&lt;&lt;Enter the marks of Math "<<endl;
-                 cin&lt;&lt;subjects[2];
+                 cin&gt;&gt;subjects[2];
                  cout&lt;&lt;"Enter the marks of Science "&lt;&lt;endl;
-                 cin&lt;&lt;subjects[3];
+                 cin&gt;&gt;subjects[3];
                  cout&lt;&lt;"Enter the marks of SS "&lt;&lt;endl;
-                 cin&lt;&lt;subjects[4];
-                 cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
-                 cin&lt;&lt;subjects[5];
+                 cin&gt;&gt;subjects[4];
+                 cout&lt;&lt;"Enter the marks of Games "&lt;&lt;end&gt;&gt;
+                 cin&gt;&gt;subjects[5];
            
               }
            
@@ -630,9 +630,9 @@
                 void getData()
                 {
                   cout&lt;&lt;"Enter roll number :"&lt;&lt;endl;
-                  cin>>roll;
+                  cin&gt;&gt;roll;
                   cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
-                  cin>>name;
+                  cin&gt;&gt;name;
                 }
              
                  void display()
@@ -659,17 +659,17 @@
                    getData();
              
                    cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
-                   cin>>subjects[0];
+                   cin&gt;&gt;subjects[0];
                    cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
-                   cin>>subjects[1];
+                   cin&gt;&gt;subjects[1];
                    cout&lt;&lt;"Enter the marks of Math "&lt;&lt;endl;
-                   cin>>subjects[2];
+                   cin&gt;&gt;subjects[2];
                    cout&lt;&lt;"Enter the marks of Science "&lt;&lt;endl;
-                   cin>>subjects[3];
+                   cin&gt;&gt;subjects[3];
                    cout&lt;&lt;"Enter the marks of SS "&lt;&lt;endl;
-                   cin>>subjects[4];
+                   cin&gt;&gt;subjects[4];
                    cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
-                   cin>>subjects[5];
+                   cin&gt;&gt;subjects[5];
              
                 }
              
@@ -810,9 +810,9 @@
               void getData()
               {
                 cout&lt;&lt;"Enter roll number :"&lt;&lt;endl;
-                cin>>roll;
+                cin&gt;&gt;roll;
                 cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
-                cin>>name;
+                cin&gt;&gt;name;
               }
            
                void display()
@@ -820,8 +820,7 @@
                  cout&lt;&lt;"Roll No :"&lt;&lt;roll&lt;&lt;endl;
                  cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;endl;
                }
-            };
-           
+            }&gt;&gt;
             // Drived Class
            
             class Science :protected  student // Single Inheritance
@@ -839,23 +838,23 @@
                  getData();
            
                  cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
-                 cin>>subjects[0];
+                 cin&gt;&gt;subjects[0];
                  cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
-                 cin>>subjects[1];
+                 cin&gt;&gt;subjects[1];
                  cout&lt;&lt;"Enter the marks of Physics "&lt;&lt;endl;
-                 cin>>subjects[2];
+                 cin&gt;&gt;subjects[2];
                  cout&lt;&lt;"Enter the marks of Chemistery "&lt;&lt;endl;
-                 cin>>subjects[3];
+                 cin&gt;&gt;subjects[3];
                  cout&lt;&lt;"Enter the marks of Maths "&lt;&lt;endl;
-                 cin>>subjects[4];
+                 cin&gt;&gt;subjects[4];
                  cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
-                 cin>>subjects[5];
+                 cin&gt;&gt;subjects[5];
            
               }
            
               void Science ::putdata() // definition
               {
-                 cout<<endl&lt;&lt;"Record of a Student is :"&lt;&lt;endl;
+                 cout&lt;&lt;endl&lt;&lt;"Record of a Student is :"&lt;&lt;endl;
                  display();
                  cout&lt;&lt;"The marks In Hindi :";
                  cout&lt;&lt;subjects[0]&lt;&lt;endl;
@@ -886,17 +885,17 @@
                  getData();
            
                  cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
-                 cin>>subjects[0];
+                 cin&gt;&gt;subjects[0];
                  cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
-                 cin>>subjects[1];
+                 cin&gt;&gt;subjects[1];
                  cout&lt;&lt;"Enter the marks of Economics "&lt;&lt;endl;
-                 cin>>subjects[2];
+                 cin&gt;&gt;subjects[2];
                  cout&lt;&lt;"Enter the marks of Business Studies "&lt;&lt;endl;
-                 cin>>subjects[3];
+                 cin&gt;&gt;subjects[3];
                  cout&lt;&lt;"Enter the marks of Accounts "&lt;&lt;endl;
-                 cin>>subjects[4];
+                 cin&gt;&gt;subjects[4];
                  cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
-                 cin>>subjects[5];
+                 cin&gt;&gt;subjects[5];
            
               }
            
@@ -960,7 +959,7 @@
                    cout&lt;&lt;"Roll No is:"&lt;&lt;roll&lt;&lt;endl;
                    cout&lt;&lt;"Name is :" &lt;&lt;name&lt;&lt;endl;
                    putdata();
-                   cout&lt;&lt;"Result is : "&lt;&lt;obtaind_marks&lt;&lt;endl;
+                   cout&lt;&lt;"Result is :&lt;&lt;obtaind_marks&lt;&lt;endl;
            
                  }
               };
@@ -969,9 +968,9 @@
            
            
               int option;
-               cout<<"Enter 1 for Science :"<<endl;
-               cout<<"Enter 2 for Commerce :"<<endl;
-               cin>>option;
+               cout&lt;&lt;"Enter 1 for Science :"&lt;&lt;endl;
+               cout&lt;&lt;"Enter 2 for Commerce :"&lt;&lt;endl;
+               cin&gt;&gt;"option;
            
            
             if(option==1)
@@ -1058,7 +1057,7 @@
          
         <div class ="program">
             <pre>
-<textarea id="text" cols="68" readonly>
+
             #include&lt;iostream&gt;
             #include&lt;string.h&gt;
             using namespace std;
@@ -1073,9 +1072,9 @@
               void getData()
               {
                 cout&lt;&lt;"Enter roll number :"&lt;&lt;endl;
-                cin>>roll;
+                cin&gt;&gt&gt;&gt&gt;&gt;"roll;
                 cout&lt;&lt;"Enter the name :"&lt;&lt&lt;&lt;ndl;
-                cin>>name;
+                cin&gt;&gt&gt;&gt&gt;&gt;"name;
               }
            
                void display()
@@ -1101,37 +1100,37 @@
               {
                  getData();
            
-                 cout<<"Enter the marks of Hindi "<<endl;
-                 cin>>subjects[0];
-                 cout<<"Enter the marks of English "<<endl;
-                 cin>>subjects[1];
-                 cout<<"Enter the marks of Physics "<<endl;
-                 cin>>subjects[2];
-                 cout<<"Enter the marks of Chemistery "<<endl;
-                 cin>>subjects[3];
-                 cout<<"Enter the marks of Maths "<<endl;
-                 cin>>subjects[4];
-                 cout<<"Enter the marks of Games "<<endl;
-                 cin>>subjects[5];
+                 cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[0];
+                 cout&lt;&lt;"Enter the marks of English "&lt;&l&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[1];
+                 cout&lt;&lt;"Enter the marks of Physics "&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[2];
+                 cout&lt;&lt;"Enter the marks of Chemistery "&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[3];
+                 cout&lt;&lt;"Enter the marks of Maths "&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[4];
+                 cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
+                 cin&gt;&gt&gt;&gt;"subjects[5];
            
-              }
+                 }
            
               void Science ::putdata() // definition
               {
-                 cout<<endl<<"Record of a Student is :"<<endl;
+                 cout<<endl&lt;&lt;"Record of a Student is :"&lt;&lt;endl;
                  display();
-                 cout<<"The marks In Hindi :";
-                 cout<<subjects[0]<<endl;
-                 cout<<"The marks In English ";
-                 cout<<subjects[1]<<endl;
-                 cout<<"The marks In Physics ";
-                 cout<<subjects[2]<<endl;
-                 cout<<"The marks Chemistery ";
-                 cout<<subjects[3]<<endl;
-                 cout<<"The marks In Maths ";
-                 cout<<subjects[4]<<endl;
-                 cout<<"The marks In Games ";
-                 cout<<subjects[5]<<endl;
+                 cout&lt;&lt;"The marks In Hindi :";
+                 cout&lt;&lt;subjects[0]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In English ";
+                 cout&lt;&lt;subjects[1]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Physics ";
+                 cout&lt;&lt;subjects[2]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks Chemistery ";
+                 cout&lt;&lt;subjects[3]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Maths ";
+                 cout&lt;&lt;subjects[4]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Games ";
+                 cout&lt;&lt;subjects[5]&lt;&lt;endl;
               }
            
                class Commerce :protected  student // Single Inheritance
@@ -1148,37 +1147,37 @@
               {
                  getData();
            
-                 cout<<"Enter the marks of Hindi "<<endl;
-                 cin>>subjects[0];
-                 cout<<"Enter the marks of English "<<endl;
-                 cin>>subjects[1];
-                 cout<<"Enter the marks of Economics "<<endl;
-                 cin>>subjects[2];
-                 cout<<"Enter the marks of Business Studies "<<endl;
-                 cin>>subjects[3];
-                 cout<<"Enter the marks of Accounts "<<endl;
-                 cin>>subjects[4];
-                 cout<<"Enter the marks of Games "<<endl;
-                 cin>>subjects[5];
+                 cout&lt;&lt;"Enter the marks of Hindi "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[0];
+                 cout&lt;&lt;"Enter the marks of English "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[1];
+                 cout&lt;&lt;"Enter the marks of Economics "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[2];
+                 cout&lt;&lt;"Enter the marks of Business Studies "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[3];
+                 cout&lt;&lt;"Enter the marks of Accounts "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[4];
+                 cout&lt;&lt;"Enter the marks of Games "&lt;&lt;endl;
+                 cin&gt;&gt;"subjects[5];
            
               }
            
               void Commerce ::putdata() // definition
               {
-                 cout<<endl<<"Record of a Student is :"<<endl;
+                 cout&lt;&lt;endl&lt;&lt;"Record of a Student is :"<<endl;
                  display();
-                 cout<<"The marks In Hindi :";
-                 cout<<subjects[0]<<endl;
-                 cout<<"The marks In English ";
-                 cout<<subjects[1]<<endl;
-                 cout<<"The marks In Economics ";
-                 cout<<subjects[2]<<endl;
-                 cout<<"The marks Business Studies ";
-                 cout<<subjects[3]<<endl;
-                 cout<<"The marks In Accounts ";
-                 cout<<subjects[4]<<endl;
-                 cout<<"The marks In Games ";
-                 cout<<subjects[5]<<endl;
+                 cout&lt;&lt;"The marks In Hindi :";
+                 cout&lt;&lt;subjects[0]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In English ";
+                 cout&lt;&lt;subjects[1]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Economics ";
+                 cout&lt;&lt;subjects[2]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks Business Studies ";
+                 cout&lt;&lt;subjects[3]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Accounts ";
+                 cout&lt;&lt;subjects[4]&lt;&lt;endl;
+                 cout&lt;&lt;"The marks In Games ";
+                 cout&lt;&lt;subjects[5]&lt;&lt;endl;
               }
               class Game
               {
@@ -1186,13 +1185,13 @@
                  public:
                  void getGame()
                  {
-                  cout<<"Which Game Do you Like :"<<endl;
-                  cin>>game;
+                  cout&lt;&lt;"Which Game Do you Like :"&lt;&lt;endl;
+                  cin&gt;&gt;"game;
                  }
            
                  void showGame()
                  {
-                    cout<<"Game is : "<<game<<endl;
+                    cout&lt;&lt;"Game is : "&lt;&lt;game&lt;&lt;endl;
                  }
            
               };
@@ -1212,11 +1211,11 @@
                     {
                       obtaind_marks +=subjects[i];
                     }
-                    cout<<endl<<"Output is :"<<endl;
-                   cout<<"Roll No is:"<<roll<<endl;
-                   cout<<"Name is :" <<name<<endl;
+                    cout&lt;&lt;endl&lt;&lt;"Output is :"&lt;&lt;endl;
+                   cout&lt;&lt;"Roll No is:"&lt;&lt;roll&lt;&lt;endl;
+                   cout&lt;&lt;"Name is :" &lt;&lt;name&lt;&lt;endl;
                    putdata();
-                   cout<<"Result is : "<<obtaind_marks<<endl;
+                   cout&lt;&lt;"Result is : "&lt;&lt;obtaind_marks&lt;&lt;endl;
                    showGame();
                  }
               };
@@ -1236,11 +1235,11 @@
                     {
                       obtaind_marks +=subjects[i];
                     }
-                    cout<<endl<<"Output is :"<<endl;
-                   cout<<"Roll No is:"<<roll<<endl;
-                   cout<<"Name is :" <<name<<endl;
+                    cout&lt;&l&lt;&lt;endl&lt;&l&lt;&lt;"Output is :"&lt;&l&lt;&lt;endl;
+                   cout&lt;&l&lt;&lt;"Roll No is:"&lt;&l&lt;&lt;roll&lt;&l&lt;&lt;endl;
+                   cout&lt;&l&lt;&lt;"Name is :" &lt;&l&lt;&lt;name&lt;&l&lt;&lt;endl;
                    putdata();
-                   cout<<"Result is : "<<obtaind_marks<<endl;
+                   cout&lt;&l&lt;&lt;"Result is : "&lt;&l&lt;&lt;obtaind_marks&lt;&l&lt;&lt;endl;
                     showGame();
                  }
               };
@@ -1249,9 +1248,9 @@
            
               // char str[55];
               int option;
-               cout<<"Enter 1 for Science :"<<endl;
-               cout<<"Enter 2 for Commerce :"<<endl;
-               cin>>option;
+               cout&lt;&l&lt;&lt;"Enter 1 for Science :"&lt;&l&lt;&lt;endl;
+               cout&lt;&l&lt;&lt;"Enter 2 for Commerce :"&lt;&l&lt;&lt;endl;
+               cin&gt;&gt;"option;
            
             if(option==1)
                {
@@ -1267,7 +1266,7 @@
                }
                else
                {
-                 cout<<"Enter the Correct input.";
+                 cout&lt;&l&lt;&lt;"Enter the Correct input.";
                }
            
                }
@@ -1374,8 +1373,8 @@
                      }
                    void display()
                      {
-                         cout<<id &lt;&lt;" "<<name<< " "<<endl<<
-                           address->addressLine<<endl<< address->city<< " "<<address->state<<endl;
+                         cout&lt;&lt;id &lt;&lt;" "&lt;&lt;name&lt;&lt; " "&lt;&lt;endl&lt;&lt;
+                           address->addressLine&lt;&lt;endl&lt;&lt; address->city&lt;&lt; " "&lt;&lt;address->state&lt;&lt;endl;
                      }
                  };
               int main(void) {
