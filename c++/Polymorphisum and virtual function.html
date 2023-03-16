@@ -89,11 +89,11 @@ public :
      
 void add(int x, int y)
 {
-cout<<x+y<<endl;
+cout&lt;&lt;x+y<<endl;
 }
 void add(int x, int y, int z)
 {
-cout<<x+y+z;
+cout&lt;&lt;x+y+z;
 }
 };
      
@@ -143,11 +143,11 @@ ob.add(2,3,4);
    
       void add(int x, int y)
       {
-        cout<<x+y<<endl;
+        cout&lt;&lt;x+y<<endl;
       }
       void add(int x, float y)
       {
-        cout<<x+y;
+        cout&lt;&lt;x+y;
       }
     };
    
@@ -202,7 +202,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-        cout<<"Parent Class \n";
+        cout&lt;&lt;"Parent Class \n";
        }
     };
     class Pv4 : public Pv4P
@@ -210,12 +210,12 @@ ob.add(2,3,4);
       public :
         void getX()
         {
-        cout<<"Enter the value of x."<<endl;
-        cin>>x;
+        cout&lt;&lt;"Enter the value of x."<<endl;
+        cin&gt;&gt;x;
         }
        void display()
        {
-         cout<<"Child Class"<<"and the value of x="<<x<<endl;
+         cout&lt;&lt;"Child Class"&lt;&lt;"and the value of x="&lt;&lt;x&lt;&lt;endl;
        }
     };
     
@@ -263,7 +263,7 @@ ob.add(2,3,4);
       public :
       void display()
       {
-        cout<<"Parent Pv5PP Class"<<endl;
+        cout&lt;&lt;"Parent Pv5PP Class"&lt;&lt;endl;
       }
     };
     class Pv5P : public Pv5PP
@@ -271,7 +271,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-        cout<<"Parent Pv5P Class \n";
+        cout&lt;&lt;"Parent Pv5P Class \n";
        }
     };
     class Pv5 : public Pv5P
@@ -279,7 +279,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-         cout<<"Child Class"<<endl;
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
        }
     };
     
@@ -330,7 +330,7 @@ ob.add(2,3,4);
       public :
       void display()
       {
-        cout<<"Parent Pv5PP Class"<<endl;
+        cout&lt;&lt;"Parent Pv5PP Class"&lt;&lt;endl;
       }
     };
     class Pv6B
@@ -338,7 +338,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-        cout<<"Parent Pv5P Class \n";
+        cout&lt;&lt;"Parent Pv5P Class \n";
        }
     };
     class Pv6 : public Pv6B, public Pv6A
@@ -346,7 +346,7 @@ ob.add(2,3,4);
       public :
        void display() // will override the parent classes
        {
-         cout<<"Child Class"<<endl;
+         cout&lt;&lt;"Child Class"&lt;&l&lt;&lt;endl;
        }
     };
     
@@ -394,7 +394,7 @@ ob.add(2,3,4);
     public :
     void display()
     {
-      cout<<"Parent Pv6A Class Display"<<endl;
+      cout&lt;&lt;"Parent Pv6A Class Display"&lt;&lt;endl;
     }
   };
   class Pv6B
@@ -402,11 +402,11 @@ ob.add(2,3,4);
     public :
      void display()
      {
-      cout<<"Parent Pv6B Class Display \n";
+      cout&lt;&lt;"Parent Pv6B Class Display \n";
      }
   };
   class Pv6 : public Pv6B, public Pv6A
-  {
+ &lt;&lt;
     public :
      void display()
      {
@@ -463,7 +463,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-        cout<<"Parent Class \n";
+        cout&lt;&lt;"Parent Class \n";
        }
     };
     class Pv8 : public Pv8P
@@ -471,7 +471,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-         cout<<"Child Class"<<endl;
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
        }
     };
     
@@ -514,16 +514,15 @@ ob.add(2,3,4);
             </div>  
           <div class ="program">
           <pre>
-
-    #include&lt;iostream&gt;
-    using namespace std;
+#include&lt;iostream&gt;
+using namespace std;
     
     class Pv8P
     {
       public :
        void display()
        {
-        cout<<"Parent Class \n";
+        cout&lt;&lt;"Parent Class \n";
        }
     };
     class Pv8 : public Pv8P
@@ -531,7 +530,7 @@ ob.add(2,3,4);
       public :
        void display()
        {
-         cout<<"Child Class"<<endl;
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
        }
     };
     
@@ -551,7 +550,42 @@ ob.add(2,3,4);
       /* will show only those members
       which is inherited by parent only not derived class members. */
     
-    }                
+    }using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  
                 
           </pre>
           </div>
@@ -625,8 +659,7 @@ ob.add(2,3,4);
             </div>  
           <div class ="program">
           <pre>
-
-    #include &lt;iostream&gt;
+#include &lt;iostream&gt;
     using namespace std;
 
     class vehicle// base class of C++ virtual function
@@ -634,7 +667,77 @@ ob.add(2,3,4);
        public:
           virtual void make ( )//C++ virtual function
          {
-            cout <<"member function of base  class vehicle accessed"<<endl;
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
          }
     };
 
@@ -643,7 +746,77 @@ ob.add(2,3,4);
        public:
           void make ( )
          {
-            cout <<"Two Wheeler accessed"<<endl;
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
          }
     };
     class fourwheeler : public vehicle
@@ -651,7 +824,77 @@ ob.add(2,3,4);
        public:
           void make ( )
          {
-            cout <<"Four Wheeler accessed"<<endl;
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
          }
     };
     int main ( )
@@ -674,7 +917,7 @@ ob.add(2,3,4);
        y= new fourwheeler();
        y->make();
   //=========================================================Å================//
-    }              
+    }  
              
           </pre>
           </div>
@@ -773,26 +1016,3896 @@ ob.add(2,3,4);
     //   Rect.setHeight(7);
     
        // Print the area of the object.
-       cout << "Total Rectangle area: " << Rect.getArea() << endl;
+       cout #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   "Total Rectangle area: " #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   Rect.getArea() #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   endl;
     
     //   Tri.setWidth(5);
     //   Tri.setHeight(7);
     
        // Print the area of the object.
-       cout << "Total Triangle area: " << Tri.getArea() << endl;
+       cout #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
     
-       cout<<"\nObject Creation at Dynamic time :"<<endl<<endl;
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   "Total Triangle area: " #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   Tri.getArea() #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   endl;
+    
+       cout#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  "\nObject Creation at Dynamic time :"#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  endl#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  endl;
        Shape *Drect, *Dtri;
        Drect= new Rectangle;
        Drect ->setWidth(8);
        Drect ->setHeight(5);
-       cout << "Total Rectangle area: " <<Drect ->getArea()<<endl;
+       cout #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   "Total Rectangle area: " #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  Drect ->getArea()#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  endl;
        Dtri= new Triangle(4,5);
     // delete Dtri; 
     // Delete will deallocate the memory for Triangle Object.
     //   Dtri ->setWidth(2);
     //   Dtri ->setHeight(3);
-        cout << "Total Triangle area: "<<Dtri ->getArea()<<endl; 
+        cout #include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }   "Total Triangle area: "#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  Dtri ->getArea()#include &lt;iostream&gt;
+    using namespace std;
+
+    class vehicle// base class of C++ virtual function
+    {
+       public:
+          virtual void make ( )//C++ virtual function
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "member function of base  class vehicle accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+
+       class TwoWheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Two Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    class fourwheeler : public vehicle
+    {
+       public:
+          void make ( )
+         {
+            cout using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  "Four Wheeler accessed"using namespace std;
+    
+    class Pv8P
+    {
+      public :
+       void display()
+       {
+        cout&lt;&lt;"Parent Class \n";
+       }
+    };
+    class Pv8 : public Pv8P
+    {
+      public :
+       void display()
+       {
+         cout&lt;&lt;"Child Class"&lt;&lt;endl;
+       }
+    };
+    
+    int main()
+    {
+      Pv8P base; // object of base class created
+      Pv8P *ptr;// base class pointer
+      ptr= &base;//pointer points to base class object
+      ptr ->display();  // will show parent class members only
+                        //because parent object in pointer.
+    
+      Pv8 derived; // derived class object
+      ptr = &derived;// base class pointer holding child class object.
+      ( ptr)->display();// will call parent class method.
+      // Casting from Base class pointer to child class pointer
+      ((Pv8 *) ptr)->display();
+      /* will show only those members
+      which is inherited by parent only not derived class members. */
+    
+    }  endl;
+         }
+    };
+    int main ( )
+    {
+       vehicle *a, *b, *c;
+       a = new vehicle ( ); // Dynamic object creation.
+       a->make ( ) ;
+       b= new fourwheeler ( ); // up casting 
+   // implicit casting :: means automatically casting child to parent
+       b->make ( );
+       c= new TwoWheeler( );// up casting
+       c->make ( );
+
+   //=========================================================================//
+       fourwheeler *x, *y;
+       // down casting // will work fine.
+       x=(fourwheeler *)new vehicle(); // must have to cast it. explicitly
+      // x= new vehicle(); // compilation error
+       x->make();
+       y= new fourwheeler();
+       y->make();
+  //=========================================================Å================//
+    }  endl; 
     // after delete line will not execute
        return 0;
     }                
