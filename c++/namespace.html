@@ -71,21 +71,21 @@
               <br><br>
               <div class ="program">
                 <pre>
-<textarea id="text" cols="67" rows="27" readonly>
-   #include <iostream>
+
+   #include &lt;iostream&g&lt;&lt;
     using namespace std;
 
    // first name space
    namespace first_space {
       void func() {
-         cout << "Inside first_space" << endl;
+         cout &lt;&lt; "Inside first_space" &lt;&lt; endl;
       }
    }
 
    // second name space
    namespace second_space {
       void func() {
-         cout << "Inside second_space" << endl;
+         cout &lt;&lt; "Inside second_space" &lt;&lt; endl;
       }
    }
 
@@ -98,7 +98,7 @@
 
       return 0;
    }
-                </textarea>
+                
             </pre>
             </div>
             Output:
@@ -127,21 +127,21 @@
         Example:1
         <div class ="program">
           <pre>
-<textarea id="text" cols="67" rows="26" readonly>
-    #include <iostream>
+
+    #include &lt;iostream&gt;
     using namespace std;
     
     // first name space
     namespace first_space {
        void func() {
-          cout << "Inside first_space" << endl;
+          cout &lt;&lt; "Inside first_space" &lt;&lt; endl;
        }
     }
     
     // second name space
     namespace second_space {
        void func() {
-          cout << "Inside second_space" << endl;
+          cout &lt;&lt; "Inside second_space" &lt;&lt; endl;
        }
     }
     
@@ -153,7 +153,7 @@
     
        return 0;
     }
-              </textarea>
+             
               </pre>
              </div>
               Output:
@@ -178,16 +178,16 @@
         Example:2
         <div class ="program">
           <pre>
-<textarea id="text" cols="68" rows="10" readonly>
-    #include <iostream>
+
+    #include &lt;iostream&gt;
     using std::cout; // will access only cout object by using 'using' directive
     int main () {
-    cout << "std::endl is used with std!" << std::endl; // directly accessing endl without using 'using' directive
+    cout &lt;&lt; "std::endl is used with std!" &lt;&lt; std::endl; // directly accessing endl without using 'using' directive
 
     return 0;
     }             
           
-          </textarea>
+     
       </pre>
       </div>
       Output:
@@ -237,20 +237,20 @@
           Example:3
         <div class ="program">
             <pre>
-<textarea id="text" cols="67" rows="27" readonly>
-    #include <iostream>
+
+    #include &lt;iostream&l&lt;&lt;
     using namespace std;
 
     // first name space
     namespace first_space {
     void func() {
-    cout << "Inside first_space" << endl;
+    cout &lt;&lt; "Inside first_space" &lt;&lt; endl;
     }
 
   // second name space
   namespace second_space {
   void func() {
-   cout << "Inside second_space" << endl;
+   cout &lt;&lt; "Inside second_space" &lt;&lt; endl;
   }
   }
   }
@@ -264,7 +264,7 @@
   }         
 
             
-        </textarea>
+     
         </pre>
         </div>
         Output:
@@ -295,20 +295,20 @@
          Example:4
         <div class ="program">
             <pre>
-<textarea id="text" cols="67" rows="29" readonly>
-    #include <iostream>
+
+    #include &lt;iostream&gt;
     using namespace std;
 
       // first name space
        namespace first_space {
       void func() {
-      cout << "Inside first_space" << endl;
+      cout &lt;&lt; "Inside first_space" &lt;&lt; endl;
       }
 
       // second name space
         namespace second_space {
         void func() {
-        cout << "Inside second_space" << endl;
+        cout &lt;&lt; "Inside second_space" &lt;&lt; endl;
         }
         }
         }              
@@ -321,7 +321,7 @@
         }     
   
                         
-                      </textarea>
+                     
                       </pre>
                       </div>
                        Output:
@@ -351,12 +351,10 @@
           Example:5
         <div class ="program">
             <pre>
-        
-<textarea id="text" cols="67" rows="30" readonly>
   // A C++ program to demonstrate use of class
   // in a namespace
 
-  #include <iostream>
+  #include &gt;iostream&l&lt;&lt;
   using namespace std;
   
   namespace ns
@@ -371,7 +369,7 @@
   public:
     void display()
     {
-      cout << "ns::geek::display()\n";
+      cout &lt;&lt; "ns::geek::display()\n";
     }
   };
   
@@ -382,7 +380,7 @@
     obj.display();
     return 0;
   }                 
-                </textarea>
+               
         </pre>
         </div>
         Output:
@@ -409,12 +407,12 @@
           Example:6
         <div class ="program">
             <pre>
-<textarea id="text" cols="67" rows="40" readonly>
+
   //A C++ code to demonstrate that we can define
   // methods outside namespace.
 
   
-  #include <iostream>
+  #include &gt;iostream&l&lt;&lt;
   using namespace std;
   
   // Creating a namespace
@@ -431,11 +429,11 @@
   // Defining methods of namespace
   void ns::geek::display()
   {
-    cout << "ns::geek::display()\n";
+    cout &lt;&lt; "ns::geek::display()\n";
   }
   void ns::display()
   {
-    cout << "ns::display()\n";
+    cout &lt;&lt; "ns::display()\n";
   }
   
   // Driver code
@@ -446,8 +444,7 @@
     obj.display();
     return 0;
   }             
-                  
-             </textarea>
+  
                 
         </pre>
         </div>
@@ -482,8 +479,7 @@
           are not different but actually the same, which are being defined in parts.<br>  </div>
           Example:7 
         <div class ="program">
-            <pre>
-<textarea id="text" cols="67" rows="25" readonly>
+            <pre&lt;&lt;
   // C++ program to demonstrate namespace exntension
           
           
@@ -504,11 +500,11 @@
 
   int main()
   {
-  cout << first::val1 <<"\n";
-  cout << first::val2 <<"\n";
+  cout &lt;&lt; first::val1 <<"\n";
+  cout &lt;&lt; first::val2 <<"\n";
   return 0;
   }         
-        </textarea>
+       
                 
         </pre>
         </div>
@@ -543,7 +539,7 @@
           Example:8     
         <div class ="program">
         <pre>
-<textarea id="text" cols="67" rows="20" readonly>
+
   // C++ program to demonstrate working of unnamed
   // namespaces
   
@@ -559,11 +555,11 @@
 
   int main()
   {
-  cout << rel << "\n"; // prints 300
+  cout &lt;&lt; rel << "\n"; // prints 300
   return 0;
   }          
           
-         </textarea>    
+             
         </pre>
         </div>
         
@@ -590,8 +586,7 @@
           Example:9
           <b>Namespace Aliasing</b>     
         <div class ="program">
-        <pre>
-<textarea id="text" cols="67" rows="29" readonly>
+        <pre&lt;&lt;
   In C++, you can use an alias name for your namespace name, for ease of use.
   Existing namespaces can be aliased with new names, with the following syntax:
 
@@ -615,10 +610,10 @@
 
     int main()  
     {
-    std::cout << alias::var << '\n';
+    std::cout &lt;&lt; alias::var &lt;&lt; '\n';
     }            
   
-                </textarea>     
+                 
               </pre>
               </div>
         
