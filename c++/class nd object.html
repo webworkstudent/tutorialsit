@@ -103,8 +103,8 @@
         Example:1
         <div class ="program">
             <pre>
-<textarea id="text" rows="20" cols="60" style="border: none; outline: none;" readonly >
-   #include<iostream>
+
+   #include&lt;iostream&gt;
    using namespace std;
 
    class A1
@@ -121,9 +121,9 @@
    {
       A1 obj; // object is ready
       obj.x=5; // Data Hiding
-      cout<<obj.x;
+      cout&lt;&lt;obj.x;
    }
-        </textarea>
+      
         </pre>
         </div>
         Output:
@@ -158,8 +158,8 @@
         <div class ="program">
         
           <pre>
-<textarea id="text" cols="25" rows="38" readonly>
-    #include<iostream>
+
+    #include&lt;iostream&gt;
     using namespace std;
  
     class A
@@ -172,17 +172,17 @@
       public :
       void getValue()
       {
-        cout<<"Enter the roll number:"<<endl;
-        cin>>roll;
-        cout<<"Enter the name :"<<endl;
-        cin>>name;
+        cout&lt;&l&lt;&lt;"Enter the roll number:"&lt;&lt;endl;
+        cin&gt;&gt;roll;
+        cout&lt;&l&lt;&lt;"Enter the name :"&lt;&lt;endl;
+        cin&gt;&gt;name;
  
       }
  
       void showValue()
       {
-       cout<<"The Roll : "<<roll<<endl;
-       cout<<"The name : "<<name;
+       cout&lt;&lt;"The Roll : "&lt;&lt;roll&lt;&lt;endl;
+       cout&lt;&lt;"The name : "&lt;&lt;name;
       }
  
     };
@@ -190,13 +190,13 @@
     {
        A obj;
        obj.getValue();// Will read data
-       cout<<"Output :"<<endl;
+       cout&lt;&lt;"Output :"&lt;&lt;endl;
        obj.showValue();// will show the data
  
     }
         
 
-</textarea>    
+
 </pre>     
         </div>
         
@@ -231,8 +231,8 @@
           Example:3
         <div class ="program">
             <pre>
-<textarea id="text" cols="60" rows="44" readonly>
-  #include<iostream>
+
+    #include<iostream>
     using namespace std;
  
     class A
@@ -250,17 +250,17 @@
  
          void A::getValue() // Member function definition
       {
-        cout<<"Enter the roll number:"<<endl;
-        cin>>roll;
-        cout<<"Enter the name :"<<endl;
-        cin>>name;
+        cout&lt;&lt;"Enter the roll number:"&lt;&lt;endl;
+        cin&gt;&gt;roll;
+        cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
+        cin&gt;&gt;name;
  
       }
  
       void A::showValue() // function defination
       {
-       cout<<"The Roll : "<<roll<<endl;
-       cout<<"The name : "<<name;
+       cout&lt;&lt;"The Roll : "&lt;&lt;roll&lt;&lt;endl;
+       cout&lt;&lt;"The name : "&lt;&lt;name;
       }
  
  
@@ -268,13 +268,13 @@
     {
        A obj; // object created
        obj.getValue();// function Calling
-       cout<<"Output :"<<endl;
+       cout&lt;&lt;"Output :"&lt;&lt;endl;
        obj.showValue();//function calling
        obj.z=5;
-       cout<<"\nZ is : "<<obj.z<<endl;
+       cout&lt;&lt;"\nZ is : "&lt;&lt;obj.z&lt;&lt;endl;
  
     }                    
-            </textarea>
+         
         </pre>
         </div>
         Output:
@@ -310,8 +310,7 @@
             
           </div>
         <div class ="program">
-            <pre>
-<textarea id="text" cols="68" rows="49" readonly>
+            <pre&lt;&lt;
 #include<iostream>
 using namespace std;
 
@@ -322,8 +321,8 @@ class sample
 
    void getData()
    {
-     cout<<"Enter the value of a and b:"<<endl;
-     cin>>a>>b;
+     cout&lt;&lt;"Enter the value of a and b:"&lt;&lt;endl;
+     cin&gt;&gt;a&gt;&gt;b;
      return;
    }
 
@@ -344,10 +343,10 @@ class sample
 
       void sample::display(void) // Definitionqq
    {
-      cout<<"The first Number :"<<a<<endl;
-      cout<<"The second Number :"<<b<<endl;
-      cout<<"The sum of two numbers are :"<<sum()<<endl;
-      cout<<"The differences between two numbers are:"<<diff()<<endl;
+      cout&lt;&lt;"The first Number :"&lt;&lt;a&lt;&lt;endl;
+      cout&lt;&lt;"The second Number :"&lt;&lt;b&lt;&lt;endl;
+      cout&lt;&lt;"The sum of two numbers are :"&lt;&lt;sum()&lt;&lt;endl;
+      cout&lt;&lt;"The differences between two numbers are:"&lt;&lt;diff()&lt;&lt;endl;
       return;
    }
 
@@ -358,7 +357,7 @@ class sample
     obj.getData();
     obj.display();
    }
-        </textarea>
+   
         </pre>
         </div>
         Output:
@@ -392,8 +391,8 @@ class sample
           </div>
         <div class ="program">
             <pre>
-<textarea id="text" cols="68" rows="49" readonly>
-  #include<iostream>
+
+    #include<iostream>
     using namespace std;
     
     class A
@@ -408,12 +407,12 @@ class sample
     
     void A::getData()
     {
-       cout<<"Enter the size of an array :"<<endl;
-       cin>>n;
-       cout<<"Enter the "<<n<<" elements\n";
+       cout&lt;&lt;"Enter the size of an array :"&lt;&lt;endl;
+       cin&gt;&gt;n;
+       cout&lt;&lt;"Enter the "&lt;&lt;n&lt;&lt;" elements\n";
        for(int i=0;i<n;i++)
        {
-       cin>>a[i];
+       cin&gt;&gt;a[i];
        }
     }
     
@@ -432,7 +431,7 @@ class sample
     
     void A:: show()
     {
-      cout<<"The big one is :"<<biggest();
+      cout&lt;&lt;"The big one is :"&lt;&lt;biggest();
     }
     int main()
     {
@@ -441,7 +440,7 @@ class sample
     obj.show();
     }    
     
-          </textarea>
+  
         </pre>
         </div>
         Output:
@@ -476,8 +475,7 @@ class sample
             <b>Read the record for more than one student</b>
             </div> 
         <div class ="program">
-            <pre>
-<textarea id="text" cols="68" rows="52" readonly>
+            <pre&lt;&lt;
     #include<iostream>
     using namespace std;
  
@@ -495,17 +493,16 @@ class sample
  
          void A::getValue() // function defination
       {
-        cout<<"Enter the roll number:"<<endl;
-        cin>>roll;
-        cout<<"Enter the name :"<<endl;
-        cin>>name;
- 
+        cout&lt;&lt;"Enter the roll number:"&lt;&lt;endl;
+        cin&gt;&gt;lroll;
+        cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
+        cin&gt;&gt;lname;
       }
  
       void A::showValue() // function defination
       {
-       cout<<"The Roll : "<<roll<<endl;
-       cout<<"The name : "<<name<<endl;
+       cout&lt;&lt;"The Roll : "&lt;&lt;roll&lt;&lt;endl;
+       cout&lt;&lt;"The name : "&lt;&lt;name&lt;&lt;endl;
       }
  
  
@@ -513,9 +510,9 @@ class sample
     {
        A obj[5]; // Array of an object
        int size,i;
-       cout<<"Enter the size of an array :"<<endl;
-       cin>>size;
-       cout<<"Enter the record of a student :"<<endl;
+       cout&lt;&lt;"Enter the size of an array :"&lt;&lt;endl;
+       cin&gt;&gt;lsize;
+       cout&lt;&lt;"Enter the record of a student :"&lt;&lt;endl;
        for(i=0;i<size;i++)
        {
         obj[i].getValue();
@@ -528,7 +525,7 @@ class sample
        }
  
     }            
-        </textarea>
+
                 
         </pre>
         </div>
@@ -579,8 +576,8 @@ class sample
          
         <div class ="program">
             <pre>
-<textarea id="text" cols="68" rows="30" readonly>
-    #include<iostream>
+
+    #include&lt;iostream&gt;
     using namespace std;
     class Abc
     {
@@ -605,11 +602,8 @@ class sample
      s.setValue();
     // Abc x;
    //  x.setValue();
-     cout<<s.sum(s);
+     cout&lt;&lt;s.sum(s);
     }
- 
- 
-        </textarea>
                 
         </pre>
         </div>
@@ -638,8 +632,7 @@ class sample
             <b>Call by reference </b>
           </div>  
         <div class ="program">
-        <pre>
-<textarea id="text"cols="68" rows="52" readonly>
+        <pre&lt;&lt;
     #include<iostream>
     using namespace std;
     class Student{
@@ -652,16 +645,16 @@ class sample
     
     void Student :: getData()
     {
-      cout<<"Enter the Roll no : "<<endl;
-      cin>>roll;
-      cout<<"Enter the name :"<<endl;
-      cin>>name;
+      cout&lt;&lt;"Enter the Roll no : "&lt;&lt;endl;
+      cin&gt;&gt;roll;
+      cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
+      cin&gt;&gt;name;
     }
     
     void Student ::display()
     {
-      cout<<"Roll No : "<<roll<<endl;
-      cout<<"Name : "<<name<<endl;
+      cout&lt;&lt;"Roll No : "&lt;&lt;roll&lt;&lt;endl;
+      cout&lt;&lt;"Name : "&lt;&lt;name&lt;&lt;endl;
     }
     
     void swap(Student& s1, Student& s2)
@@ -674,24 +667,24 @@ class sample
     int main()
     {
        Student stu1,stu2;
-       cout<<"Enter the Record for student 1 :"<<endl;
+       cout&lt;&lt;"Enter the Record for student 1 :"&lt;&lt;endl;
        stu1.getData();
-        cout<<"Enter the Record for student 2 :"<<endl;
+        cout&lt;&lt;"Enter the Record for student 2 :"&lt;&lt;endl;
        stu2.getData();
-       cout<<"Record before swaping :"<<endl<<endl;
-       cout<<"The record of Student 1 :"<<endl;
+       cout&lt;&lt;"Record before swaping :"&lt;&lt;endl&lt;&lt;endl;
+       cout&lt;&lt;"The record of Student 1 :"&lt;&lt;endl;
        stu1.display();
-       cout<<"The record of Student 2 :"<<endl;
+       cout&lt;&lt;"The record of Student 2 :"&lt;&lt;endl;
        stu2.display();
        swap(stu1,stu2); // Normal function
-        cout<<"Record After swaping :"<<endl<<endl;
-       cout<<"The record of Student 1 :"<<endl;
+        cout&lt;&lt;"Record After swaping :"&lt;&lt;endl&lt;&lt;endl;
+       cout&lt;&lt;"The record of Student 1 :"&lt;&lt;endl;
        stu1.display();
-       cout<<"The record of Student 2 :"<<endl;
+       cout&lt;&lt;"The record of Student 2 :"&lt;&lt;endl;
        stu2.display();
     
     }
-           </textarea>     
+        
         </pre>
         </div>
         
@@ -746,8 +739,8 @@ class sample
             </div>  
         <div class ="program">
         <pre>
-<textarea id="text" cols="68" rows="33" readonly>
-    #include<iostream>
+
+    #include&lt;iostream&g&lt;&lt;
     using namespace std;
     class sample
     {
@@ -759,7 +752,7 @@ class sample
     }
     void display()
     {
-    cout<<x; // c.x= 30
+    cout&lt;&lt;x; // c.x= 30
     }
     sample sum(sample b)
     {
@@ -775,11 +768,11 @@ class sample
     obj1.getdata(10);// obj1.x=10;
     obj2.getdata(20); // obj2.x=20;
     obj3=obj1.sum(obj2);
-    cout<<"Sum =";
+    cout&lt;&lt;"Sum =";
     obj3.display();
     return 0;
     }           
-</textarea>     
+     
         </pre>
         </div>
         
@@ -825,9 +818,9 @@ class sample
         </div>
         <div class="program">
           <pre>
-<textarea id="text" cols="68" rows="33" readonly>
-    #include<iostream>
-    using namespace std;
+
+    #include&lt;iostream&gt;
+    using namespace st&lt;&lt;
     class sample
     {
     public :
@@ -846,7 +839,7 @@ class sample
     void sample ::display()
     {
      ++count;
-     cout<<"The value of count : "<<count<<endl;
+     cout&lt;&lt;"The value of count : "&lt;&lt;count&lt;&lt;endl;
     }
     int main()
     {
@@ -856,7 +849,7 @@ class sample
      c3.display();
     }
                   
-</textarea>
+
           </pre>
         </div>
 
@@ -898,8 +891,8 @@ class sample
 
       <div class="program">
         <pre>
-<textarea id="text" cols="68" rows="29" readonly>
-    #include<iostream>
+
+    #include&lt;iostream&g&lt;&lt;
     using namespace std;
     class Account
     {
@@ -910,7 +903,7 @@ class sample
        void display() // static member function
        {
         count++;
-        cout<<"The value of count is :"<<count<<endl;
+        cout&lt;&lt;"The value of count is :"&lt;&lt;count&lt;&lt;endl;
        }
     };
 
@@ -923,7 +916,7 @@ class sample
       Account::display();
 
     }
-          </textarea> 
+      
         </pre>
       </div>
       Output
@@ -956,8 +949,7 @@ class sample
 
     <div class="program">
       <pre>
-<textarea id="text" cols="68" rows="43" readonly>
-  #include<iostream>
+     #include&lt;iostream&gt;
     using namespace std;
  
     class A
@@ -974,18 +966,17 @@ class sample
  
          void A::getValue() // function defination
       {
-        cout<<"Enter the roll number:"<<endl;
-        cin>>roll;
-        cout<<"Enter the name :"<<endl;
-        cin>>name;
- 
-      }
+        cout&lt;&lt;"Enter the roll number:"&lt;&lt;endl;
+        cin&gt;&gt;roll;
+        cout&lt;&lt;"Enter the name :"&lt;&lt;endl;
+        cin&gt;&gt;name;
+ &lt;&lt;
  
       void A::showValue() const// Constant function
       {
        // roll=67; // its just read only // can't change in value
-       cout<<"The Roll : "<<roll<<endl;
-       cout<<"The name : "<<name;
+       cout&lt;&lt;"The Roll : "&lt;&lt;roll&lt;&lt;endl;
+       cout&lt;&lt;"The name : "&lt;&lt;name;
       }
  
  
@@ -994,11 +985,11 @@ class sample
        A obj;
        obj.
        getValue();// function Calling
-       cout<<"Output :"<<endl;
+       cout&lt;&lt;"Output :"&lt;&lt;endl;
        obj.showValue();//function calling
  
     }
-        </textarea>
+    
       </pre>
     </div>
     Output
