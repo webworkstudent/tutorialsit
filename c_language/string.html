@@ -130,8 +130,8 @@ tr:hover { background-color: #E0FFF;}
 
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="15" style="border: none; outline: none;" readonly >
+#include<stdio.h>
 int main()
 {
 char str[25];
@@ -145,7 +145,7 @@ puts(str);
 // will print only string we can't print format string using puts().
 return 0;
 }
-        
+        </textarea>
         </pre>
         </div>
         Output:
@@ -171,8 +171,8 @@ return 0;
         <div class ="program">
         
           <pre>
-
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="14" readonly>
+#include<stdio.h>
 int main()
 {
     char str[50];
@@ -183,7 +183,7 @@ int main()
      // formated string
     return 0;
 }
-   
+</textarea>    
         </pre>     
         </div>
     
@@ -218,8 +218,8 @@ int main()
 
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="19" readonly>
+#include<stdio.h>
 int main()
 {
     char s1[]="String"; // assign String as value using litteral.
@@ -237,7 +237,7 @@ int main()
     printf("\n s3 = %s",s3);
     return 0;
 }
-          
+            </textarea>
         </pre>
         </div>
         Output:
@@ -265,8 +265,8 @@ int main()
           <b><h5> 4.Program to display a string character-wise.</h5></b>
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="12" readonly>
+#include<stdio.h>
 int main()
 {
     char name[]="String";
@@ -277,7 +277,7 @@ int main()
         i++;
     }
 }
-       
+        </textarea>
         </pre>
         </div>
         Output:
@@ -308,9 +308,9 @@ int main()
         </h5></b>
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
-#include&lt;string.h&gt;
+<textarea id="text" rows="11" readonly>
+#include<stdio.h>
+#include<string.h>
 int main()
 {
     char str[]="My Computer Class";
@@ -319,7 +319,7 @@ int main()
     printf("\n String = %s \n Length =%d",str,len);
     return 0;
 }
-         
+          </textarea>
         </pre>
         </div>
         Output:
@@ -348,9 +348,9 @@ int main()
           
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
-#include&lt;string.h&gt;
+<textarea id="text" rows="13" readonly>
+#include<stdio.h>
+#include<string.h>
 int main()
 {
     char source[] ="My Computer Class";
@@ -360,7 +360,7 @@ int main()
     printf("\n Target String = %s",target);
     return 0;
 }
-      
+        </textarea>
                 
         </pre>
         </div>
@@ -392,9 +392,9 @@ int main()
     
         <div class ="program">
             <pre>
-
-#include&lt;stdio.h&gt;
-#include&lt;string.h&gt;
+<textarea id="text"  rows="13" readonly>
+#include<stdio.h>
+#include<string.h>
 int main()
 {
     char name[50]="String ";
@@ -403,7 +403,7 @@ int main()
     printf("\n %s",name);
     return 0;
 }
-       
+        </textarea>
                 
         </pre>
         </div>
@@ -434,9 +434,9 @@ int main()
   
         <div class ="program">
         <pre>
-
-#include&lt;stdio.h&gt;
-#include&lt;string.h&gt;
+<textarea id="text" rows="22" readonly>
+#include<stdio.h>
+#include<string.h>
 int main()
 {
     char str1[25]="String";
@@ -454,7 +454,7 @@ int main()
     }
     return 0;
 }
-  
+</textarea>     
         </pre>
         </div>
         
@@ -481,9 +481,9 @@ int main()
         <b><h5>9.Program to use strcmp() function to compare String.</h5></b>
       <div class ="program">
       <pre>
-
-#include&lt;string.h&gt;
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="23" readonly>
+#include<string.h>
+#include<stdio.h>
 int main()
 {
     char mpass[7]="Ram",npass[7];
@@ -502,7 +502,7 @@ int main()
     }
     return 0;
 }
-    
+</textarea>     
       </pre>
       </div>
       
@@ -532,9 +532,9 @@ int main()
 
       <div class ="program">
       <pre>
-
-#include&lt;string.h&gt;
-#include&lt;stdio.h&gt;
+<textarea id="text" rows="18" readonly>
+#include<string.h>
+#include<stdio.h>
 int main()
 {
     char str1[25],str2[25],t[25];
@@ -549,7 +549,7 @@ int main()
     printf("1. %s \n2. %s",str1,str2);
     return 0;
 }
-     
+</textarea>     
       </pre>
       </div>
       
@@ -575,6 +575,545 @@ int main()
       
       
       <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 11 start --->
+        
+        <h5>Example:11</h5>
+        <b><h5>11. Program to find Length of String without using strlen() function.</h5></b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="15" style="border: none; outline: none;" readonly >
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    char str[50];
+    int i,len;
+    printf("Enter String : \n");
+    gets(str);
+    for(i=0;str[i]!='\0';i++);
+     len=i;
+     printf("\n Length of String : %d",len);
+     return 0;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Enter String :
+                sachin
+
+                 Length of String : 6
+                --------------------------------
+                Process exited after 3.234 seconds with return value 0
+                Press any key to continue . . .
+        </div>
+        
+        <!-- Example 11 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 12 start --->
+        <h5>Example:12</h5>
+        <b><h5>12.Program to copy String without using strcpy() function.</h5></b>
+
+        <div class ="program">
+        
+          <pre>
+<textarea id="text" rows="14" readonly>
+#include<stdio.h>
+int main()
+{
+    char str1[25]="Anil Computer Education";
+    char str2[25];
+    int i;
+    for(i=0;str1[i]!='\0';i++)
+    {
+        str2[i]=str1[i];
+    }
+    str2[i]='\0';
+    printf("\n str1= %s",str1);
+    printf("\n str2= %s",str2);
+    return 0;
+}
+</textarea>    
+        </pre>     
+        </div>
+    
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+                 str1= Anil Computer Education
+                 str2= Anil Computer Education
+                --------------------------------
+                Process exited after 0.05046 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+            
+        </div>
+            <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 13 start --->
+        
+          <h5>Example:13</h5>
+          <b><h5> 13.Program to concat String without using strcat() function.</h5></b>
+
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="19" readonly>
+#include<stdio.h>
+int main()
+{
+    char str1[50]="Anil ";
+    char str2[]="Computer Education";
+    int i,l;
+    for(i=0;str1[i]!='\0';i++);
+    l=i;
+    for(i=0;str2[i]!='\0';i++)
+    {
+    str1[l+i]=str2[i];
+    }
+    str1[l+i]='\0';
+    printf("\n str1= %s",str1);
+    printf("\n str2= %s",str2);
+    return 0;
+}
+            </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                 str1= Anil Computer Education
+                 str2= Computer Education
+                --------------------------------
+                Process exited after 0.05255 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 13 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 14 start --->
+          <h5>Example:14</h5>
+          <b><h5> 4.Program to Reverse a String without using String function.</h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="12" readonly>
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    char str1[25],str2[25];
+    int i,j,l;
+    printf("\n Enter a String : ");
+    gets(str1);
+    for(i=0;str1[i]!='\0';i++);
+    l=i;
+    for(i=0,j=l-1;j>=0;j--,i++)
+    {
+        str2[i]=str1[j];
+    }
+    str2[i]='\0';
+    puts(str2);
+    return 0;
+}
+        </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                 Enter a String : sachin
+                nihcas
+
+                --------------------------------
+                Process exited after 4.716 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 14 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 15 start --->
+          <h5>Example:15</h5>
+          <b><h5>15.Program to check whether the Input String is Palindrome or not.
+        </h5></b>
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="11" readonly>
+#include<stdio.h>
+int main()
+{
+    char str[26];
+    int i,j,len,flag;
+    printf("Enter the string :");
+    gets(str);
+    for(len=0;str[len]!='\0';len++);
+    flag=1;
+    for(i=0,j=len-1;i<len/2;i++,j--)
+    {
+        if(str[i]!=str[j])
+        {
+            flag=0;
+            break;
+        }
+    }
+
+    if(flag)
+    printf("\n It is Palindrome.");
+    else
+    printf("\n It is not a Palindrome");
+    return 0;
+}
+          </textarea>
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+                Enter the string :sachin
+
+                 It is not a Palindrome
+                --------------------------------
+                Process exited after 4.163 seconds with return value 0
+                Press any key to continue . .
+        </pre>
+        </div>
+        
+        <!-- Example 15 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 16 start --->
+          <h5>Example:16</h5>
+          <h5><b> 16.Program to Reverse a String without using String functions and Second String.</b></h5> 
+          
+          
+        <div class ="program">
+            <pre>
+<textarea id="text" rows="13" readonly>
+#include<stdio.h>
+int main()
+{
+    int i,j,len;
+    char ch,str[50];
+    printf("Enter a String :");
+    gets(str);
+    printf("\n Given String = %s",str);
+    for(len=0; str[len]!='\0';len++);
+    for(i=0,j=len-1;i<len/2;i++,j--)
+    {
+        ch=str[i];
+        str[i]=str[j];
+        str[j]=ch;
+    }
+    printf("\n Reversed String = %s",str);
+    return 0;
+}
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+            Enter a String :sachin
+
+             Given String = sachin
+             Reversed String = nihcas
+            --------------------------------
+            Process exited after 3.22 seconds with return value 0
+            Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 16 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 17 start --->
+       
+          <h5>Example:17</h5>
+          <b><h5>17.Program to Count the Number of Vowels in the Sentence.</h5></b>    
+    
+        <div class ="program">
+            <pre>
+<textarea id="text"  rows="13" readonly>
+#include<stdio.h>
+int main()
+{
+    int i,j,c=0;
+    char ch[50];
+    printf("\n Enter String:\n");
+    gets(ch);
+    for(i=0;ch[i]!='\0';i++)
+    {
+        if((ch[i]=='a')
+        ||(ch[i]=='e')
+        ||(ch[i]=='i')
+        ||(ch[i]=='o')
+        ||(ch[i]=='u')
+        ||(ch[i]=='A')
+        ||(ch[i]=='E')
+        ||(ch[i]=='I')
+        ||(ch[i]=='O')
+        ||(ch[i]=='U'))
+        {
+            c++;
+        }
+
+    }
+    printf("\nNumber of Vowels =%d",c);
+    return 0;
+}
+        </textarea>
+                
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+                 Enter String:
+                sachin
+
+                Number of Vowels =2
+                --------------------------------
+                Process exited after 6.946 seconds with return value 0
+                Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 17 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 18 start --->
+
+
+          <h5>Example:18</h5>   
+          <b><h5>18.Program to Count the number of vowels in the Sentence using switch.</h5></b>
+  
+        <div class ="program">
+        <pre>
+<textarea id="text" rows="22" readonly>
+#include<stdio.h>
+int main()
+{
+    char str[80];
+    int v =0,i;
+    printf(" Enter String :");
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        switch(str[i])
+        {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+        ++v;
+        }
+    }
+        printf("\n Number of Vowels =%d ",v);
+        return 0;
+
+}
+</textarea>     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+                 Enter String :My Name Is Sachin
+
+                 Number of Vowels =5
+                --------------------------------
+                Process exited after 13.21 seconds with return value 0
+                Press any key to continue . . .          
+        </pre>
+        </div>
+        
+        <!-- Example 18 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 19 start --->
+        
+        <h5>Example:19</h5>   
+        <b><h5>19. Write a program to count the number of character, words, and lines in a text.</h5></b>
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="23" readonly>
+#include<stdio.h>
+int main()
+{
+    char s[58],c;
+    int words=0,lines=0, i=1,j;
+    printf("\n Enter the String and at end press control+z in window and control+d in linux: \n");
+    while((c=getchar())!=EOF)
+    {
+        s[i] = c;
+        ++i;
+    }
+
+    /* Insert null character at last */
+    i=i-1;
+    s[i]='\0';
+
+    /* Find number of words and lines */
+    for(j=1;s[j]!='\0';++j)
+    {
+        if(s[j] == ' ' || s[j] == '\t' || s[j] =='\n')
+        ++words;
+        if(s[j] == '\n')
+        ++lines;
+    }
+
+    /* Write output */
+
+    printf("Number of characters = %d\n",i);
+    printf("Number of words = %d\n",words+1);
+    printf("Number of lines = %d\n",lines+1);
+}
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+        Enter your Password :
+        ram
+
+         Welcome Password Match.
+        --------------------------------
+        Process exited after 1.296 seconds with return value 0
+        Press any key to continue . . .
+                  
+      </pre>
+      </div>
+      
+      <!-- Example 19 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+      
+     <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 20 start --->
+        <h5>Example:20</h5>   
+        <b><h5>20. write a program for string palindrome.</h5></b>
+
+      <div class ="program">
+      <pre>
+<textarea id="text" rows="18" readonly>
+#include<stdio.h>
+#include<string.h>
+
+char *strrev(char *str) //not needed in window
+{
+    if (!str || ! *str)
+        return str;
+
+    int i = strlen(str) - 1, j = 0;
+
+    char ch;
+    while (i > j)
+    {
+        ch = str[i];
+        str[i] = str[j];
+        str[j] = ch;
+        i--;
+        j++;
+    }
+    return str;
+}
+int main()
+{
+    char s1[21],s2[21], *rev;
+    printf("\n Enter a String :\n");
+    gets(s1);
+    strcpy(s2,s1);
+    rev=strrev(s2);
+    //strrev(s2) // strrev(s2) this method is not available in linux works in window
+    //if(strcmp(s1,s2) == 0)
+    if(strcmp(s1,rev) == 0)
+    {
+        printf("String is a palindrome.");
+    }
+    else
+    {
+        printf("String is not a palindrome.");
+    }
+}
+</textarea>     
+      </pre>
+      </div>
+      
+      Output:
+      <div class="output">
+      <pre>
+             Enter a String :
+            sachin
+            String is not a palindrome.
+            --------------------------------
+            Process exited after 2.961 seconds with return value 27
+            Press any key to continue . . .    
+      </pre>
+      </div>
+      
+      <!-- Example 20 end --->
+      
+      
+      <!-- ------------------------------------------------------------------------- -->
+
 
       
     </div> <!-- Middle page end-->
