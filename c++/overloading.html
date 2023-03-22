@@ -1,0 +1,745 @@
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="icon.css" rel="stylesheet" type="text/css"/>
+ 
+</head>
+<style type="text/css">
+
+{
+
+}
+a{
+text-decoration:none;
+}
+div
+    {
+        padding: 10px 5px;
+    }
+
+.note
+{
+background-color: LemonChiffon;
+border-left:3px solid blue;
+font-style:italic;
+margin:20px auto;
+padding: 5%;
+}
+
+/* .detail
+{
+    border: 2px solid blue;
+    font-style: bold;
+    margin: 20px auto;
+    padding: 5%;
+    height: auto;
+
+} */
+.program
+{
+border-top:1px solid silver;
+border-bottom:1px solid silver;
+margin:20px auto;
+border: 20px solid pink
+
+
+}
+
+.output
+{
+margin:20px auto;
+color:white;
+background-color: black;
+}
+
+.pagecontent{
+background-color: LemonChiffon;
+margin:5px;
+margin-top: -15px;
+margin-bottom: 100px;
+}
+
+twidth
+{
+width:100%;
+margin:0px;
+}
+.method_table, th, td 
+{
+
+border-bottom:1px solid DarkSlateGray;
+background-color:LemonChiffon;
+padding: 5px 10px;
+}
+textarea#text{
+    border: none;
+    border-color: white;
+    width: 100%;
+    border: transparent;
+    outline:none;
+    padding-left: 5%;
+    
+}
+
+tr:hover { background-color: #E0FFF;}
+   </style>
+<body>
+<div class="container"><!-- Container start -->
+
+  <div class="row"> <!-- Row start -->
+      
+    <div class="col">
+      1 of 3
+    </div>
+      
+    <div class="col-lg-8"> <!-- Middle page start-->
+      
+        <div>
+            
+        <div class="pagecontent"><!-- Content start-->
+        <fieldset>
+        <legend> Page Content  </legend>
+            <li><a>Operator  Overloading</a></li>
+            <li><a>Examples 1</a></li>
+            <li><a>Examples 2</a></li>
+            <li><a>Examples 3</a></li>
+            <li><a>Examples 4</a></li>
+            <li><a>Examples 5</a></li>
+            <li><a>Examples 6</a></li>
+            <li><a>Examples 7</a></li>
+            <li><a>Examples 8</a></li>
+            <li><a>Examples 9</a></li>
+            <li><a>Examples 10</a></li>
+        </fieldset>
+        </div> <!-- Content end-->
+       
+        
+         
+
+        <dfn><dt><h2>Operator  Overloading</h2></dt></dfn>
+       <dt>Overloading </dt>
+       <dd>Refers to the use of the same things for different purposes.
+        Operator overloading : An operator can be redefined to perform additional tasks.</dd>
+        
+        <dt> Example :</dt>
+        <dd>Consider the operation of operator(+). Operation is sum if operands are numbers and if
+          type is  string then operation is string concatenation.
+          However using operator overloading you can extends the capability of + operator
+          so that this operator performs the addition of two objects of a class.</dd>
+
+        <dt>Syntex of Operator Overloading function</dt>
+        <dd>Return_type operator op (op-arguments)<br>
+          {<br>
+          // function body<br>
+          }<br><br>
+      
+          return_type  :  is the data type returned by the operation.<br>
+          operator     :  is a keyword.<br>
+          op           :  is the overloading operator like +, - etc<br>
+          op-arguments :  is the list of arguments.</dd>
+
+
+        <dt><h2>Operator Overloading For Member function</h2></dt>
+        <dd>A member function does not provide any argument for unary operation and it has
+          only one argument for binary operation whereas a friend function has one argument
+          for unary operation and two arguments for binary operation.</dd>
+
+        <dt>Example :</dt>
+        <dd>void operator -(); // Unary minus with no return value.<br>
+          Complex operator + (complex); // binary + used to add two complex numbers<br>
+          friend complex operator + (complex, complex); // binary + using friend function.</dd>
+
+        <dt>Overloading Unary Operators</dt>
+        <dd>Unary operators act on only one operand.<br>
+          Like :<br>
+                 - (unary minus)<br>
+                 ++ increment<br>
+                 -- decrement<br>
+                 etc</dd>
+            
+        </div>
+        
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- Example 1 start --->
+        
+        Example:1
+        <div class="note">
+            <b>Overloading Unary minus</b>
+        </div>
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+using namespace std;
+
+class sample
+{
+  int m;
+  int n;
+  public :
+  void getData(int a,int b);// Declaration
+  void display();
+  void operator -(); // overload unary minus
+};
+// :: scope resolution operator
+void
+sample :: getData(int a,int b) // Definition
+{
+m=a;
+n=b;
+}
+
+void sample :: display(void)
+{
+ cout&lt;&lt;m&lt;&lt;" "&lt;&lt;n&lt;&lt;endl;
+}
+
+void sample :: operator -()
+{
+  m=-m;
+  n=-n;
+}
+
+int main()
+{
+  sample obj; // object creation of sample class
+  obj.getData(40,-25);
+  cout&lt;&lt;"\n The value of the data member Before operator overloading \n";
+  obj.display();
+  -obj; // Operator overloading
+  cout&lt;&lt;"\n The value of the data member after operator overloading \n";
+  obj.display();
+   return 0;
+}
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              The value of the data member Before operator overloading
+              40 -25
+              
+               The value of the data member after operator overloading
+              -40 25
+              
+              --------------------------------
+              Process exited after 0.0608 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 1 end --->        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+        <!-- Example 2 start --->
+        Example:2
+       
+
+        <div class="note">
+            <b>Overloading Urinary minus Using Friend Function</b><br><br>
+            
+        </div>
+        
+        <div class ="program">
+        
+          <pre>
+
+
+#include&lt;iostream&gt;
+using namespace std;
+
+class sample
+{
+  int m;
+  int n;
+  public :
+  void getData(int a,int b);
+  void display();
+  friend void operator -(sample &x); // overload urinary minus
+};
+
+void sample :: getData(int a,int b)
+{
+m=a;
+n=b;
+}
+
+void sample :: display()
+{
+ cout&lt;&lt;m&lt;&lt;" "&lt;&lt;n&lt;&lt;endl;
+}
+
+void operator -(sample &x)
+{
+  x.m=-x.m;
+  x.n=-x.n;
+}
+int main()
+{
+  sample obj;
+  obj.getData(40,-25);
+  cout&lt;&lt;"\n The value of the data member Before operator overloading \n";
+  obj.display();
+  -obj;
+  cout&lt;&lt;"\n The value of the data member after operator overloading \n";
+  obj.display();
+   return 0;
+}
+</pre>     
+        </div>
+        
+        Output:
+        <div class="output">
+            
+        <pre>
+          The value of the data member Before operator overloading
+          40 -25
+          
+           The value of the data member after operator overloading
+          -40 25
+          
+          --------------------------------
+          Process exited after 0.06607 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+            
+        </div>
+        <!-- Example 2 end --->
+        
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+       
+        
+        <!-- Example 3 start --->
+          
+          <div class="note">
+          <dt>Overloading Prefix Increment Operator</dt>
+          </div>
+          Example:3
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+#include&lt;string.h&gt;
+using namespace std;
+class complex
+{
+  int real;
+  int img;
+  public :
+  complex(){};
+  complex(int a, int b)
+  {
+    real =a;
+    img  =b;
+  }
+  void display()
+  {
+    cout&lt;&lt;real&lt;&lt;"+"&lt;&lt;img&lt;&lt;"i"&lt;&lt;"\n";
+  }
+  complex operator ++(); //prefix increment operator
+};
+
+complex complex::operator ++()
+{
+  complex temp;
+  temp.real=++real;
+  temp.img=++img;
+  return (temp);
+}
+
+int main()
+{
+  complex c(5,10);
+  ++c;
+//  c++;// Its only for prefix operator
+  c.display();
+  ++c;
+  c.display();
+}
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              6+11i
+              7+12i
+              
+              --------------------------------
+              Process exited after 0.06484 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 3 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+       
+        
+      <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 4 start --->
+          Example:4
+          <div class="note">
+           <dt>Overloading Post fix Increment Operator</dt>
+          </div>
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+using namespace std;
+class complex
+{
+  int real;
+  int img;
+  public :
+  complex(){};
+  complex(int a, int b)
+  {
+    real =a;
+    img  =b;
+  }
+  void display()
+  {
+    cout&lt;&lt;real&lt;&lt;"+"&lt;&lt;img&lt;&lt;"i"&lt;&lt;"\n";
+  }
+  complex operator ++(int); //post fix increment operator
+};
+
+complex complex::operator ++(int)
+{
+  complex temp;
+  temp.real=real++;
+  temp.img=img++;
+  return (temp);
+}
+
+int main()
+{
+  complex c(5,10);
+  c++;
+  //++c; // only for post fix operator
+  c.display();
+  c++;
+  c.display();
+}  
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              6+11i
+              7+12i
+              
+              --------------------------------
+              Process exited after 0.09378 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 4 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+         <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 5 start --->
+          Example:5
+          <div class="note">
+          <dt>Overloading of the Arithmetic Operator</dt>
+          </div>
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+#include&lt;string.h&gt;
+using namespace std;
+class sample
+{
+float a,b;
+public :
+  sample(){}; // default Constructor
+ sample (float x, float y)
+ {
+   a=x;
+   b=y;
+ }
+ sample operator + (sample);
+ void display()
+ {
+   cout&lt;&lt;"a="&lt;&lt;a&lt;&lt;"\n";
+   cout&lt;&lt;"b="&lt;&lt;b&lt;&lt;"\n";
+ }
+};
+
+sample sample::operator+(sample c)
+{
+  sample temp;
+  temp.a=a+c.a;
+  temp.b=b+c.b;
+  return(temp);
+}
+int main()
+{
+  sample obj1,obj2,obj3;
+  obj1=sample(1.5,7.25);
+  obj2=sample(5.25,2.15);
+  obj3=obj1+obj2;
+  cout&lt;&lt;"First Object :"&lt;&lt;endl;
+  obj1.display();
+  cout&lt;&lt;"Second object \n";
+  obj2.display();
+  cout&lt;&lt;"Sum of objects \n";
+  obj3.display();
+}
+        </pre>
+        </div>
+        Output:
+        <div class="output">
+            <pre>
+              First Object :
+              a=1.5
+              b=7.25
+              Second object
+              a=5.25
+              b=2.15
+              Sum of objects
+              a=6.75
+              b=9.4
+              
+              --------------------------------
+              Process exited after 0.1049 seconds with return value 0
+              Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 5 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+      
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 6 start --->
+        <div class="note">
+       <dt>Overloading of the Arithmetic Operator using friend function</dt>
+        </div>
+          Example:6     
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+using namespace std;
+class sample
+{
+float a,b;
+public :
+  sample(){}; // default Constructor
+ sample (float x, float y)
+ {
+   a=x;
+   b=y;
+ }
+ friend sample operator + (sample,sample);
+ void display()
+ {
+   cout&lt;&lt;"a="&lt;&lt;a&lt;&lt;"\n";
+   cout&lt;&lt;"b="&lt;&lt;b&lt;&lt;"\n";
+ }
+};
+
+sample operator+(sample m,sample n)
+{
+  sample temp;
+  temp.a=m.a+n.a;
+  temp.b=m.b +n.b;
+  return(temp);
+}
+int main()
+{
+  sample x,y,z;
+  x=sample(1.5,7.25);
+  y=sample(5.25,2.15);
+  z=x+y;
+  cout&lt;&lt;"First Object :"&lt;&lt;endl;
+  x.display();
+  cout&lt;&lt;"Second object \n";
+  y.display();
+  cout&lt;&lt;"Sum of objects \n";
+  z.display();
+}     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          First Object :
+          a=1.5
+          b=7.25
+          Second object
+          a=5.25
+          b=2.15
+          Sum of objects
+          a=6.75
+          b=9.4
+          
+          --------------------------------
+          Process exited after 0.1033 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 6 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 7 start --->
+       
+          Example:7     
+         <div class="note"> 
+          <dt>Overloading of the Relational Operators.</dt>
+         </div>
+         
+        <div class ="program">
+            <pre>
+#include&lt;iostream&gt;
+using namespace std;
+class sample
+{
+  int num;
+  public :
+  sample()
+  {
+    num=0;
+  }
+  sample(int a)
+  {
+    num=a;
+  }
+  int operator <(sample x);
+};
+
+int sample :: operator <(sample x)
+{
+ if(num<x.num)
+ return 1;
+ else
+ return 0;
+}
+
+int main()
+{
+  sample obj1(24),obj2(45);
+  cout&lt;&lt;(obj1<obj2);
+}    
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          1
+          --------------------------------
+          Process exited after 0.07778 seconds with return value 0
+          Press any key to continue . . .
+        </pre>
+        </div>
+        
+        <!-- Example 7 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+        
+        
+          <!-- ------------------------------------------------------------------------- -->
+        
+        <!-- Example 8 start --->
+          Example:8   
+          <div class="note">
+          <dt>Overloading the I/O operators</dt>
+          </div>  
+        <div class ="program">
+        <pre>
+#include&lt;iostream&gt;
+#include&lt;string.h&gt;
+ using namespace std;
+ class sample
+ {
+   int num;
+   public:
+     sample()
+     {
+       num=0;
+     }
+     friend ostream& operator &lt;&lt; (ostream&, sample&);
+     friend istream& operator &gt;&gt; (istream&, sample&);
+ };
+
+
+
+ // Overload insertion operator function
+ ostream& operator &lt;&lt; (ostream& out,sample& no)
+ {
+   out&lt;&lt;no.num;
+   return out;
+ }
+
+  // Overload extraction operator function
+ istream& operator &gt;&gt; (istream& in,sample& n)
+ {
+   in&gt;&gt;n.num;
+   return in;
+ }
+
+  int main()
+  {
+    sample obj;
+    cout&lt;&lt;"Enter a number :";
+    cin&gt;&gt;obj;
+    cout&lt;&lt;"Entered Number is "&lt;&lt;obj&lt;&lt;endl; // object printing a number
+  }     
+        </pre>
+        </div>
+        
+        Output:
+        <div class="output">
+        <pre>
+          Enter a number :1
+          Entered Number is 1
+          
+          --------------------------------
+          Process exited after 3.626 seconds with return value 0
+          Press any key to continue . . .
+          
+        </pre>
+        </div>
+        
+        <!-- Example 8 end --->
+        
+        
+        <!-- ------------------------------------------------------------------------- -->
+
+        
+    </div> <!-- Middle page end-->
+    
+    <div class="col">
+      3 of 3
+    </div>
+      
+  </div> <!-- Container end-->
+</div>  
+</body>
+</html>
